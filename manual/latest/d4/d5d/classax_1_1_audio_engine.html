@@ -1,0 +1,1690 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: AudioEngine Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d4/d5d/classax_1_1_audio_engine.html','../../','dc/da0/classax_1_1_audio_engine-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AudioEngine Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Offers a interface to play audio.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;AudioEngine.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a82cdf833b5d7a90f60d8d8fa638bea9e" id="r_a82cdf833b5d7a90f60d8d8fa638bea9e"><td class="memItemLeft"><a id="a82cdf833b5d7a90f60d8d8fa638bea9e" name="a82cdf833b5d7a90f60d8d8fa638bea9e"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="#a82cdf833b5d7a90f60d8d8fa638bea9e">AudioState</a> </td></tr>
+<tr class="memdesc:a82cdf833b5d7a90f60d8d8fa638bea9e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a82cdf833b5d7a90f60d8d8fa638bea9e" title="AudioState enum,all possible states of an audio instance.">AudioState</a> enum,all possible states of an audio instance. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a37f5b0b22e759383dce4a78ddd05a3d4" id="r_a37f5b0b22e759383dce4a78ddd05a3d4"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a37f5b0b22e759383dce4a78ddd05a3d4">end</a> ()</td></tr>
+<tr class="memdesc:a37f5b0b22e759383dce4a78ddd05a3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release objects relating to <a class="el" href="../../d4/d5d/classax_1_1_audio_engine.html" title="Offers a interface to play audio.">AudioEngine</a>.  <br /></td></tr>
+<tr class="memitem:a587b5d75191fd246925e4bd306a7cfe5" id="r_a587b5d75191fd246925e4bd306a7cfe5"><td class="memItemLeft">static AudioProfile *&#160;</td><td class="memItemRight"><a class="el" href="#a587b5d75191fd246925e4bd306a7cfe5">getDefaultProfile</a> ()</td></tr>
+<tr class="memdesc:a587b5d75191fd246925e4bd306a7cfe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default profile of audio instances.  <br /></td></tr>
+<tr class="memitem:a7db3c21d47bd6ec9a7d249349002994f" id="r_a7db3c21d47bd6ec9a7d249349002994f"><td class="memItemLeft">static AudioId&#160;</td><td class="memItemRight"><a class="el" href="#a7db3c21d47bd6ec9a7d249349002994f">play2d</a> (std::string_view filePath, bool loop=false, float volume=1.0f, const AudioProfile *profile=nullptr)</td></tr>
+<tr class="memdesc:a7db3c21d47bd6ec9a7d249349002994f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play 2d sound.  <br /></td></tr>
+<tr class="memitem:ad1641ff7252daf491bc9ff806f76cff7" id="r_ad1641ff7252daf491bc9ff806f76cff7"><td class="memItemLeft">static AudioId&#160;</td><td class="memItemRight"><a class="el" href="#ad1641ff7252daf491bc9ff806f76cff7">play2d</a> (std::string_view filePath, const AudioPlayerSettings &amp;settings, const AudioProfile *profile=nullptr)</td></tr>
+<tr class="memdesc:ad1641ff7252daf491bc9ff806f76cff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play 2d sound.  <br /></td></tr>
+<tr class="memitem:a4a0e66ca3e10306e56089d07d282dee7" id="r_a4a0e66ca3e10306e56089d07d282dee7"><td class="memItemLeft">static AudioId&#160;</td><td class="memItemRight"><a class="el" href="#a4a0e66ca3e10306e56089d07d282dee7">play3d</a> (std::string_view filePath, const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;position, bool loop=false, float volume=1.0f, const AudioProfile *profile=nullptr)</td></tr>
+<tr class="memdesc:a4a0e66ca3e10306e56089d07d282dee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play sound in 3d space.  <br /></td></tr>
+<tr class="memitem:af23404bcc1dd91a2eccf2e40578929d4" id="r_af23404bcc1dd91a2eccf2e40578929d4"><td class="memItemLeft">static AudioId&#160;</td><td class="memItemRight"><a class="el" href="#af23404bcc1dd91a2eccf2e40578929d4">play3d</a> (std::string_view filePath, const AudioPlayerSettings &amp;settings, const AudioProfile *profile=nullptr)</td></tr>
+<tr class="memdesc:af23404bcc1dd91a2eccf2e40578929d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play sound in 3d space.  <br /></td></tr>
+<tr class="memitem:ae3ad25e17c7ea4ced0b199333bf67321" id="r_ae3ad25e17c7ea4ced0b199333bf67321"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae3ad25e17c7ea4ced0b199333bf67321">setLoop</a> (AudioId audioID, bool loop)</td></tr>
+<tr class="memdesc:ae3ad25e17c7ea4ced0b199333bf67321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether an audio instance loop or not.  <br /></td></tr>
+<tr class="memitem:ae0a8f4521bcb513e7b0e8ab470b8468a" id="r_ae0a8f4521bcb513e7b0e8ab470b8468a"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ae0a8f4521bcb513e7b0e8ab470b8468a">isLoop</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:ae0a8f4521bcb513e7b0e8ab470b8468a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether an audio instance is loop.  <br /></td></tr>
+<tr class="memitem:a9cd99eaf873b251239fefcd61049ab5b" id="r_a9cd99eaf873b251239fefcd61049ab5b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a9cd99eaf873b251239fefcd61049ab5b">setVolume</a> (AudioId audioID, float volume)</td></tr>
+<tr class="memdesc:a9cd99eaf873b251239fefcd61049ab5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets volume for an audio instance.  <br /></td></tr>
+<tr class="memitem:ab5cd94ccd4fa9d6fd0ae8c6f27872bbf" id="r_ab5cd94ccd4fa9d6fd0ae8c6f27872bbf"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ab5cd94ccd4fa9d6fd0ae8c6f27872bbf">getVolume</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:ab5cd94ccd4fa9d6fd0ae8c6f27872bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the volume value of an audio instance.  <br /></td></tr>
+<tr class="memitem:a723f2d908ddfcedd220d6b45df9a25b2" id="r_a723f2d908ddfcedd220d6b45df9a25b2"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a723f2d908ddfcedd220d6b45df9a25b2">setPitch</a> (AudioId audioID, float pitch)</td></tr>
+<tr class="memdesc:a723f2d908ddfcedd220d6b45df9a25b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets pitch for an audio instance.  <br /></td></tr>
+<tr class="memitem:ae3f2d1c4f0ee2a7901949e0220eb3d6b" id="r_ae3f2d1c4f0ee2a7901949e0220eb3d6b"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ae3f2d1c4f0ee2a7901949e0220eb3d6b">getPitch</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:ae3f2d1c4f0ee2a7901949e0220eb3d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the volume value of an audio instance.  <br /></td></tr>
+<tr class="memitem:a0f64c4ecc2d2397799dddf9df3633cf9" id="r_a0f64c4ecc2d2397799dddf9df3633cf9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0f64c4ecc2d2397799dddf9df3633cf9">pause</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:a0f64c4ecc2d2397799dddf9df3633cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause an audio instance.  <br /></td></tr>
+<tr class="memitem:af102dc50df40c11ff6a66d488995c454" id="r_af102dc50df40c11ff6a66d488995c454"><td class="memItemLeft"><a id="af102dc50df40c11ff6a66d488995c454" name="af102dc50df40c11ff6a66d488995c454"></a>
+static void&#160;</td><td class="memItemRight"><b>pauseAll</b> ()</td></tr>
+<tr class="memdesc:af102dc50df40c11ff6a66d488995c454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause all playing audio instances. <br /></td></tr>
+<tr class="memitem:a6476f6386792d6e7ff6489adc2cf2607" id="r_a6476f6386792d6e7ff6489adc2cf2607"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a6476f6386792d6e7ff6489adc2cf2607">resume</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:a6476f6386792d6e7ff6489adc2cf2607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume an audio instance.  <br /></td></tr>
+<tr class="memitem:a14284ce2f3598c6ec4b9921db70c9a4b" id="r_a14284ce2f3598c6ec4b9921db70c9a4b"><td class="memItemLeft"><a id="a14284ce2f3598c6ec4b9921db70c9a4b" name="a14284ce2f3598c6ec4b9921db70c9a4b"></a>
+static void&#160;</td><td class="memItemRight"><b>resumeAll</b> ()</td></tr>
+<tr class="memdesc:a14284ce2f3598c6ec4b9921db70c9a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume all suspended audio instances. <br /></td></tr>
+<tr class="memitem:aee3a5552c1ef2fae5126321b6e50dc6e" id="r_aee3a5552c1ef2fae5126321b6e50dc6e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aee3a5552c1ef2fae5126321b6e50dc6e">stop</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:aee3a5552c1ef2fae5126321b6e50dc6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop an audio instance.  <br /></td></tr>
+<tr class="memitem:affbe4384be0d38e94bcc56de84c07edd" id="r_affbe4384be0d38e94bcc56de84c07edd"><td class="memItemLeft"><a id="affbe4384be0d38e94bcc56de84c07edd" name="affbe4384be0d38e94bcc56de84c07edd"></a>
+static void&#160;</td><td class="memItemRight"><b>stopAll</b> ()</td></tr>
+<tr class="memdesc:affbe4384be0d38e94bcc56de84c07edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop all audio instances. <br /></td></tr>
+<tr class="memitem:a48cd8be35a1d2b6a2b925f4722967456" id="r_a48cd8be35a1d2b6a2b925f4722967456"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a48cd8be35a1d2b6a2b925f4722967456">setCurrentTime</a> (AudioId audioID, float sec)</td></tr>
+<tr class="memdesc:a48cd8be35a1d2b6a2b925f4722967456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current playback position of an audio instance.  <br /></td></tr>
+<tr class="memitem:a3844a75d4e161b5c65763bc2a3409a3e" id="r_a3844a75d4e161b5c65763bc2a3409a3e"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a3844a75d4e161b5c65763bc2a3409a3e">getCurrentTime</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:a3844a75d4e161b5c65763bc2a3409a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current playback position of an audio instance.  <br /></td></tr>
+<tr class="memitem:ac3cad633512c445fe6888c6ca3a39162" id="r_ac3cad633512c445fe6888c6ca3a39162"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ac3cad633512c445fe6888c6ca3a39162">getDuration</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:ac3cad633512c445fe6888c6ca3a39162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the duration of an audio instance.  <br /></td></tr>
+<tr class="memitem:a3bd3d2a2f79eaee516612bf97832db99" id="r_a3bd3d2a2f79eaee516612bf97832db99"><td class="memItemLeft">static <a class="el" href="#a82cdf833b5d7a90f60d8d8fa638bea9e">AudioState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3bd3d2a2f79eaee516612bf97832db99">getState</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:a3bd3d2a2f79eaee516612bf97832db99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of an audio instance.  <br /></td></tr>
+<tr class="memitem:a831b0703fcb1079a3a3788481196c0d5" id="r_a831b0703fcb1079a3a3788481196c0d5"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a831b0703fcb1079a3a3788481196c0d5">setFinishCallback</a> (AudioId audioID, const std::function&lt; void(AudioId, std::string_view)&gt; &amp;callback)</td></tr>
+<tr class="memdesc:a831b0703fcb1079a3a3788481196c0d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback to be invoked when an audio instance has completed playing.  <br /></td></tr>
+<tr class="memitem:a0e7b2295fa0ffb87b663ad7e4719fb59" id="r_a0e7b2295fa0ffb87b663ad7e4719fb59"><td class="memItemLeft"><a id="a0e7b2295fa0ffb87b663ad7e4719fb59" name="a0e7b2295fa0ffb87b663ad7e4719fb59"></a>
+static int&#160;</td><td class="memItemRight"><b>getMaxAudioInstance</b> ()</td></tr>
+<tr class="memdesc:a0e7b2295fa0ffb87b663ad7e4719fb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the maximum number of simultaneous audio instance of <a class="el" href="../../d4/d5d/classax_1_1_audio_engine.html" title="Offers a interface to play audio.">AudioEngine</a>. <br /></td></tr>
+<tr class="memitem:a042c4b5c6027ebeee89fbb2fe76589ed" id="r_a042c4b5c6027ebeee89fbb2fe76589ed"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a042c4b5c6027ebeee89fbb2fe76589ed">setMaxAudioInstance</a> (int maxInstances)</td></tr>
+<tr class="memdesc:a042c4b5c6027ebeee89fbb2fe76589ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum number of simultaneous audio instance for <a class="el" href="../../d4/d5d/classax_1_1_audio_engine.html" title="Offers a interface to play audio.">AudioEngine</a>.  <br /></td></tr>
+<tr class="memitem:a3f0cc6c1aea73444ef9bbf7fd4367055" id="r_a3f0cc6c1aea73444ef9bbf7fd4367055"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3f0cc6c1aea73444ef9bbf7fd4367055">uncache</a> (std::string_view filePath)</td></tr>
+<tr class="memdesc:a3f0cc6c1aea73444ef9bbf7fd4367055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uncache the audio data from internal buffer.  <br /></td></tr>
+<tr class="memitem:affaba0c2353f9a47bfd068895408ae69" id="r_affaba0c2353f9a47bfd068895408ae69"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#affaba0c2353f9a47bfd068895408ae69">uncacheAll</a> ()</td></tr>
+<tr class="memdesc:affaba0c2353f9a47bfd068895408ae69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uncache all audio data from internal buffer.  <br /></td></tr>
+<tr class="memitem:a5b43d5999c5a860b29915ca7edd95cc4" id="r_a5b43d5999c5a860b29915ca7edd95cc4"><td class="memItemLeft">static AudioProfile *&#160;</td><td class="memItemRight"><a class="el" href="#a5b43d5999c5a860b29915ca7edd95cc4">getProfile</a> (AudioId audioID)</td></tr>
+<tr class="memdesc:a5b43d5999c5a860b29915ca7edd95cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the audio profile by id of audio instance.  <br /></td></tr>
+<tr class="memitem:a4ec9cf82a6404c0087af38c6351b021e" id="r_a4ec9cf82a6404c0087af38c6351b021e"><td class="memItemLeft">static AudioProfile *&#160;</td><td class="memItemRight"><a class="el" href="#a4ec9cf82a6404c0087af38c6351b021e">getProfile</a> (std::string_view profileName)</td></tr>
+<tr class="memdesc:a4ec9cf82a6404c0087af38c6351b021e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an audio profile by name.  <br /></td></tr>
+<tr class="memitem:ab70e930104d8e8767a4e4dd22e59d48a" id="r_ab70e930104d8e8767a4e4dd22e59d48a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ab70e930104d8e8767a4e4dd22e59d48a">preload</a> (std::string_view filePath)</td></tr>
+<tr class="memdesc:ab70e930104d8e8767a4e4dd22e59d48a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preload audio file.  <br /></td></tr>
+<tr class="memitem:a27267055c2ee9b10ae3cd5e53e060372" id="r_a27267055c2ee9b10ae3cd5e53e060372"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a27267055c2ee9b10ae3cd5e53e060372">preload</a> (std::string_view filePath, std::function&lt; void(bool isSuccess)&gt; callback)</td></tr>
+<tr class="memdesc:a27267055c2ee9b10ae3cd5e53e060372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preload audio file.  <br /></td></tr>
+<tr class="memitem:ae4a9c2dd545a4b87b5094db36217c976" id="r_ae4a9c2dd545a4b87b5094db36217c976"><td class="memItemLeft"><a id="ae4a9c2dd545a4b87b5094db36217c976" name="ae4a9c2dd545a4b87b5094db36217c976"></a>
+static int&#160;</td><td class="memItemRight"><b>getPlayingAudioCount</b> ()</td></tr>
+<tr class="memdesc:ae4a9c2dd545a4b87b5094db36217c976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets playing audio count. <br /></td></tr>
+<tr class="memitem:aa9b11d30f2728fd5363a57d59d059aec" id="r_aa9b11d30f2728fd5363a57d59d059aec"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa9b11d30f2728fd5363a57d59d059aec">setEnabled</a> (bool <a class="el" href="#a914a23c35eaf965b85a2401419e78f4e">isEnabled</a>)</td></tr>
+<tr class="memdesc:aa9b11d30f2728fd5363a57d59d059aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to enable playing audios.  <br /></td></tr>
+<tr class="memitem:a914a23c35eaf965b85a2401419e78f4e" id="r_a914a23c35eaf965b85a2401419e78f4e"><td class="memItemLeft"><a id="a914a23c35eaf965b85a2401419e78f4e" name="a914a23c35eaf965b85a2401419e78f4e"></a>
+static bool&#160;</td><td class="memItemRight"><b>isEnabled</b> ()</td></tr>
+<tr class="memdesc:a914a23c35eaf965b85a2401419e78f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether <a class="el" href="../../d4/d5d/classax_1_1_audio_engine.html" title="Offers a interface to play audio.">AudioEngine</a> is enabled. <br /></td></tr>
+<tr class="memitem:a2e14a570049129950b51e11faec7fbb7" id="r_a2e14a570049129950b51e11faec7fbb7"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2e14a570049129950b51e11faec7fbb7">setPan</a> (AudioId audioId, float value, float distance=-0.5f)</td></tr>
+<tr class="memdesc:a2e14a570049129950b51e11faec7fbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the pan of an audio instance.  <br /></td></tr>
+<tr class="memitem:a405ec424be98a41a8f1be06e152a254a" id="r_a405ec424be98a41a8f1be06e152a254a"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a405ec424be98a41a8f1be06e152a254a">getPan</a> (AudioId audioId)</td></tr>
+<tr class="memdesc:a405ec424be98a41a8f1be06e152a254a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pan of an audio instance.  <br /></td></tr>
+<tr class="memitem:a1bb5ed41248cc7df32e0a300044859c8" id="r_a1bb5ed41248cc7df32e0a300044859c8"><td class="memItemLeft">static <a class="el" href="../../d0/de0/classax_1_1_vec3.html">ax::Vec3</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1bb5ed41248cc7df32e0a300044859c8">getSourcePosition</a> (AudioId audioId)</td></tr>
+<tr class="memdesc:a1bb5ed41248cc7df32e0a300044859c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the audio source.  <br /></td></tr>
+<tr class="memitem:a1a46cd28c88ed17fbde76c807745cb13" id="r_a1a46cd28c88ed17fbde76c807745cb13"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a1a46cd28c88ed17fbde76c807745cb13">setSourcePosition</a> (AudioId audioId, const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">ax::Vec3</a> &amp;position)</td></tr>
+<tr class="memdesc:a1a46cd28c88ed17fbde76c807745cb13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the audio source.  <br /></td></tr>
+<tr class="memitem:a46bf221b4f27ef06fe87206451bf491d" id="r_a46bf221b4f27ef06fe87206451bf491d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a46bf221b4f27ef06fe87206451bf491d">setListenerPosition</a> (const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">ax::Vec3</a> &amp;position)</td></tr>
+<tr class="memdesc:a46bf221b4f27ef06fe87206451bf491d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the listener.  <br /></td></tr>
+<tr class="memitem:a289ed6a4f93d76fb6aa3747cbfaa9015" id="r_a289ed6a4f93d76fb6aa3747cbfaa9015"><td class="memItemLeft">static <a class="el" href="../../d0/de0/classax_1_1_vec3.html">ax::Vec3</a>&#160;</td><td class="memItemRight"><a class="el" href="#a289ed6a4f93d76fb6aa3747cbfaa9015">getListenerPosition</a> ()</td></tr>
+<tr class="memdesc:a289ed6a4f93d76fb6aa3747cbfaa9015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the listener.  <br /></td></tr>
+<tr class="memitem:a5b6ef1a7f31247a9bae2c9dca9156397" id="r_a5b6ef1a7f31247a9bae2c9dca9156397"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5b6ef1a7f31247a9bae2c9dca9156397">setDistanceScale</a> (float scale)</td></tr>
+<tr class="memdesc:a5b6ef1a7f31247a9bae2c9dca9156397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distance scale.  <br /></td></tr>
+<tr class="memitem:afdd3b0854f08c76ade23845d842184f6" id="r_afdd3b0854f08c76ade23845d842184f6"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#afdd3b0854f08c76ade23845d842184f6">getDistanceScale</a> ()</td></tr>
+<tr class="memdesc:afdd3b0854f08c76ade23845d842184f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the distance scale.  <br /></td></tr>
+<tr class="memitem:a67c6be060271bcb000fe7fecb8b15dee" id="r_a67c6be060271bcb000fe7fecb8b15dee"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a67c6be060271bcb000fe7fecb8b15dee">setReverbProperties</a> (AudioId audioId, const ReverbProperties *reverbProperties)</td></tr>
+<tr class="memdesc:a67c6be060271bcb000fe7fecb8b15dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets and enables reverb for an audio track.  <br /></td></tr>
+<tr class="memitem:a4afaed9aa6d669dcb935c706c67d5829" id="r_a4afaed9aa6d669dcb935c706c67d5829"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4afaed9aa6d669dcb935c706c67d5829">setHRTFEnabled</a> (bool enabled)</td></tr>
+<tr class="memdesc:a4afaed9aa6d669dcb935c706c67d5829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable HRTF.  <br /></td></tr>
+<tr class="memitem:acb6df2d38d3a45c8d487311b2c1e3329" id="r_acb6df2d38d3a45c8d487311b2c1e3329"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#acb6df2d38d3a45c8d487311b2c1e3329">isHRTFEnabled</a> ()</td></tr>
+<tr class="memdesc:acb6df2d38d3a45c8d487311b2c1e3329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if HRTF is enabled.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Offers a interface to play audio. </p>
+<dl class="section note"><dt>Note</dt><dd>Make sure to call <a class="el" href="#a37f5b0b22e759383dce4a78ddd05a3d4" title="Release objects relating to AudioEngine.">AudioEngine::end()</a> when the audio engine is not needed anymore to release resources. </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a37f5b0b22e759383dce4a78ddd05a3d4" name="a37f5b0b22e759383dce4a78ddd05a3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f5b0b22e759383dce4a78ddd05a3d4">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Release objects relating to <a class="el" href="../../d4/d5d/classax_1_1_audio_engine.html" title="Offers a interface to play audio.">AudioEngine</a>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>It must be called before the application exit. @lua endToLua </dd></dl>
+
+</div>
+</div>
+<a id="a587b5d75191fd246925e4bd306a7cfe5" name="a587b5d75191fd246925e4bd306a7cfe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587b5d75191fd246925e4bd306a7cfe5">&#9670;&#160;</a></span>getDefaultProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioProfile * getDefaultProfile </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the default profile of audio instances. </p>
+<dl class="section return"><dt>Returns</dt><dd>The default profile of audio instances. </dd></dl>
+
+</div>
+</div>
+<a id="a7db3c21d47bd6ec9a7d249349002994f" name="a7db3c21d47bd6ec9a7d249349002994f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db3c21d47bd6ec9a7d249349002994f">&#9670;&#160;</a></span>play2d() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioId play2d </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loop</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>volume</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AudioProfile *</td>          <td class="paramname"><span class="paramname"><em>profile</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Play 2d sound. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>The path of an audio file. </td></tr>
+    <tr><td class="paramname">loop</td><td>Whether audio instance loop or not. </td></tr>
+    <tr><td class="paramname">volume</td><td>Volume value (range from 0.0 to 1.0). </td></tr>
+    <tr><td class="paramname">profile</td><td>A profile for audio instance. When profile is not specified, default profile will be used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An audio ID. It allows you to dynamically change the behavior of an audio instance on the fly.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><span class="tt">AudioProfile</span> </dd></dl>
+
+</div>
+</div>
+<a id="ad1641ff7252daf491bc9ff806f76cff7" name="ad1641ff7252daf491bc9ff806f76cff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1641ff7252daf491bc9ff806f76cff7">&#9670;&#160;</a></span>play2d() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioId play2d </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AudioPlayerSettings &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AudioProfile *</td>          <td class="paramname"><span class="paramname"><em>profile</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Play 2d sound. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>The path of an audio file. </td></tr>
+    <tr><td class="paramname">settings</td><td>The player settings for audio. </td></tr>
+    <tr><td class="paramname">profile</td><td>A profile for audio instance. When profile is not specified, default profile will be used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An audio ID. It allows you to dynamically change the behavior of an audio instance on the fly.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><span class="tt">AudioProfile</span>, <span class="tt">AudioPlayerSettings</span> </dd></dl>
+
+</div>
+</div>
+<a id="a4a0e66ca3e10306e56089d07d282dee7" name="a4a0e66ca3e10306e56089d07d282dee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0e66ca3e10306e56089d07d282dee7">&#9670;&#160;</a></span>play3d() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioId play3d </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loop</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>volume</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AudioProfile *</td>          <td class="paramname"><span class="paramname"><em>profile</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Play sound in 3d space. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>The path of an audio file. </td></tr>
+    <tr><td class="paramname">position</td><td>Position of audio source relative to listener </td></tr>
+    <tr><td class="paramname">loop</td><td>Whether audio instance loop or not. </td></tr>
+    <tr><td class="paramname">volume</td><td>Volume value (range from 0.0 to 1.0). </td></tr>
+    <tr><td class="paramname">profile</td><td>A profile for audio instance. When profile is not specified, default profile will be used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An audio ID. It allows you to dynamically change the behavior of an audio instance on the fly.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><span class="tt">AudioProfile</span> </dd></dl>
+
+</div>
+</div>
+<a id="af23404bcc1dd91a2eccf2e40578929d4" name="af23404bcc1dd91a2eccf2e40578929d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23404bcc1dd91a2eccf2e40578929d4">&#9670;&#160;</a></span>play3d() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioId play3d </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AudioPlayerSettings &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AudioProfile *</td>          <td class="paramname"><span class="paramname"><em>profile</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Play sound in 3d space. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>The path of an audio file. </td></tr>
+    <tr><td class="paramname">settings</td><td>The player settings for audio. </td></tr>
+    <tr><td class="paramname">profile</td><td>A profile for audio instance. When profile is not specified, default profile will be used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An audio ID. It allows you to dynamically change the behavior of an audio instance on the fly.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><span class="tt">AudioProfile</span>, <span class="tt">AudioPlayerSettings</span> </dd></dl>
+
+</div>
+</div>
+<a id="ae3ad25e17c7ea4ced0b199333bf67321" name="ae3ad25e17c7ea4ced0b199333bf67321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3ad25e17c7ea4ced0b199333bf67321">&#9670;&#160;</a></span>setLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setLoop </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loop</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether an audio instance loop or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+    <tr><td class="paramname">loop</td><td>Whether audio instance loop or not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0a8f4521bcb513e7b0e8ab470b8468a" name="ae0a8f4521bcb513e7b0e8ab470b8468a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0a8f4521bcb513e7b0e8ab470b8468a">&#9670;&#160;</a></span>isLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isLoop </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks whether an audio instance is loop. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not an audio instance is loop. </dd></dl>
+
+</div>
+</div>
+<a id="a9cd99eaf873b251239fefcd61049ab5b" name="a9cd99eaf873b251239fefcd61049ab5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd99eaf873b251239fefcd61049ab5b">&#9670;&#160;</a></span>setVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setVolume </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>volume</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets volume for an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+    <tr><td class="paramname">volume</td><td>Volume value (range from 0.0 to 1.0). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab5cd94ccd4fa9d6fd0ae8c6f27872bbf" name="ab5cd94ccd4fa9d6fd0ae8c6f27872bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5cd94ccd4fa9d6fd0ae8c6f27872bbf">&#9670;&#160;</a></span>getVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getVolume </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the volume value of an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Volume value (range from 0.0 to 1.0). </dd></dl>
+
+</div>
+</div>
+<a id="a723f2d908ddfcedd220d6b45df9a25b2" name="a723f2d908ddfcedd220d6b45df9a25b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723f2d908ddfcedd220d6b45df9a25b2">&#9670;&#160;</a></span>setPitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPitch </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets pitch for an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+    <tr><td class="paramname">pitch</td><td>Volume value (range from 0.5 to 2.0). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae3f2d1c4f0ee2a7901949e0220eb3d6b" name="ae3f2d1c4f0ee2a7901949e0220eb3d6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3f2d1c4f0ee2a7901949e0220eb3d6b">&#9670;&#160;</a></span>getPitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getPitch </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the volume value of an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pitch value (range from 0.5 to 2.0). </dd></dl>
+
+</div>
+</div>
+<a id="a0f64c4ecc2d2397799dddf9df3633cf9" name="a0f64c4ecc2d2397799dddf9df3633cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f64c4ecc2d2397799dddf9df3633cf9">&#9670;&#160;</a></span>pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pause </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pause an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6476f6386792d6e7ff6489adc2cf2607" name="a6476f6386792d6e7ff6489adc2cf2607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6476f6386792d6e7ff6489adc2cf2607">&#9670;&#160;</a></span>resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resume </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resume an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee3a5552c1ef2fae5126321b6e50dc6e" name="aee3a5552c1ef2fae5126321b6e50dc6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3a5552c1ef2fae5126321b6e50dc6e">&#9670;&#160;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stop </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a48cd8be35a1d2b6a2b925f4722967456" name="a48cd8be35a1d2b6a2b925f4722967456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48cd8be35a1d2b6a2b925f4722967456">&#9670;&#160;</a></span>setCurrentTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setCurrentTime </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sec</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the current playback position of an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+    <tr><td class="paramname">sec</td><td>The offset in seconds from the start to seek to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a3844a75d4e161b5c65763bc2a3409a3e" name="a3844a75d4e161b5c65763bc2a3409a3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3844a75d4e161b5c65763bc2a3409a3e">&#9670;&#160;</a></span>getCurrentTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getCurrentTime </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current playback position of an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The current playback position of an audio instance. </dd></dl>
+
+</div>
+</div>
+<a id="ac3cad633512c445fe6888c6ca3a39162" name="ac3cad633512c445fe6888c6ca3a39162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3cad633512c445fe6888c6ca3a39162">&#9670;&#160;</a></span>getDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getDuration </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the duration of an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The duration of an audio instance. </dd></dl>
+
+</div>
+</div>
+<a id="a3bd3d2a2f79eaee516612bf97832db99" name="a3bd3d2a2f79eaee516612bf97832db99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd3d2a2f79eaee516612bf97832db99">&#9670;&#160;</a></span>getState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a82cdf833b5d7a90f60d8d8fa638bea9e">AudioState</a> getState </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the state of an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The status of an audio instance. </dd></dl>
+
+</div>
+</div>
+<a id="a831b0703fcb1079a3a3788481196c0d5" name="a831b0703fcb1079a3a3788481196c0d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831b0703fcb1079a3a3788481196c0d5">&#9670;&#160;</a></span>setFinishCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFinishCallback </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; void(AudioId, std::string_view)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register a callback to be invoked when an audio instance has completed playing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a042c4b5c6027ebeee89fbb2fe76589ed" name="a042c4b5c6027ebeee89fbb2fe76589ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042c4b5c6027ebeee89fbb2fe76589ed">&#9670;&#160;</a></span>setMaxAudioInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setMaxAudioInstance </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxInstances</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the maximum number of simultaneous audio instance for <a class="el" href="../../d4/d5d/classax_1_1_audio_engine.html" title="Offers a interface to play audio.">AudioEngine</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">maxInstances</td><td>The maximum number of simultaneous audio instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3f0cc6c1aea73444ef9bbf7fd4367055" name="a3f0cc6c1aea73444ef9bbf7fd4367055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0cc6c1aea73444ef9bbf7fd4367055">&#9670;&#160;</a></span>uncache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uncache </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Uncache the audio data from internal buffer. </p>
+<p><a class="el" href="../../d4/d5d/classax_1_1_audio_engine.html" title="Offers a interface to play audio.">AudioEngine</a> cache audio data on ios,mac, and win32 platform.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This can lead to stop related audio first. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>Audio file path. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="affaba0c2353f9a47bfd068895408ae69" name="affaba0c2353f9a47bfd068895408ae69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affaba0c2353f9a47bfd068895408ae69">&#9670;&#160;</a></span>uncacheAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uncacheAll </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Uncache all audio data from internal buffer. </p>
+<dl class="section warning"><dt>Warning</dt><dd>All audio will be stopped first. </dd></dl>
+
+</div>
+</div>
+<a id="a5b43d5999c5a860b29915ca7edd95cc4" name="a5b43d5999c5a860b29915ca7edd95cc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b43d5999c5a860b29915ca7edd95cc4">&#9670;&#160;</a></span>getProfile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioProfile * getProfile </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the audio profile by id of audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioID</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The audio profile. </dd></dl>
+
+</div>
+</div>
+<a id="a4ec9cf82a6404c0087af38c6351b021e" name="a4ec9cf82a6404c0087af38c6351b021e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec9cf82a6404c0087af38c6351b021e">&#9670;&#160;</a></span>getProfile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioProfile * getProfile </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>profileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets an audio profile by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">profileName</td><td>A name of audio profile. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The audio profile. </dd></dl>
+
+</div>
+</div>
+<a id="ab70e930104d8e8767a4e4dd22e59d48a" name="ab70e930104d8e8767a4e4dd22e59d48a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70e930104d8e8767a4e4dd22e59d48a">&#9670;&#160;</a></span>preload() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void preload </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Preload audio file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>The file path of an audio. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27267055c2ee9b10ae3cd5e53e060372" name="a27267055c2ee9b10ae3cd5e53e060372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27267055c2ee9b10ae3cd5e53e060372">&#9670;&#160;</a></span>preload() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void preload </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(bool isSuccess)&gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Preload audio file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>The file path of an audio. </td></tr>
+    <tr><td class="paramname">callback</td><td>A callback which will be called after loading is finished. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa9b11d30f2728fd5363a57d59d059aec" name="aa9b11d30f2728fd5363a57d59d059aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b11d30f2728fd5363a57d59d059aec">&#9670;&#160;</a></span>setEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isEnabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to enable playing audios. </p>
+<dl class="section note"><dt>Note</dt><dd>If it's disabled, current playing audios will be stopped and the later 'preload', 'play2d' methods will take no effects. </dd></dl>
+
+</div>
+</div>
+<a id="a2e14a570049129950b51e11faec7fbb7" name="a2e14a570049129950b51e11faec7fbb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e14a570049129950b51e11faec7fbb7">&#9670;&#160;</a></span>setPan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPan </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>distance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-0.5f</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the pan of an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioId</td><td>An audioID returned by the play2d function. </td></tr>
+    <tr><td class="paramname">value</td><td>Panning value, from -1.f to +1.f, representing -60 degrees to +60 degrees </td></tr>
+    <tr><td class="paramname">distance</td><td>Distance from source, with -0.5f being the default </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a405ec424be98a41a8f1be06e152a254a" name="a405ec424be98a41a8f1be06e152a254a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a405ec424be98a41a8f1be06e152a254a">&#9670;&#160;</a></span>getPan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getPan </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the pan of an audio instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioId</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pan value as a float between -1.0f to +1.0f </dd></dl>
+
+</div>
+</div>
+<a id="a1bb5ed41248cc7df32e0a300044859c8" name="a1bb5ed41248cc7df32e0a300044859c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bb5ed41248cc7df32e0a300044859c8">&#9670;&#160;</a></span>getSourcePosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/de0/classax_1_1_vec3.html">ax::Vec3</a> getSourcePosition </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the position of the audio source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioId</td><td>An audioID returned by the play2d function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d0/de0/classax_1_1_vec3.html" title="Defines a 3-element floating point vector.">Vec3</a> position of source </dd></dl>
+
+</div>
+</div>
+<a id="a1a46cd28c88ed17fbde76c807745cb13" name="a1a46cd28c88ed17fbde76c807745cb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a46cd28c88ed17fbde76c807745cb13">&#9670;&#160;</a></span>setSourcePosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSourcePosition </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">ax::Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>position</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the position of the audio source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioId</td><td>An audioID returned by the play2d function. </td></tr>
+    <tr><td class="paramname">position</td><td>position of source </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a46bf221b4f27ef06fe87206451bf491d" name="a46bf221b4f27ef06fe87206451bf491d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46bf221b4f27ef06fe87206451bf491d">&#9670;&#160;</a></span>setListenerPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setListenerPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">ax::Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the position of the listener. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>position of listener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a289ed6a4f93d76fb6aa3747cbfaa9015" name="a289ed6a4f93d76fb6aa3747cbfaa9015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a289ed6a4f93d76fb6aa3747cbfaa9015">&#9670;&#160;</a></span>getListenerPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/de0/classax_1_1_vec3.html">ax::Vec3</a> getListenerPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the position of the listener. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d0/de0/classax_1_1_vec3.html" title="Defines a 3-element floating point vector.">Vec3</a> position of listener </dd></dl>
+
+</div>
+</div>
+<a id="a5b6ef1a7f31247a9bae2c9dca9156397" name="a5b6ef1a7f31247a9bae2c9dca9156397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b6ef1a7f31247a9bae2c9dca9156397">&#9670;&#160;</a></span>setDistanceScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setDistanceScale </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the distance scale. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>used for 3D audio source to listener calculations. Default is 1.0f, and must be greater than 0.f. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afdd3b0854f08c76ade23845d842184f6" name="afdd3b0854f08c76ade23845d842184f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd3b0854f08c76ade23845d842184f6">&#9670;&#160;</a></span>getDistanceScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getDistanceScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the distance scale. </p>
+<dl class="section return"><dt>Returns</dt><dd>float distance used for 3D audio source to listener calculations </dd></dl>
+
+</div>
+</div>
+<a id="a67c6be060271bcb000fe7fecb8b15dee" name="a67c6be060271bcb000fe7fecb8b15dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c6be060271bcb000fe7fecb8b15dee">&#9670;&#160;</a></span>setReverbProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setReverbProperties </td>
+          <td>(</td>
+          <td class="paramtype">AudioId</td>          <td class="paramname"><span class="paramname"><em>audioId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ReverbProperties *</td>          <td class="paramname"><span class="paramname"><em>reverbProperties</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets and enables reverb for an audio track. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioId</td><td>An audioID returned by the play2d function. </td></tr>
+    <tr><td class="paramname">reverbProperties</td><td>The pointer to reverb effect settings. If this is nullptr, then reverb effect will be disabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4afaed9aa6d669dcb935c706c67d5829" name="a4afaed9aa6d669dcb935c706c67d5829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4afaed9aa6d669dcb935c706c67d5829">&#9670;&#160;</a></span>setHRTFEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setHRTFEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable or disable HRTF. </p>
+<p>Controls whether Head-Related Transfer Function is used for spatial audio. Default is disabled.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>true to enable, false to disable.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This API only has effect when using openal-soft. On WebAssembly builds it is a no-op. </dd></dl>
+
+</div>
+</div>
+<a id="acb6df2d38d3a45c8d487311b2c1e3329" name="acb6df2d38d3a45c8d487311b2c1e3329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb6df2d38d3a45c8d487311b2c1e3329">&#9670;&#160;</a></span>isHRTFEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isHRTFEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if HRTF is enabled. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if enabled, false otherwise. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>AudioEngine.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../d4/d5d/classax_1_1_audio_engine.html">AudioEngine</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

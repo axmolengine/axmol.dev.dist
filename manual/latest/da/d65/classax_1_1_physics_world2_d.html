@@ -1,0 +1,864 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: PhysicsWorld2D Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('da/d65/classax_1_1_physics_world2_d.html','../../','db/d10/classax_1_1_physics_world2_d-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PhysicsWorld2D Class Reference<div class="ingroups"><a class="el" href="../../d4/d0d/group__physics.html">Physics</a> &raquo; <a class="el" href="../../d0/d2f/group__physics__2d.html">Physics 2D</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>An <a class="el" href="../../da/d65/classax_1_1_physics_world2_d.html" title="An PhysicsWorld2D object simulates collisions and other physical properties.">PhysicsWorld2D</a> object simulates collisions and other physical properties.  
+ <a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9815e81fcba1996f9d813e7c0ba77f0e" id="r_a9815e81fcba1996f9d813e7c0ba77f0e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9815e81fcba1996f9d813e7c0ba77f0e">isGlobalEventEnabled</a> (ContactEventBits events) const</td></tr>
+<tr class="memdesc:a9815e81fcba1996f9d813e7c0ba77f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether specific collision events are globally enabled in this physics world.  <br /></td></tr>
+<tr class="memitem:afc18d38e72b3ea318c75f31deee5bad8" id="r_afc18d38e72b3ea318c75f31deee5bad8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc18d38e72b3ea318c75f31deee5bad8">setGlobalEventEnabled</a> (ContactEventBits events, bool enabled)</td></tr>
+<tr class="memdesc:afc18d38e72b3ea318c75f31deee5bad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable specific collision events globally in this physics world.  <br /></td></tr>
+<tr class="memitem:ac3ed67896f7c0d5a2c5b0d134dbb4955" id="r_ac3ed67896f7c0d5a2c5b0d134dbb4955"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac3ed67896f7c0d5a2c5b0d134dbb4955">setPreSolveCallback</a> (PreSolveCallback cb)</td></tr>
+<tr class="memdesc:ac3ed67896f7c0d5a2c5b0d134dbb4955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the PreSolve callback for the 2D physics world.  <br /></td></tr>
+<tr class="memitem:a2b5e01be50708a52d494d96b808eaacb" id="r_a2b5e01be50708a52d494d96b808eaacb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b5e01be50708a52d494d96b808eaacb">rayCast</a> (<a class="el" href="../../d3/d6b/namespaceax.html#a13217958d5cc79a91de6d1e5760a019c">RayCastHitCallback2D</a> func, const <a class="el" href="../../db/d09/structax_1_1_ray2_d.html">Ray2D</a> &amp;ray, void *data=nullptr)</td></tr>
+<tr class="memdesc:a2b5e01be50708a52d494d96b808eaacb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for physics shapes that intersects the ray.  <br /></td></tr>
+<tr class="memitem:af17e1f76651912a370f78784c530400e" id="r_af17e1f76651912a370f78784c530400e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af17e1f76651912a370f78784c530400e">overlapBox</a> (PhysicsQueryCallback2D func, const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;rect, void *data)</td></tr>
+<tr class="memdesc:af17e1f76651912a370f78784c530400e"><td class="mdescLeft">&#160;</td><td class="mdescRight">f Enumerates all physics shapes whose bounding box overlaps the specified rectangle.  <br /></td></tr>
+<tr class="memitem:a60fda6c0972de74b65ab9e14913f27c5" id="r_a60fda6c0972de74b65ab9e14913f27c5"><td class="memItemLeft">Collider2D *&#160;</td><td class="memItemRight"><a class="el" href="#a60fda6c0972de74b65ab9e14913f27c5">overlapBox</a> (const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;rect) const</td></tr>
+<tr class="memdesc:a60fda6c0972de74b65ab9e14913f27c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nearest physics shape whose bounding box overlaps the specified rectangle.  <br /></td></tr>
+<tr class="memitem:a9da2ef842188272f96c4ad16e39e4926" id="r_a9da2ef842188272f96c4ad16e39e4926"><td class="memItemLeft">Vector&lt; Collider2D * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9da2ef842188272f96c4ad16e39e4926">overlapBoxAll</a> (const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;rect) const</td></tr>
+<tr class="memdesc:a9da2ef842188272f96c4ad16e39e4926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all physics shapes whose bounding box overlaps the specified rectangle.  <br /></td></tr>
+<tr class="memitem:a7ec84021a8b738da8f9926376be96603" id="r_a7ec84021a8b738da8f9926376be96603"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7ec84021a8b738da8f9926376be96603">overlapPoint</a> (PhysicsQueryCallback2D func, const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;point, void *data)</td></tr>
+<tr class="memdesc:a7ec84021a8b738da8f9926376be96603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates all physics shapes that contain the specified point.  <br /></td></tr>
+<tr class="memitem:ab10a73864baa92a953ebb50fb89c9c0e" id="r_ab10a73864baa92a953ebb50fb89c9c0e"><td class="memItemLeft">Collider2D *&#160;</td><td class="memItemRight"><a class="el" href="#ab10a73864baa92a953ebb50fb89c9c0e">overlapPoint</a> (const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;point) const</td></tr>
+<tr class="memdesc:ab10a73864baa92a953ebb50fb89c9c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nearest physics shape that contains the specified point.  <br /></td></tr>
+<tr class="memitem:a652c485e0e111e506a0561a2d959c1b4" id="r_a652c485e0e111e506a0561a2d959c1b4"><td class="memItemLeft">Vector&lt; Collider2D * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a652c485e0e111e506a0561a2d959c1b4">overlapPointAll</a> (const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;point) const</td></tr>
+<tr class="memdesc:a652c485e0e111e506a0561a2d959c1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all physics shapes that contain the specified point.  <br /></td></tr>
+<tr class="memitem:a0c36c4965240371f43c896f8d6af7feb" id="r_a0c36c4965240371f43c896f8d6af7feb"><td class="memItemLeft">Scene *&#160;</td><td class="memItemRight"><a class="el" href="#a0c36c4965240371f43c896f8d6af7feb">getScene</a> () const</td></tr>
+<tr class="memdesc:a0c36c4965240371f43c896f8d6af7feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a scene contain this physics world.  <br /></td></tr>
+<tr class="memitem:a6cf5fd48c09a8379e78fd594e5644be2" id="r_a6cf5fd48c09a8379e78fd594e5644be2"><td class="memItemLeft"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6cf5fd48c09a8379e78fd594e5644be2">getGravity</a> () const</td></tr>
+<tr class="memdesc:a6cf5fd48c09a8379e78fd594e5644be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the gravity value of this physics world.  <br /></td></tr>
+<tr class="memitem:a1a13a6b62c26de2d0549d062533fbd99" id="r_a1a13a6b62c26de2d0549d062533fbd99"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1a13a6b62c26de2d0549d062533fbd99">setGravity</a> (const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;gravity)</td></tr>
+<tr class="memdesc:a1a13a6b62c26de2d0549d062533fbd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the gravity value of this physics world.  <br /></td></tr>
+<tr class="memitem:a5466c67c5ec22359c0702dc4ac8ffb19" id="r_a5466c67c5ec22359c0702dc4ac8ffb19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5466c67c5ec22359c0702dc4ac8ffb19">setSpeed</a> (float speed)</td></tr>
+<tr class="memdesc:a5466c67c5ec22359c0702dc4ac8ffb19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the speed of this physics world.  <br /></td></tr>
+<tr class="memitem:a26ebefde7fe71954e6c1282255951b7d" id="r_a26ebefde7fe71954e6c1282255951b7d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a26ebefde7fe71954e6c1282255951b7d">getSpeed</a> ()</td></tr>
+<tr class="memdesc:a26ebefde7fe71954e6c1282255951b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the speed of this physics world.  <br /></td></tr>
+<tr class="memitem:aa96afb43bdbfee368bc538fbd48d5b4d" id="r_aa96afb43bdbfee368bc538fbd48d5b4d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa96afb43bdbfee368bc538fbd48d5b4d">setSubsteps</a> (int steps)</td></tr>
+<tr class="memdesc:aa96afb43bdbfee368bc538fbd48d5b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the number of substeps in an update of the physics world.  <br /></td></tr>
+<tr class="memitem:aa799b125ea2ed821ab308dadf19af28e" id="r_aa799b125ea2ed821ab308dadf19af28e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa799b125ea2ed821ab308dadf19af28e">getSubsteps</a> () const</td></tr>
+<tr class="memdesc:aa799b125ea2ed821ab308dadf19af28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of substeps of this physics world.  <br /></td></tr>
+<tr class="memitem:a53b9b253151d469d6099ebcf93fc23af" id="r_a53b9b253151d469d6099ebcf93fc23af"><td class="memItemLeft"><a id="a53b9b253151d469d6099ebcf93fc23af" name="a53b9b253151d469d6099ebcf93fc23af"></a>
+void&#160;</td><td class="memItemRight"><b>setPreUpdateCallback</b> (const std::function&lt; void()&gt; &amp;callback)</td></tr>
+<tr class="memdesc:a53b9b253151d469d6099ebcf93fc23af"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the callback which invoked before update of each object in physics world. <br /></td></tr>
+<tr class="memitem:aac8ce61ebfb55ba86f88a71552eb13fe" id="r_aac8ce61ebfb55ba86f88a71552eb13fe"><td class="memItemLeft"><a id="aac8ce61ebfb55ba86f88a71552eb13fe" name="aac8ce61ebfb55ba86f88a71552eb13fe"></a>
+void&#160;</td><td class="memItemRight"><b>setPostUpdateCallback</b> (const std::function&lt; void()&gt; &amp;callback)</td></tr>
+<tr class="memdesc:aac8ce61ebfb55ba86f88a71552eb13fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the callback which invoked after update of each object in physics world. <br /></td></tr>
+<tr class="memitem:a029ec560f6031c49dae7c3dac3468943" id="r_a029ec560f6031c49dae7c3dac3468943"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a029ec560f6031c49dae7c3dac3468943">setAutoStep</a> (bool autoStep)</td></tr>
+<tr class="memdesc:a029ec560f6031c49dae7c3dac3468943"><td class="mdescLeft">&#160;</td><td class="mdescRight">To control the step of physics.  <br /></td></tr>
+<tr class="memitem:a85085244fa358c1b4901bdf4df43459a" id="r_a85085244fa358c1b4901bdf4df43459a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a85085244fa358c1b4901bdf4df43459a">isAutoStep</a> ()</td></tr>
+<tr class="memdesc:a85085244fa358c1b4901bdf4df43459a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the auto step of this physics world.  <br /></td></tr>
+<tr class="memitem:ab8c84bda8dd8a08942a0549e6cb0c79b" id="r_ab8c84bda8dd8a08942a0549e6cb0c79b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab8c84bda8dd8a08942a0549e6cb0c79b">stepSimulation</a> (float delta)</td></tr>
+<tr class="memdesc:ab8c84bda8dd8a08942a0549e6cb0c79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the physics simulation by one step.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a99c0469252d977f04059bb84fb644ba4" id="r_a99c0469252d977f04059bb84fb644ba4"><td class="memItemLeft"><a id="a99c0469252d977f04059bb84fb644ba4" name="a99c0469252d977f04059bb84fb644ba4"></a>
+static const int&#160;</td><td class="memItemRight"><b>DEBUGDRAW_NONE</b></td></tr>
+<tr class="memdesc:a99c0469252d977f04059bb84fb644ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw nothing <br /></td></tr>
+<tr class="memitem:a903cb21b952649e9c33bfa526b28a304" id="r_a903cb21b952649e9c33bfa526b28a304"><td class="memItemLeft"><a id="a903cb21b952649e9c33bfa526b28a304" name="a903cb21b952649e9c33bfa526b28a304"></a>
+static const int&#160;</td><td class="memItemRight"><b>DEBUGDRAW_SHAPE</b></td></tr>
+<tr class="memdesc:a903cb21b952649e9c33bfa526b28a304"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw shapes <br /></td></tr>
+<tr class="memitem:a6ec68b9f031513e057ea54d721f32c46" id="r_a6ec68b9f031513e057ea54d721f32c46"><td class="memItemLeft"><a id="a6ec68b9f031513e057ea54d721f32c46" name="a6ec68b9f031513e057ea54d721f32c46"></a>
+static const int&#160;</td><td class="memItemRight"><b>DEBUGDRAW_JOINT</b></td></tr>
+<tr class="memdesc:a6ec68b9f031513e057ea54d721f32c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw joints <br /></td></tr>
+<tr class="memitem:a3f93d5231a2951fe2e35d3f3c8c62651" id="r_a3f93d5231a2951fe2e35d3f3c8c62651"><td class="memItemLeft"><a id="a3f93d5231a2951fe2e35d3f3c8c62651" name="a3f93d5231a2951fe2e35d3f3c8c62651"></a>
+static const int&#160;</td><td class="memItemRight"><b>DEBUGDRAW_CONTACT</b></td></tr>
+<tr class="memdesc:a3f93d5231a2951fe2e35d3f3c8c62651"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw contact <br /></td></tr>
+<tr class="memitem:a591c301b8f410599d4edb4d6fc525e46" id="r_a591c301b8f410599d4edb4d6fc525e46"><td class="memItemLeft"><a id="a591c301b8f410599d4edb4d6fc525e46" name="a591c301b8f410599d4edb4d6fc525e46"></a>
+static const int&#160;</td><td class="memItemRight"><b>DEBUGDRAW_ALL</b></td></tr>
+<tr class="memdesc:a591c301b8f410599d4edb4d6fc525e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw all <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An <a class="el" href="../../da/d65/classax_1_1_physics_world2_d.html" title="An PhysicsWorld2D object simulates collisions and other physical properties.">PhysicsWorld2D</a> object simulates collisions and other physical properties. </p>
+<p>You do not create <a class="el" href="../../da/d65/classax_1_1_physics_world2_d.html" title="An PhysicsWorld2D object simulates collisions and other physical properties.">PhysicsWorld2D</a> objects directly; instead, you can get it from an Scene object. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a9815e81fcba1996f9d813e7c0ba77f0e" name="a9815e81fcba1996f9d813e7c0ba77f0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9815e81fcba1996f9d813e7c0ba77f0e">&#9670;&#160;</a></span>isGlobalEventEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isGlobalEventEnabled </td>
+          <td>(</td>
+          <td class="paramtype">ContactEventBits</td>          <td class="paramname"><span class="paramname"><em>events</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check whether specific collision events are globally enabled in this physics world. </p>
+<p>This method verifies if the given event bits are allowed by the world's global event mask. Even if a collider enables these events locally, they will only take effect if the world also permits them.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">events</td><td>Collision event bits to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if all specified events are enabled globally, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="afc18d38e72b3ea318c75f31deee5bad8" name="afc18d38e72b3ea318c75f31deee5bad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc18d38e72b3ea318c75f31deee5bad8">&#9670;&#160;</a></span>setGlobalEventEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setGlobalEventEnabled </td>
+          <td>(</td>
+          <td class="paramtype">ContactEventBits</td>          <td class="paramname"><span class="paramname"><em>events</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable or disable specific collision events globally in this physics world. </p>
+<p>This modifies the world's global event mask by turning on or off the specified event bits. Colliders can only generate these events if they are enabled both locally and globally.</p>
+<dl class="section note"><dt>Note</dt><dd>This setting should be applied before any rigid-body components are added to nodes, because global event state cannot be changed at runtime once rigidbodies are active. By default, all global collision events are disabled (mask = 0).</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">events</td><td>Collision event bits to modify. </td></tr>
+    <tr><td class="paramname">enabled</td><td>True to enable the specified events globally, false to disable them. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac3ed67896f7c0d5a2c5b0d134dbb4955" name="ac3ed67896f7c0d5a2c5b0d134dbb4955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ed67896f7c0d5a2c5b0d134dbb4955">&#9670;&#160;</a></span>setPreSolveCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPreSolveCallback </td>
+          <td>(</td>
+          <td class="paramtype">PreSolveCallback</td>          <td class="paramname"><span class="paramname"><em>cb</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the PreSolve callback for the 2D physics world. </p>
+<p>The PreSolve callback is invoked before constraint resolution, allowing the user to decide whether a contact should be accepted or rejected. This mimics Box2D-style PreSolve behavior.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>User-provided callback function with signature: <span class="tt">bool(const ContactInfo2D&amp;)</span><ul>
+<li>Return true to accept the contact.</li>
+<li>Return false to reject the contact.</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>PreSolve callbacks are potentially dangerous:<ul>
+<li>Avoid race conditions and shared state modifications.</li>
+<li>Do not perform blocking or long-running operations.</li>
+<li>Execution order of multiple callbacks is not guaranteed, which may lead to non-deterministic behavior.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If no callback is set, all contacts are accepted by default. </dd></dl>
+
+</div>
+</div>
+<a id="a2b5e01be50708a52d494d96b808eaacb" name="a2b5e01be50708a52d494d96b808eaacb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b5e01be50708a52d494d96b808eaacb">&#9670;&#160;</a></span>rayCast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rayCast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d6b/namespaceax.html#a13217958d5cc79a91de6d1e5760a019c">RayCastHitCallback2D</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d09/structax_1_1_ray2_d.html">Ray2D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Searches for physics shapes that intersects the ray. </p>
+<p>Query this physics world along the line segment from start to end. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>Func is called for each shape found. </td></tr>
+    <tr><td class="paramname">start</td><td>A <a class="el" href="../../d3/d6f/classax_1_1_vec2.html" title="Defines a 2-element floating point vector.">Vec2</a> object contains the begin position of the ray. </td></tr>
+    <tr><td class="paramname">end</td><td>A <a class="el" href="../../d3/d6f/classax_1_1_vec2.html" title="Defines a 2-element floating point vector.">Vec2</a> object contains the end position of the ray. </td></tr>
+    <tr><td class="paramname">data</td><td>User defined data, it is passed to func. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af17e1f76651912a370f78784c530400e" name="af17e1f76651912a370f78784c530400e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af17e1f76651912a370f78784c530400e">&#9670;&#160;</a></span>overlapBox() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void overlapBox </td>
+          <td>(</td>
+          <td class="paramtype">PhysicsQueryCallback2D</td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>f Enumerates all physics shapes whose bounding box overlaps the specified rectangle. </p>
+<p>Queries the physics world for shapes intersecting the given rect. For each overlapping shape, the provided callback function is invoked.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>Callback function executed for each overlapping shape. </td></tr>
+    <tr><td class="paramname">rect</td><td>Rectangle region (x, y, width, height) used for overlap testing. </td></tr>
+    <tr><td class="paramname">data</td><td>User-defined data passed to the callback. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a60fda6c0972de74b65ab9e14913f27c5" name="a60fda6c0972de74b65ab9e14913f27c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60fda6c0972de74b65ab9e14913f27c5">&#9670;&#160;</a></span>overlapBox() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Collider2D * overlapBox </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the nearest physics shape whose bounding box overlaps the specified rectangle. </p>
+<p>Queries the physics world at the given rect and finds the closest shape that intersects it. If no shape overlaps the rect, nullptr is returned.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>Rectangle region (x, y, width, height) used for overlap testing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the nearest <a class="el" href="../../d4/ddb/classax_1_1_collider2_d.html" title="A shape for body.">Collider2D</a> overlapping the rect, or nullptr if none were found. </dd></dl>
+
+</div>
+</div>
+<a id="a9da2ef842188272f96c4ad16e39e4926" name="a9da2ef842188272f96c4ad16e39e4926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9da2ef842188272f96c4ad16e39e4926">&#9670;&#160;</a></span>overlapBoxAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt; Collider2D * &gt; overlapBoxAll </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all physics shapes whose bounding box overlaps the specified rectangle. </p>
+<p>Queries the physics world and collects every shape intersecting the given rect into a vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>Rectangle region (x, y, width, height) used for overlap testing. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of <a class="el" href="../../d4/ddb/classax_1_1_collider2_d.html" title="A shape for body.">Collider2D</a> pointers representing all shapes overlapping the rect. </dd></dl>
+
+</div>
+</div>
+<a id="a7ec84021a8b738da8f9926376be96603" name="a7ec84021a8b738da8f9926376be96603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec84021a8b738da8f9926376be96603">&#9670;&#160;</a></span>overlapPoint() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void overlapPoint </td>
+          <td>(</td>
+          <td class="paramtype">PhysicsQueryCallback2D</td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerates all physics shapes that contain the specified point. </p>
+<p>Queries the physics world for shapes covering the given point. For each shape that contains the point, the provided callback function is invoked.</p>
+<dl class="section attention"><dt>Attention</dt><dd>The point must lie inside at least one shape to trigger callbacks.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>Callback function executed for each shape containing the point. </td></tr>
+    <tr><td class="paramname">point</td><td>Position of the point to test. </td></tr>
+    <tr><td class="paramname">data</td><td>User-defined data passed to the callback. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab10a73864baa92a953ebb50fb89c9c0e" name="ab10a73864baa92a953ebb50fb89c9c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab10a73864baa92a953ebb50fb89c9c0e">&#9670;&#160;</a></span>overlapPoint() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Collider2D * overlapPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the nearest physics shape that contains the specified point. </p>
+<p>Queries the physics world at the given point and finds the closest shape that covers it. If no shape contains the point, nullptr is returned.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Position of the point to test. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the nearest <a class="el" href="../../d4/ddb/classax_1_1_collider2_d.html" title="A shape for body.">Collider2D</a> containing the point, or nullptr if none were found. </dd></dl>
+
+</div>
+</div>
+<a id="a652c485e0e111e506a0561a2d959c1b4" name="a652c485e0e111e506a0561a2d959c1b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652c485e0e111e506a0561a2d959c1b4">&#9670;&#160;</a></span>overlapPointAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt; Collider2D * &gt; overlapPointAll </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all physics shapes that contain the specified point. </p>
+<p>Queries the physics world and collects every shape covering the given point into a vector.</p>
+<dl class="section attention"><dt>Attention</dt><dd>The point must lie inside at least one shape to produce results.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Position of the point to test. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of <a class="el" href="../../d4/ddb/classax_1_1_collider2_d.html" title="A shape for body.">Collider2D</a> pointers representing all shapes that contain the point. </dd></dl>
+
+</div>
+</div>
+<a id="a0c36c4965240371f43c896f8d6af7feb" name="a0c36c4965240371f43c896f8d6af7feb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c36c4965240371f43c896f8d6af7feb">&#9670;&#160;</a></span>getScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene * getScene </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a scene contain this physics world. </p>
+<dl class="section attention"><dt>Attention</dt><dd>This value is initialized in constructor </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A Scene object reference. </dd></dl>
+
+</div>
+</div>
+<a id="a6cf5fd48c09a8379e78fd594e5644be2" name="a6cf5fd48c09a8379e78fd594e5644be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf5fd48c09a8379e78fd594e5644be2">&#9670;&#160;</a></span>getGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> getGravity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the gravity value of this physics world. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d3/d6f/classax_1_1_vec2.html" title="Defines a 2-element floating point vector.">Vec2</a> object. </dd></dl>
+
+</div>
+</div>
+<a id="a1a13a6b62c26de2d0549d062533fbd99" name="a1a13a6b62c26de2d0549d062533fbd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a13a6b62c26de2d0549d062533fbd99">&#9670;&#160;</a></span>setGravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setGravity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>gravity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set the gravity value of this physics world. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gravity</td><td>A gravity value of this physics world. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5466c67c5ec22359c0702dc4ac8ffb19" name="a5466c67c5ec22359c0702dc4ac8ffb19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5466c67c5ec22359c0702dc4ac8ffb19">&#9670;&#160;</a></span>setSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the speed of this physics world. </p>
+<dl class="section attention"><dt>Attention</dt><dd>if you setAutoStep(false), this won't work. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speed</td><td>A float number. Speed is the rate at which the simulation executes. default value is 1.0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a26ebefde7fe71954e6c1282255951b7d" name="a26ebefde7fe71954e6c1282255951b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ebefde7fe71954e6c1282255951b7d">&#9670;&#160;</a></span>getSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getSpeed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the speed of this physics world. </p>
+<dl class="section return"><dt>Returns</dt><dd>A float number. </dd></dl>
+
+</div>
+</div>
+<a id="aa96afb43bdbfee368bc538fbd48d5b4d" name="aa96afb43bdbfee368bc538fbd48d5b4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa96afb43bdbfee368bc538fbd48d5b4d">&#9670;&#160;</a></span>setSubsteps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSubsteps </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>steps</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set the number of substeps in an update of the physics world. </p>
+<p>One physics update will be divided into several substeps to increase its accuracy. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">steps</td><td>An integer number, default value is 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa799b125ea2ed821ab308dadf19af28e" name="aa799b125ea2ed821ab308dadf19af28e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa799b125ea2ed821ab308dadf19af28e">&#9670;&#160;</a></span>getSubsteps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getSubsteps </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of substeps of this physics world. </p>
+<dl class="section return"><dt>Returns</dt><dd>An integer number. </dd></dl>
+
+</div>
+</div>
+<a id="a029ec560f6031c49dae7c3dac3468943" name="a029ec560f6031c49dae7c3dac3468943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a029ec560f6031c49dae7c3dac3468943">&#9670;&#160;</a></span>setAutoStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAutoStep </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>autoStep</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To control the step of physics. </p>
+<p>If you want control it by yourself( fixed-timestep for example ), you can set this to false and call step by yourself. </p><dl class="section attention"><dt>Attention</dt><dd>If you set auto step to false, setSpeed setSubsteps won't works, you need to control the time step by yourself. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">autoStep</td><td>A bool object, default value is true. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a85085244fa358c1b4901bdf4df43459a" name="a85085244fa358c1b4901bdf4df43459a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85085244fa358c1b4901bdf4df43459a">&#9670;&#160;</a></span>isAutoStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isAutoStep </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the auto step of this physics world. </p>
+<dl class="section return"><dt>Returns</dt><dd>A bool object. </dd></dl>
+
+</div>
+</div>
+<a id="ab8c84bda8dd8a08942a0549e6cb0c79b" name="ab8c84bda8dd8a08942a0549e6cb0c79b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c84bda8dd8a08942a0549e6cb0c79b">&#9670;&#160;</a></span>stepSimulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stepSimulation </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>delta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Advances the physics simulation by one step. </p>
+<p>By default, the physics world runs with auto-step enabled, and this function is called automatically each frame. If you disable auto-step via setAutoStep(false), you must call this function manually to update the simulation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta</td><td>The time step (in seconds) to simulate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>PhysicsWorld2D.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../da/d65/classax_1_1_physics_world2_d.html">PhysicsWorld2D</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

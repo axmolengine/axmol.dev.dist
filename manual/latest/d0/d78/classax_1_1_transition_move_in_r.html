@@ -1,0 +1,288 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: TransitionMoveInR Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d0/d78/classax_1_1_transition_move_in_r.html','../../','d7/d7d/classax_1_1_transition_move_in_r-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TransitionMoveInR Class Reference<div class="ingroups"><a class="el" href="../../d0/dc7/group____2d.html">2D Nodes</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="../../d0/d78/classax_1_1_transition_move_in_r.html" title="TransitionMoveInR: Move in from to the right the incoming scene.">TransitionMoveInR</a>: Move in from to the right the incoming scene.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;Transition.h&gt;</code></p>
+
+<p>Inherits <a class="el" href="../../d7/df3/classax_1_1_transition_move_in_l.html">TransitionMoveInL</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0f7ce0372d5f4adefa55c2e80ee902c8" id="r_a0f7ce0372d5f4adefa55c2e80ee902c8"><td class="memItemLeft">static TransitionMoveInR *&#160;</td><td class="memItemRight"><a class="el" href="#a0f7ce0372d5f4adefa55c2e80ee902c8">create</a> (float t, Scene *scene)</td></tr>
+<tr class="memdesc:a0f7ce0372d5f4adefa55c2e80ee902c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a transition with duration and incoming scene.  <br /></td></tr>
+<tr class="inherit_header pub_static_methods_classax_1_1_transition_move_in_l"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classax_1_1_transition_move_in_l')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="../../d7/df3/classax_1_1_transition_move_in_l.html">TransitionMoveInL</a></td></tr>
+<tr class="memitem:a07c7303cf01476e459724004c2a5ae0a inherit pub_static_methods_classax_1_1_transition_move_in_l" id="r_a07c7303cf01476e459724004c2a5ae0a"><td class="memItemLeft">static TransitionMoveInL *&#160;</td><td class="memItemRight"><a class="el" href="../../d7/df3/classax_1_1_transition_move_in_l.html#a07c7303cf01476e459724004c2a5ae0a">create</a> (float t, Scene *scene)</td></tr>
+<tr class="memdesc:a07c7303cf01476e459724004c2a5ae0a inherit pub_static_methods_classax_1_1_transition_move_in_l"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a transition with duration and incoming scene.  <br /></td></tr>
+<tr class="inherit_header pub_static_methods_classax_1_1_transition_scene"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classax_1_1_transition_scene')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="../../da/d04/classax_1_1_transition_scene.html">TransitionScene</a></td></tr>
+<tr class="memitem:a4a4eb9e68c5a17b032a60c9550ae4e2d inherit pub_static_methods_classax_1_1_transition_scene" id="r_a4a4eb9e68c5a17b032a60c9550ae4e2d"><td class="memItemLeft">static TransitionScene *&#160;</td><td class="memItemRight"><a class="el" href="../../da/d04/classax_1_1_transition_scene.html#a4a4eb9e68c5a17b032a60c9550ae4e2d">create</a> (float t, Scene *scene)</td></tr>
+<tr class="memdesc:a4a4eb9e68c5a17b032a60c9550ae4e2d inherit pub_static_methods_classax_1_1_transition_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a base transition with duration and incoming scene.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classax_1_1_transition_scene"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classax_1_1_transition_scene')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="../../da/d04/classax_1_1_transition_scene.html">TransitionScene</a></td></tr>
+<tr class="memitem:a871118a09520247c78a71ecd7b0abd58 inherit pub_types_classax_1_1_transition_scene" id="r_a871118a09520247c78a71ecd7b0abd58"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="../../da/d04/classax_1_1_transition_scene.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> { <a class="el" href="../../da/d04/classax_1_1_transition_scene.html#a871118a09520247c78a71ecd7b0abd58a839da9577687c48229e41e8fd12d12f2">LEFT_OVER</a> = 0
+, <a class="el" href="../../da/d04/classax_1_1_transition_scene.html#a871118a09520247c78a71ecd7b0abd58a40645d58a8968385e751b7f694e95a7f">RIGHT_OVER</a> = 1
+, <a class="el" href="../../da/d04/classax_1_1_transition_scene.html#a871118a09520247c78a71ecd7b0abd58ac7ad4d776e5cc4020b6e518cc6ce7b74">UP_OVER</a> = 0
+, <a class="el" href="../../da/d04/classax_1_1_transition_scene.html#a871118a09520247c78a71ecd7b0abd58a3591c0ef551a9e701b6d0a4b5fe6679c">DOWN_OVER</a> = 1
+ }</td></tr>
+<tr class="memdesc:a871118a09520247c78a71ecd7b0abd58"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d04/classax_1_1_transition_scene.html#a871118a09520247c78a71ecd7b0abd58" title="Orientation Type used by some transitions.">Orientation</a> Type used by some transitions.  <a href="../../da/d04/classax_1_1_transition_scene.html#a871118a09520247c78a71ecd7b0abd58">More...</a><br /></td></tr>
+<tr class="inherit_header pub_methods_classax_1_1_transition_move_in_l"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classax_1_1_transition_move_in_l')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d7/df3/classax_1_1_transition_move_in_l.html">TransitionMoveInL</a></td></tr>
+<tr class="memitem:a1c5ef138969f1169dea3fd92c1c909c8 inherit pub_methods_classax_1_1_transition_move_in_l" id="r_a1c5ef138969f1169dea3fd92c1c909c8"><td class="memItemLeft">virtual <a class="el" href="../../d4/dc0/classax_1_1_action_interval.html">ActionInterval</a> *&#160;</td><td class="memItemRight"><a class="el" href="../../d7/df3/classax_1_1_transition_move_in_l.html#a1c5ef138969f1169dea3fd92c1c909c8">action</a> ()</td></tr>
+<tr class="memdesc:a1c5ef138969f1169dea3fd92c1c909c8 inherit pub_methods_classax_1_1_transition_move_in_l"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the action that will be performed.  <br /></td></tr>
+<tr class="memitem:a45fdba568c415f3b7ce117ba98af0856 inherit pub_methods_classax_1_1_transition_move_in_l" id="r_a45fdba568c415f3b7ce117ba98af0856"><td class="memItemLeft"><a class="el" href="../../d4/dc0/classax_1_1_action_interval.html">ActionInterval</a> *&#160;</td><td class="memItemRight"><a class="el" href="../../d7/df3/classax_1_1_transition_move_in_l.html#a45fdba568c415f3b7ce117ba98af0856">easeActionWithAction</a> (<a class="el" href="../../d4/dc0/classax_1_1_action_interval.html">ActionInterval</a> *<a class="el" href="../../d7/df3/classax_1_1_transition_move_in_l.html#a1c5ef138969f1169dea3fd92c1c909c8">action</a>) override</td></tr>
+<tr class="memdesc:a45fdba568c415f3b7ce117ba98af0856 inherit pub_methods_classax_1_1_transition_move_in_l"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Ease action that will be performed on a linear action.  <br /></td></tr>
+<tr class="memitem:a7d49ce0b97da59c8470b2e731365064d inherit pub_methods_classax_1_1_transition_move_in_l" id="r_a7d49ce0b97da59c8470b2e731365064d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d7/df3/classax_1_1_transition_move_in_l.html#a7d49ce0b97da59c8470b2e731365064d">onEnter</a> () override</td></tr>
+<tr class="memdesc:a7d49ce0b97da59c8470b2e731365064d inherit pub_methods_classax_1_1_transition_move_in_l"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/db6/classax_1_1_event.html" title="Base class of all kinds of events.">Event</a> callback that is invoked every time when <a class="el" href="../../df/da2/classax_1_1_node.html" title="Node is the base element of the Scene Graph.">Node</a> enters the 'stage'.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classax_1_1_transition_scene"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classax_1_1_transition_scene')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../da/d04/classax_1_1_transition_scene.html">TransitionScene</a></td></tr>
+<tr class="memitem:a6dfe1abe0d1eb3ddc1ca081de98b5342 inherit pub_methods_classax_1_1_transition_scene" id="r_a6dfe1abe0d1eb3ddc1ca081de98b5342"><td class="memItemLeft">
+void&#160;</td><td class="memItemRight"><b>finish</b> ()</td></tr>
+<tr class="memdesc:a6dfe1abe0d1eb3ddc1ca081de98b5342 inherit pub_methods_classax_1_1_transition_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after a transition finishes. <br /></td></tr>
+<tr class="memitem:a76bc78896b64ff3b919f281b2298bff4 inherit pub_methods_classax_1_1_transition_scene" id="r_a76bc78896b64ff3b919f281b2298bff4"><td class="memItemLeft">
+void&#160;</td><td class="memItemRight"><b>hideOutShowIn</b> ()</td></tr>
+<tr class="memdesc:a76bc78896b64ff3b919f281b2298bff4 inherit pub_methods_classax_1_1_transition_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by some transitions to hide the outer scene. <br /></td></tr>
+<tr class="memitem:a34bebf00ac4bc2d346c8f37b66cfa190 inherit pub_methods_classax_1_1_transition_scene" id="r_a34bebf00ac4bc2d346c8f37b66cfa190"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../da/d04/classax_1_1_transition_scene.html#a34bebf00ac4bc2d346c8f37b66cfa190">draw</a> (const SceneRenderState &amp;state, const <a class="el" href="../../d8/d6e/classax_1_1_mat4.html">Mat4</a> &amp;transform, uint32_t flags) override</td></tr>
+<tr class="memdesc:a34bebf00ac4bc2d346c8f37b66cfa190 inherit pub_methods_classax_1_1_transition_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to draw your own node.  <br /></td></tr>
+<tr class="memitem:a7d49ce0b97da59c8470b2e731365064d inherit pub_methods_classax_1_1_transition_scene" id="r_a7d49ce0b97da59c8470b2e731365064d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../da/d04/classax_1_1_transition_scene.html#a7d49ce0b97da59c8470b2e731365064d">onEnter</a> () override</td></tr>
+<tr class="memdesc:a7d49ce0b97da59c8470b2e731365064d inherit pub_methods_classax_1_1_transition_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/db6/classax_1_1_event.html" title="Base class of all kinds of events.">Event</a> callback that is invoked every time when <a class="el" href="../../df/da2/classax_1_1_node.html" title="Node is the base element of the Scene Graph.">Node</a> enters the 'stage'.  <br /></td></tr>
+<tr class="memitem:aa8479fb5be2ae5398ebaf3ff15401dc3 inherit pub_methods_classax_1_1_transition_scene" id="r_aa8479fb5be2ae5398ebaf3ff15401dc3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../da/d04/classax_1_1_transition_scene.html#aa8479fb5be2ae5398ebaf3ff15401dc3">onExit</a> () override</td></tr>
+<tr class="memdesc:aa8479fb5be2ae5398ebaf3ff15401dc3 inherit pub_methods_classax_1_1_transition_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/db6/classax_1_1_event.html" title="Base class of all kinds of events.">Event</a> callback that is invoked every time the <a class="el" href="../../df/da2/classax_1_1_node.html" title="Node is the base element of the Scene Graph.">Node</a> leaves the 'stage'.  <br /></td></tr>
+<tr class="memitem:a6116e1a8965cfa1112b2ec004230aa39 inherit pub_methods_classax_1_1_transition_scene" id="r_a6116e1a8965cfa1112b2ec004230aa39"><td class="memItemLeft">
+void&#160;</td><td class="memItemRight"><b>cleanup</b> () override</td></tr>
+<tr class="memdesc:a6116e1a8965cfa1112b2ec004230aa39 inherit pub_methods_classax_1_1_transition_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops all running actions and schedulers. <br /></td></tr>
+<tr class="memitem:a0444d492d91150c36368b13d927e2fe6 inherit pub_methods_classax_1_1_transition_scene" id="r_a0444d492d91150c36368b13d927e2fe6"><td class="memItemLeft">
+bool&#160;</td><td class="memItemRight"><b>initWithDuration</b> (float t, Scene *scene)</td></tr>
+<tr class="memdesc:a0444d492d91150c36368b13d927e2fe6 inherit pub_methods_classax_1_1_transition_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializes a transition with duration and incoming scene <br /></td></tr>
+<tr class="inherit_header pub_methods_classax_1_1_transition_ease_scene"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classax_1_1_transition_ease_scene')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d7/d48/classax_1_1_transition_ease_scene.html">TransitionEaseScene</a></td></tr>
+<tr class="memitem:a4362cd9c6aecbdb746bb25696ea94791 inherit pub_methods_classax_1_1_transition_ease_scene" id="r_a4362cd9c6aecbdb746bb25696ea94791"><td class="memItemLeft">
+virtual&#160;</td><td class="memItemRight"><b>~TransitionEaseScene</b> ()</td></tr>
+<tr class="memdesc:a4362cd9c6aecbdb746bb25696ea94791 inherit pub_methods_classax_1_1_transition_ease_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="../../d0/d78/classax_1_1_transition_move_in_r.html" title="TransitionMoveInR: Move in from to the right the incoming scene.">TransitionMoveInR</a>: Move in from to the right the incoming scene. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a0f7ce0372d5f4adefa55c2e80ee902c8" name="a0f7ce0372d5f4adefa55c2e80ee902c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7ce0372d5f4adefa55c2e80ee902c8">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TransitionMoveInR * create </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Scene *</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a transition with duration and incoming scene. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Duration time, in seconds. </td></tr>
+    <tr><td class="paramname">scene</td><td>A given scene. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A autoreleased <a class="el" href="../../d0/d78/classax_1_1_transition_move_in_r.html" title="TransitionMoveInR: Move in from to the right the incoming scene.">TransitionMoveInR</a> object. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>Transition.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../d0/d78/classax_1_1_transition_move_in_r.html">TransitionMoveInR</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

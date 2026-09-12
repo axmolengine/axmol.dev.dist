@@ -1,0 +1,248 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: PointerInputState Struct Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d6/de7/structax_1_1_pointer_input_state.html','../../','d7/da5/structax_1_1_pointer_input_state-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PointerInputState Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Internal representation of raw pointer input from the platform.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;Event.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a7c9d5a356f12e39ed436f29c42d2e336" id="r_a7c9d5a356f12e39ed436f29c42d2e336"><td class="memItemLeft"><a id="a7c9d5a356f12e39ed436f29c42d2e336" name="a7c9d5a356f12e39ed436f29c42d2e336"></a>
+intptr_t&#160;</td><td class="memItemRight"><b>id</b> {-1}</td></tr>
+<tr class="memdesc:a7c9d5a356f12e39ed436f29c42d2e336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique identifier for the pointer (platform-provided or mapped). <br /></td></tr>
+<tr class="memitem:ac870e1249bab4a2a68cc4126761d24ef" id="r_ac870e1249bab4a2a68cc4126761d24ef"><td class="memItemLeft"><a id="ac870e1249bab4a2a68cc4126761d24ef" name="ac870e1249bab4a2a68cc4126761d24ef"></a>
+float&#160;</td><td class="memItemRight"><b>pressure</b> {1.0f}</td></tr>
+<tr class="memdesc:ac870e1249bab4a2a68cc4126761d24ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw pressure value reported by the platform (if available). <br /></td></tr>
+<tr class="memitem:a5476c2e51127dc708fbf60925f3f6a56" id="r_a5476c2e51127dc708fbf60925f3f6a56"><td class="memItemLeft"><a id="a5476c2e51127dc708fbf60925f3f6a56" name="a5476c2e51127dc708fbf60925f3f6a56"></a>
+int32_t&#160;</td><td class="memItemRight"><b>button</b> {<a class="el" href="../../dc/d5f/structax_1_1_input_button.html#afdf6cd1e93b82ec0c46989e2fe8e54aeac9d3e887722f2bc482bcca9d41c512af">InputButton::None</a>}</td></tr>
+<tr class="memdesc:a5476c2e51127dc708fbf60925f3f6a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggering button index (0..n-1), or -1 when none (touch / no button). <br /></td></tr>
+<tr class="memitem:a31898f7227c3446c35ba06a8a2836feb" id="r_a31898f7227c3446c35ba06a8a2836feb"><td class="memItemLeft"><a id="a31898f7227c3446c35ba06a8a2836feb" name="a31898f7227c3446c35ba06a8a2836feb"></a>
+uint32_t&#160;</td><td class="memItemRight"><b>pressedButtons</b> {0}</td></tr>
+<tr class="memdesc:a31898f7227c3446c35ba06a8a2836feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitmask of currently pressed buttons; bit i corresponds to button index i. <br /></td></tr>
+<tr class="memitem:a2e83f2f439967fa794f2c57833172aa8" id="r_a2e83f2f439967fa794f2c57833172aa8"><td class="memItemLeft"><a id="a2e83f2f439967fa794f2c57833172aa8" name="a2e83f2f439967fa794f2c57833172aa8"></a>
+PointerType&#160;</td><td class="memItemRight"><b>type</b> {PointerType::Mouse}</td></tr>
+<tr class="memdesc:a2e83f2f439967fa794f2c57833172aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of pointer (Mouse, Touch, Pen). <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Internal representation of raw pointer input from the platform. </p>
+<p>This structure is used internally by the <a class="el" href="../../d6/d0f/classax_1_1_input_system.html" title="Input Method Edit Message Dispatcher.">InputSystem</a> to capture native input events (touch, mouse, pen, etc.) coming from the OS or windowing layer. Fields contain unprocessed, screen-space values and raw attributes such as pointer id, button index, pressed-button bitmask and pressure.</p>
+<dl class="section note"><dt>Note</dt><dd>Pointer id rules:<ul>
+<li>Touch / Pen: non-negative integer ids assigned per active contact by the platform.</li>
+<li>Mouse: the identifier is set to 0.</li>
+</ul>
+</dd>
+<dd>
+Button semantics:<ul>
+<li>The <code>button</code> field is a single button index indicating which button triggered this event. It uses the convention:<ul>
+<li>-1 (<a class="el" href="../../dc/d5f/structax_1_1_input_button.html#afdf6cd1e93b82ec0c46989e2fe8e54aeac9d3e887722f2bc482bcca9d41c512af" title="No button triggered (touch or no-button event).">InputButton::None</a>) =&gt; no button triggered (e.g., touch or pure move)</li>
+<li>0..n-1 =&gt; button index (0 typically = left, 1 = right, 2 = middle)</li>
+</ul>
+</li>
+<li>For PointerMove events the <code>button</code> value MUST be -1.</li>
+<li>Use <code>pressedButtons</code> to inspect the current set of pressed buttons.</li>
+</ul>
+</dd>
+<dd>
+pressedButtons bitmask:<ul>
+<li>Each bit corresponds to a button index: bit i represents whether button index i is currently pressed (1 = pressed, 0 = released).</li>
+<li>Example:<ul>
+<li>bit 0 (1u &lt;&lt; 0) =&gt; left button</li>
+<li>bit 1 (1u &lt;&lt; 1) =&gt; right button</li>
+<li>bit 2 (1u &lt;&lt; 2) =&gt; middle button</li>
+</ul>
+</li>
+<li>For touch events, <code>pressedButtons</code> is typically 0.</li>
+</ul>
+</dd>
+<dd>
+Coordinate / transform:<ul>
+<li>Values <code>x</code> and <code>y</code> are raw native screen-space coordinates. The <a class="el" href="../../d6/d0f/classax_1_1_input_system.html" title="Input Method Edit Message Dispatcher.">InputSystem</a> is responsible for applying input scaling and transforming these into engine/view coordinates before constructing and dispatching a higher-level <a class="el" href="../../d9/dc8/classax_1_1_pointer_event.html" title="Pointer event.">PointerEvent</a> to listeners.</li>
+</ul>
+</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This type is internal to the input pipeline and should not be exposed directly to user code or public APIs. </dd></dl>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><b>Event.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../d6/de7/structax_1_1_pointer_input_state.html">PointerInputState</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

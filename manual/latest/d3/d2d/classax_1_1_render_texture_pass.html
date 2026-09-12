@@ -1,0 +1,604 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: RenderTexturePass Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d3/d2d/classax_1_1_render_texture_pass.html','../../','d2/df9/classax_1_1_render_texture_pass-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RenderTexturePass Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Manages an offscreen render pass into a <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a>.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;RenderTexturePass.h&gt;</code></p>
+
+<p>Inherits <a class="el" href="../../d0/d25/classax_1_1_object.html">Object</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a05382354b4bab43b8edd41bd5b7cd6b6" id="r_a05382354b4bab43b8edd41bd5b7cd6b6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a05382354b4bab43b8edd41bd5b7cd6b6">setCameraOverrideEnabled</a> (bool enabled)</td></tr>
+<tr class="memdesc:a05382354b4bab43b8edd41bd5b7cd6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables automatic camera adjustment for this pass.  <br /></td></tr>
+<tr class="memitem:abb99ef037961c77db716c44fd7013991" id="r_abb99ef037961c77db716c44fd7013991"><td class="memItemLeft"><a id="abb99ef037961c77db716c44fd7013991" name="abb99ef037961c77db716c44fd7013991"></a>
+bool&#160;</td><td class="memItemRight"><b>isCameraOverrideEnabled</b> () const</td></tr>
+<tr class="memdesc:abb99ef037961c77db716c44fd7013991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether this pass automatically overrides the visiting camera. <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Target</div></td></tr>
+<tr class="memitem:a2c98e69e74842aa19441f2a4d74517ad" id="r_a2c98e69e74842aa19441f2a4d74517ad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2c98e69e74842aa19441f2a4d74517ad">setTarget</a> (<a class="el" href="../../db/db7/classax_1_1_render_texture.html">RenderTexture</a> *rt)</td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Viewport</div></td></tr>
+<tr class="memitem:af4e9e70d688cee37eff310680f053296" id="r_af4e9e70d688cee37eff310680f053296"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af4e9e70d688cee37eff310680f053296">setViewport</a> (std::optional&lt; Viewport &gt; vp)</td></tr>
+<tr class="memitem:aabdb7afd30be64c1081a5e18fc8f95db" id="r_aabdb7afd30be64c1081a5e18fc8f95db"><td class="memItemLeft">Viewport&#160;</td><td class="memItemRight"><a class="el" href="#aabdb7afd30be64c1081a5e18fc8f95db">makeVirtualViewport</a> (const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;rtBegin, const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;fullRect, const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;fullViewport) const</td></tr>
+<tr class="memdesc:aabdb7afd30be64c1081a5e18fc8f95db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a virtual viewport rectangle for rendering into a <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a>.  <br /></td></tr>
+<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Lifecycle</div></td></tr>
+<tr class="memitem:adf8c9009c80cd23b34e0508bcbf9e29b" id="r_adf8c9009c80cd23b34e0508bcbf9e29b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b">begin</a> (const <a class="el" href="../../d6/dca/classax_1_1_camera.html">Camera</a> *camera=nullptr)</td></tr>
+<tr class="memdesc:adf8c9009c80cd23b34e0508bcbf9e29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin offscreen rendering.  <br /></td></tr>
+<tr class="memitem:aaf81d3fdaf258088d7692fa70cece087" id="r_aaf81d3fdaf258088d7692fa70cece087"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaf81d3fdaf258088d7692fa70cece087">end</a> ()</td></tr>
+<tr class="memdesc:aaf81d3fdaf258088d7692fa70cece087"><td class="mdescLeft">&#160;</td><td class="mdescRight">End offscreen rendering.  <br /></td></tr>
+<tr id="pub-methods-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Clear (must be called between begin() / end())</div></td></tr>
+<tr class="memitem:a297a0e9155d90a025879ee1e4a3baa4e" id="r_a297a0e9155d90a025879ee1e4a3baa4e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a297a0e9155d90a025879ee1e4a3baa4e">clear</a> (ClearFlag flags, const <a class="el" href="../../d6/d36/structax_1_1_clear_value.html">ClearValue</a> &amp;value=<a class="el" href="../../d6/d36/structax_1_1_clear_value.html">ClearValue</a>{})</td></tr>
+<tr class="memdesc:a297a0e9155d90a025879ee1e4a3baa4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the active render target.  <br /></td></tr>
+<tr class="memitem:a594a316cb55bd81bde5240f348b73c2f" id="r_a594a316cb55bd81bde5240f348b73c2f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a594a316cb55bd81bde5240f348b73c2f">clearColor</a> (const <a class="el" href="../../d2/da7/structax_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memdesc:a594a316cb55bd81bde5240f348b73c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear color buffer only.  <br /></td></tr>
+<tr class="memitem:a65e0ecda4d0d8f0acf96e6593e6d3f21" id="r_a65e0ecda4d0d8f0acf96e6593e6d3f21"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a65e0ecda4d0d8f0acf96e6593e6d3f21">clearDepth</a> (float depth)</td></tr>
+<tr class="memdesc:a65e0ecda4d0d8f0acf96e6593e6d3f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear depth buffer only.  <br /></td></tr>
+<tr class="memitem:a858182a2ffef62f2b0738c643407b2c0" id="r_a858182a2ffef62f2b0738c643407b2c0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a858182a2ffef62f2b0738c643407b2c0">clearStencil</a> (unsigned int stencil)</td></tr>
+<tr class="memdesc:a858182a2ffef62f2b0738c643407b2c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear stencil buffer only.  <br /></td></tr>
+<tr class="memitem:a36040fb3bfc4858f79890a86078ae66e" id="r_a36040fb3bfc4858f79890a86078ae66e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a36040fb3bfc4858f79890a86078ae66e">clearAll</a> (const <a class="el" href="../../d6/d36/structax_1_1_clear_value.html">ClearValue</a> &amp;value=<a class="el" href="../../d6/d36/structax_1_1_clear_value.html">ClearValue</a>{})</td></tr>
+<tr class="memdesc:a36040fb3bfc4858f79890a86078ae66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all buffers (color|depth|stencil).  <br /></td></tr>
+<tr class="inherit_header pub_methods_classax_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classax_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d0/d25/classax_1_1_object.html">Object</a></td></tr>
+<tr class="memitem:a24888ae1fe9df2d329c9b485807cb62b inherit pub_methods_classax_1_1_object" id="r_a24888ae1fe9df2d329c9b485807cb62b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a24888ae1fe9df2d329c9b485807cb62b">retain</a> ()</td></tr>
+<tr class="memdesc:a24888ae1fe9df2d329c9b485807cb62b inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retains the ownership.  <br /></td></tr>
+<tr class="memitem:a23b477d0e2d399f75d585d154c346591 inherit pub_methods_classax_1_1_object" id="r_a23b477d0e2d399f75d585d154c346591"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a23b477d0e2d399f75d585d154c346591">release</a> ()</td></tr>
+<tr class="memdesc:a23b477d0e2d399f75d585d154c346591 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the ownership immediately.  <br /></td></tr>
+<tr class="memitem:a8c10c4318ad9f6d71f24f5185e4b8512 inherit pub_methods_classax_1_1_object" id="r_a8c10c4318ad9f6d71f24f5185e4b8512"><td class="memItemLeft">Object *&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a8c10c4318ad9f6d71f24f5185e4b8512">autorelease</a> ()</td></tr>
+<tr class="memdesc:a8c10c4318ad9f6d71f24f5185e4b8512 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the ownership sometime soon automatically.  <br /></td></tr>
+<tr class="memitem:a00f5c543c1504195eb40b1dcc4d1e794 inherit pub_methods_classax_1_1_object" id="r_a00f5c543c1504195eb40b1dcc4d1e794"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a00f5c543c1504195eb40b1dcc4d1e794">getReferenceCount</a> () const</td></tr>
+<tr class="memdesc:a00f5c543c1504195eb40b1dcc4d1e794 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d0/d25/classax_1_1_object.html" title="Object is used for reference count management.">Object</a>'s current reference count.  <br /></td></tr>
+<tr class="memitem:aece2eba33dcdef9be4fee125d74dda92 inherit pub_methods_classax_1_1_object" id="r_aece2eba33dcdef9be4fee125d74dda92"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#aece2eba33dcdef9be4fee125d74dda92">getObjectID</a> () const noexcept</td></tr>
+<tr class="memdesc:aece2eba33dcdef9be4fee125d74dda92 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the process-local diagnostic identifier assigned at construction.  <br /></td></tr>
+<tr class="memitem:ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5 inherit pub_methods_classax_1_1_object" id="r_ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5">~Object</a> ()</td></tr>
+<tr class="memdesc:ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a70d5fa2b17b3e2d2b7acb1cbddec904b" id="r_a70d5fa2b17b3e2d2b7acb1cbddec904b"><td class="memItemLeft">static RenderTexturePass *&#160;</td><td class="memItemRight"><a class="el" href="#a70d5fa2b17b3e2d2b7acb1cbddec904b">obtain</a> (<a class="el" href="../../db/db7/classax_1_1_render_texture.html">RenderTexture</a> *rt=nullptr)</td></tr>
+<tr class="memdesc:a70d5fa2b17b3e2d2b7acb1cbddec904b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a new render texture pass instance (ref count 1, does not enter autorelease pool).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages an offscreen render pass into a <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a>. </p>
+<p><a class="el" href="../../d3/d2d/classax_1_1_render_texture_pass.html" title="Manages an offscreen render pass into a RenderTexture.">RenderTexturePass</a> is a lightweight helper that brackets a group of renderer commands between <a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a> and <a class="el" href="#aaf81d3fdaf258088d7692fa70cece087" title="End offscreen rendering.">end()</a>. Commands submitted while the pass is active are recorded into a dedicated renderer group. When that group is executed, the pass saves the current render target and viewport, binds the <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a>'s render target, optionally applies a custom viewport, and restores the previous state at the end of the group.</p>
+<p>This class is intentionally not a render target resource. It does not own the <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a>, does not traverse a scene by itself, and does not flush the renderer automatically. Callers are responsible for submitting draw commands between <a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a> and <a class="el" href="#aaf81d3fdaf258088d7692fa70cece087" title="End offscreen rendering.">end()</a>, then flushing the renderer at an appropriate time.</p>
+<h1 class="doxsection"><a class="anchor" id="Command"></a>
+ordering</h1>
+<p>Axmol's renderer does not execute commands strictly in submission order. Render queues are sorted by type and global order; in particular, 3D commands may be processed before regular GLOBALZ_ZERO commands. For this reason, the internal begin callback must be scheduled with an early global order, and the internal end callback must be scheduled with a late global order. This guarantees that all commands submitted between <a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a> and <a class="el" href="#aaf81d3fdaf258088d7692fa70cece087" title="End offscreen rendering.">end()</a>, including 3D, 2D, debug draw, and custom commands, are executed while the <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a> is bound.</p>
+<p>The <a class="el" href="#a297a0e9155d90a025879ee1e4a3baa4e" title="Clear the active render target.">clear()</a> helpers are also scheduled after the render target has been bound and before normal draw commands, so they clear the intended <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a> rather than the previously active render target.</p>
+<h1 class="doxsection"><a class="anchor" id="Y-axis"></a>
+consistency across graphics backends</h1>
+<p>On OpenGL, offscreen FBO textures have a bottom-left origin, while D3D, Metal, and Vulkan use a top-left origin. When automatic Y flipping is enabled, this pass can flip the selected camera's projection matrix on OpenGL so that the rendered texture has a consistent orientation across backends.</p>
+<dl class="section note"><dt>Note</dt><dd>This guarantee applies only to rendering managed by <a class="el" href="../../d3/d2d/classax_1_1_render_texture_pass.html" title="Manages an offscreen render pass into a RenderTexture.">RenderTexturePass</a>. If you access <a class="el" href="../../db/db7/classax_1_1_render_texture.html#a7b4309fe9d6402ffcfb85c30eb7d0565" title="Returns the underlying render target used for offscreen rendering.">RenderTexture::getRenderTarget()</a> directly and manage the rendering pipeline yourself, you must handle backend-specific Y-axis orientation yourself.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="Usage"></a>
+Usage</h1>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> rt = <a class="code hl_function" href="../../db/db7/classax_1_1_render_texture.html#aea2fabe7ec38e657215debd3031011f7">RenderTexture::create</a>(w, h);</div>
+<div class="line"><span class="keyword">auto</span> pass = RefPtr&lt;RenderTexturePass&gt;(<a class="code hl_function" href="#a70d5fa2b17b3e2d2b7acb1cbddec904b">RenderTexturePass::obtain</a>(rt), tlx::adopt_object);</div>
+<div class="line"> </div>
+<div class="line">pass-&gt;begin(camera);</div>
+<div class="line">pass-&gt;clear(ClearFlag::COLOR | ClearFlag::DEPTH_AND_STENCIL,</div>
+<div class="line">            {.color = <a class="code hl_struct" href="../../d2/da7/structax_1_1_color.html">Color</a>(0, 0, 0, 1)});</div>
+<div class="line"><span class="comment">// Submit draw commands here.</span></div>
+<div class="line">pass-&gt;end();</div>
+<div class="line"> </div>
+<div class="line">renderer-&gt;render();</div>
+<div class="ttc" id="aclassax_1_1_render_texture_html_aea2fabe7ec38e657215debd3031011f7"><div class="ttname"><a href="../../db/db7/classax_1_1_render_texture.html#aea2fabe7ec38e657215debd3031011f7">ax::RenderTexture::create</a></div><div class="ttdeci">static RenderTexture * create(int w, int h, rhi::PixelFormat format=rhi::PixelFormat::RGBA8, rhi::PixelFormat depthStencilFormat=rhi::PixelFormat::NONE)</div><div class="ttdoc">Creates a render texture with an optional depth/stencil attachment.</div></div>
+<div class="ttc" id="aclassax_1_1_render_texture_pass_html_a70d5fa2b17b3e2d2b7acb1cbddec904b"><div class="ttname"><a href="#a70d5fa2b17b3e2d2b7acb1cbddec904b">ax::RenderTexturePass::obtain</a></div><div class="ttdeci">static RenderTexturePass * obtain(RenderTexture *rt=nullptr)</div><div class="ttdoc">Obtain a new render texture pass instance (ref count 1, does not enter autorelease pool).</div></div>
+<div class="ttc" id="astructax_1_1_color_html"><div class="ttname"><a href="../../d2/da7/structax_1_1_color.html">ax::Color</a></div><div class="ttdoc">RGBA color composed of 4 floats.</div><div class="ttdef"><b>Definition</b> Color.h:153</div></div>
+</div><!-- fragment --><p>Use a separate <a class="el" href="../../d3/d2d/classax_1_1_render_texture_pass.html" title="Manages an offscreen render pass into a RenderTexture.">RenderTexturePass</a> object for nested render target passes. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a70d5fa2b17b3e2d2b7acb1cbddec904b" name="a70d5fa2b17b3e2d2b7acb1cbddec904b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d5fa2b17b3e2d2b7acb1cbddec904b">&#9670;&#160;</a></span>obtain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderTexturePass * obtain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/db7/classax_1_1_render_texture.html">RenderTexture</a> *</td>          <td class="paramname"><span class="paramname"><em>rt</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain a new render texture pass instance (ref count 1, does not enter autorelease pool). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rt</td><td>Optional render texture to assign. If null, call <a class="el" href="#a2c98e69e74842aa19441f2a4d74517ad">setTarget()</a> before <a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A RenderTexturePass* with reference count 1. Call <a class="el" href="../../d0/d25/classax_1_1_object.html#a23b477d0e2d399f75d585d154c346591" title="Releases the ownership immediately.">release()</a> when done, or wrap in RefPtr&lt;T&gt;(ptr, tlx::adopt_object) for automatic management. </dd></dl>
+
+</div>
+</div>
+<a id="a2c98e69e74842aa19441f2a4d74517ad" name="a2c98e69e74842aa19441f2a4d74517ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c98e69e74842aa19441f2a4d74517ad">&#9670;&#160;</a></span>setTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTarget </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/db7/classax_1_1_render_texture.html">RenderTexture</a> *</td>          <td class="paramname"><span class="paramname"><em>rt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set render target. Must be called before <a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a>, not while active. </p>
+
+</div>
+</div>
+<a id="af4e9e70d688cee37eff310680f053296" name="af4e9e70d688cee37eff310680f053296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e9e70d688cee37eff310680f053296">&#9670;&#160;</a></span>setViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setViewport </td>
+          <td>(</td>
+          <td class="paramtype">std::optional&lt; Viewport &gt;</td>          <td class="paramname"><span class="paramname"><em>vp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set custom viewport. Must be called before <a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a>. </p>
+
+</div>
+</div>
+<a id="aabdb7afd30be64c1081a5e18fc8f95db" name="aabdb7afd30be64c1081a5e18fc8f95db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabdb7afd30be64c1081a5e18fc8f95db">&#9670;&#160;</a></span>makeVirtualViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Viewport makeVirtualViewport </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rtBegin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fullRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fullViewport</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a virtual viewport rectangle for rendering into a <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a>. </p>
+<p>This function maps a sub-rectangle of the full render target (<span class="tt">fullRect</span>) into the coordinate space of the specified full viewport (<span class="tt">fullViewport</span>), relative to the <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a> begin offset (<span class="tt">rtBegin</span>). It produces a <span class="tt">Viewport</span> object that can be used for scissor or rendering operations inside the <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rtBegin</td><td>The origin offset (x, y) of the <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a> region where rendering begins. </td></tr>
+    <tr><td class="paramname">fullRect</td><td>The full rectangle of the <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a> in local coordinates. </td></tr>
+    <tr><td class="paramname">fullViewport</td><td>The full viewport rectangle in local coordinates.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <span class="tt">Viewport</span> structure containing the computed x/y position and width/height of the virtual viewport. If any input rectangle has non-positive dimensions, an empty <span class="tt">Viewport</span> is returned.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The calculation scales the rectangle coordinates by the ratio of <span class="tt">fullViewport.size</span> to <span class="tt">fullRect.size</span>, ensuring that the resulting viewport aligns correctly with the RenderTexture’s coordinate system. </dd></dl>
+
+</div>
+</div>
+<a id="adf8c9009c80cd23b34e0508bcbf9e29b" name="adf8c9009c80cd23b34e0508bcbf9e29b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8c9009c80cd23b34e0508bcbf9e29b">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void begin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dca/classax_1_1_camera.html">Camera</a> *</td>          <td class="paramname"><span class="paramname"><em>camera</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Begin offscreen rendering. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>Optional camera used for backend-specific projection adjustment. Saves current render target/viewport, pushes render group. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaf81d3fdaf258088d7692fa70cece087" name="aaf81d3fdaf258088d7692fa70cece087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf81d3fdaf258088d7692fa70cece087">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>End offscreen rendering. </p>
+<p>Restores previous render target/viewport and camera projection. </p>
+
+</div>
+</div>
+<a id="a297a0e9155d90a025879ee1e4a3baa4e" name="a297a0e9155d90a025879ee1e4a3baa4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a297a0e9155d90a025879ee1e4a3baa4e">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear </td>
+          <td>(</td>
+          <td class="paramtype">ClearFlag</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d6/d36/structax_1_1_clear_value.html">ClearValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d6/d36/structax_1_1_clear_value.html">ClearValue</a>{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear the active render target. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>Bitmask of ClearFlag (COLOR|DEPTH|STENCIL). </td></tr>
+    <tr><td class="paramname">value</td><td>Clear parameters (color, depth, stencil). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Must be called between <a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a> and <a class="el" href="#aaf81d3fdaf258088d7692fa70cece087" title="End offscreen rendering.">end()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a594a316cb55bd81bde5240f348b73c2f" name="a594a316cb55bd81bde5240f348b73c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a594a316cb55bd81bde5240f348b73c2f">&#9670;&#160;</a></span>clearColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/da7/structax_1_1_color.html">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear color buffer only. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a> .. <a class="el" href="#aaf81d3fdaf258088d7692fa70cece087" title="End offscreen rendering.">end()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a65e0ecda4d0d8f0acf96e6593e6d3f21" name="a65e0ecda4d0d8f0acf96e6593e6d3f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e0ecda4d0d8f0acf96e6593e6d3f21">&#9670;&#160;</a></span>clearDepth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearDepth </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>depth</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear depth buffer only. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a> .. <a class="el" href="#aaf81d3fdaf258088d7692fa70cece087" title="End offscreen rendering.">end()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a858182a2ffef62f2b0738c643407b2c0" name="a858182a2ffef62f2b0738c643407b2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a858182a2ffef62f2b0738c643407b2c0">&#9670;&#160;</a></span>clearStencil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearStencil </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>stencil</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear stencil buffer only. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a> .. <a class="el" href="#aaf81d3fdaf258088d7692fa70cece087" title="End offscreen rendering.">end()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a36040fb3bfc4858f79890a86078ae66e" name="a36040fb3bfc4858f79890a86078ae66e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36040fb3bfc4858f79890a86078ae66e">&#9670;&#160;</a></span>clearAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearAll </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/d36/structax_1_1_clear_value.html">ClearValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d6/d36/structax_1_1_clear_value.html">ClearValue</a>{}</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear all buffers (color|depth|stencil). </p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a> .. <a class="el" href="#aaf81d3fdaf258088d7692fa70cece087" title="End offscreen rendering.">end()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a05382354b4bab43b8edd41bd5b7cd6b6" name="a05382354b4bab43b8edd41bd5b7cd6b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05382354b4bab43b8edd41bd5b7cd6b6">&#9670;&#160;</a></span>setCameraOverrideEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCameraOverrideEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enables or disables automatic camera adjustment for this pass. </p>
+<p>When enabled, <a class="el" href="#adf8c9009c80cd23b34e0508bcbf9e29b" title="Begin offscreen rendering.">begin()</a> applies backend-specific projection adjustments to the selected camera when needed. <a class="el" href="#aaf81d3fdaf258088d7692fa70cece087" title="End offscreen rendering.">end()</a> restores the projection state.</p>
+<p>Advanced renderers that manage their own camera loop, such as VR or custom multi-view renderers, can disable this behavior and handle camera state explicitly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>True to let <a class="el" href="../../d3/d2d/classax_1_1_render_texture_pass.html" title="Manages an offscreen render pass into a RenderTexture.">RenderTexturePass</a> adjust the selected camera; false to leave camera projection untouched. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>RenderTexturePass.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../d3/d2d/classax_1_1_render_texture_pass.html">RenderTexturePass</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

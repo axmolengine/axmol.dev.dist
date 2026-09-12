@@ -1,0 +1,754 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: GraphicsDevice Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d0/dbb/classax_1_1rhi_1_1_graphics_device.html','../../','d5/d53/classax_1_1rhi_1_1_graphics_device-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GraphicsDevice Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="../../d1/df3/group____rhi.html">_rhi</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>New or create resources from <a class="el" href="../../d0/dbb/classax_1_1rhi_1_1_graphics_device.html" title="New or create resources from GraphicsDevice.">GraphicsDevice</a>.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;GraphicsDevice.h&gt;</code></p>
+
+<p>Inherited by <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html">GraphicsDeviceImpl</a>, , and <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html">GraphicsDeviceImpl</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae0e7579f0bd506448819c99e85fc0087" id="r_ae0e7579f0bd506448819c99e85fc0087"><td class="memItemLeft">virtual <a class="el" href="../../d2/d27/classax_1_1rhi_1_1_graphics_context.html">GraphicsContext</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae0e7579f0bd506448819c99e85fc0087">createGraphicsContext</a> (SurfaceHandle surface)=0</td></tr>
+<tr class="memdesc:ae0e7579f0bd506448819c99e85fc0087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="../../d2/d27/classax_1_1rhi_1_1_graphics_context.html" title="Store encoded commands for the GPU to execute.">GraphicsContext</a> (not auto‑released).  <br /></td></tr>
+<tr class="memitem:a816a318e0126c960c43b66c2e7d3aa55" id="r_a816a318e0126c960c43b66c2e7d3aa55"><td class="memItemLeft">virtual <a class="el" href="../../da/d27/classax_1_1rhi_1_1_buffer.html">Buffer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a816a318e0126c960c43b66c2e7d3aa55">createBuffer</a> (size_t size, BufferType type, BufferUsage usage, const void *inital=nullptr)=0</td></tr>
+<tr class="memdesc:a816a318e0126c960c43b66c2e7d3aa55"><td class="mdescLeft">&#160;</td><td class="mdescRight">New a <a class="el" href="../../da/d27/classax_1_1rhi_1_1_buffer.html" title="Used to store vertex and index data data.">Buffer</a> object, not auto released.  <br /></td></tr>
+<tr class="memitem:a352e1dae91e6758029c95524422d5bec" id="r_a352e1dae91e6758029c95524422d5bec"><td class="memItemLeft">virtual <a class="el" href="../../db/dd3/classax_1_1rhi_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a352e1dae91e6758029c95524422d5bec">createTexture</a> (const TextureDesc &amp;descriptor, std::optional&lt; <a class="el" href="../../d2/da7/structax_1_1_color.html">Color</a> &gt; clearColorHint=std::nullopt)=0</td></tr>
+<tr class="memdesc:a352e1dae91e6758029c95524422d5bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">New a <a class="el" href="../../db/dd3/classax_1_1rhi_1_1_texture.html" title="A base texture.">Texture</a> object with a render-target clear color hint, not auto released.  <br /></td></tr>
+<tr class="memitem:a6ad206c4942eb666c9b0ac1a52357062" id="r_a6ad206c4942eb666c9b0ac1a52357062"><td class="memItemLeft"><a id="a6ad206c4942eb666c9b0ac1a52357062" name="a6ad206c4942eb666c9b0ac1a52357062"></a>
+virtual <a class="el" href="../../db/dd3/classax_1_1rhi_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight"><b>createTextureFromNativeHandle</b> (const <a class="el" href="../../da/dd1/structax_1_1rhi_1_1_external_texture_desc.html">ExternalTextureDesc</a> &amp;descriptor)=0</td></tr>
+<tr class="memdesc:a6ad206c4942eb666c9b0ac1a52357062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap a backend-native texture owned by an external runtime, not auto released. <br /></td></tr>
+<tr class="memitem:ad870b266ce9750de761f9afa07a7fc89" id="r_ad870b266ce9750de761f9afa07a7fc89"><td class="memItemLeft">virtual <a class="el" href="../../d4/d65/classax_1_1rhi_1_1_graphics_pipeline.html">GraphicsPipeline</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad870b266ce9750de761f9afa07a7fc89">createGraphicsPipeline</a> ()=0</td></tr>
+<tr class="memdesc:ad870b266ce9750de761f9afa07a7fc89"><td class="mdescLeft">&#160;</td><td class="mdescRight">New a <a class="el" href="../../d4/d65/classax_1_1rhi_1_1_graphics_pipeline.html" title="Graphics pipeline.">GraphicsPipeline</a> object, not auto released.  <br /></td></tr>
+<tr class="memitem:a0152e6cb4f723d475eb30b57b3d160ef" id="r_a0152e6cb4f723d475eb30b57b3d160ef"><td class="memItemLeft">virtual <a class="el" href="../../d4/dfe/classax_1_1rhi_1_1_compute_pipeline.html">ComputePipeline</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0152e6cb4f723d475eb30b57b3d160ef">createComputePipeline</a> (<a class="el" href="../../dd/dba/classax_1_1rhi_1_1_program.html">Program</a> *program)=0</td></tr>
+<tr class="memdesc:a0152e6cb4f723d475eb30b57b3d160ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a compute pipeline from a compute program, not auto released.  <br /></td></tr>
+<tr class="memitem:a46b6c1b2e77f6d9283fd5c4a5a602992" id="r_a46b6c1b2e77f6d9283fd5c4a5a602992"><td class="memItemLeft">virtual <a class="el" href="../../dd/dba/classax_1_1rhi_1_1_program.html">Program</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a46b6c1b2e77f6d9283fd5c4a5a602992">createProgram</a> (Data vsData, Data fsData)=0</td></tr>
+<tr class="memdesc:a46b6c1b2e77f6d9283fd5c4a5a602992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an auto released <a class="el" href="../../dd/dba/classax_1_1rhi_1_1_program.html" title="A program.">Program</a>.  <br /></td></tr>
+<tr class="memitem:ac9ce1107d3dace47e5693f9b72e565f8" id="r_ac9ce1107d3dace47e5693f9b72e565f8"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#ac9ce1107d3dace47e5693f9b72e565f8">getVendor</a> () const =0</td></tr>
+<tr class="memdesc:ac9ce1107d3dace47e5693f9b72e565f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">below is driver info  <br /></td></tr>
+<tr class="memitem:af0fde1744766247e32d022ef7fecec0b" id="r_af0fde1744766247e32d022ef7fecec0b"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#af0fde1744766247e32d022ef7fecec0b">getRenderer</a> () const =0</td></tr>
+<tr class="memdesc:af0fde1744766247e32d022ef7fecec0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the full name of the vendor device.  <br /></td></tr>
+<tr class="memitem:a4c9e75c8b5a3c7a2a742a55786c2b757" id="r_a4c9e75c8b5a3c7a2a742a55786c2b757"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#a4c9e75c8b5a3c7a2a742a55786c2b757">getVersion</a> () const =0</td></tr>
+<tr class="memdesc:a4c9e75c8b5a3c7a2a742a55786c2b757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get version name.  <br /></td></tr>
+<tr class="memitem:ad7943dab4f57bd4788dfada6a7cd40c1" id="r_ad7943dab4f57bd4788dfada6a7cd40c1"><td class="memItemLeft"><a id="ad7943dab4f57bd4788dfada6a7cd40c1" name="ad7943dab4f57bd4788dfada6a7cd40c1"></a>
+virtual bool&#160;</td><td class="memItemRight"><b>hasExtension</b> (std::string_view) const</td></tr>
+<tr class="memdesc:ad7943dab4f57bd4788dfada6a7cd40c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check does device has extension. <br /></td></tr>
+<tr class="memitem:a0cbe20dd13dd1b1c35805bb8c16259df" id="r_a0cbe20dd13dd1b1c35805bb8c16259df"><td class="memItemLeft"><a id="a0cbe20dd13dd1b1c35805bb8c16259df" name="a0cbe20dd13dd1b1c35805bb8c16259df"></a>
+virtual std::string&#160;</td><td class="memItemRight"><b>dumpExtensions</b> () const</td></tr>
+<tr class="memdesc:a0cbe20dd13dd1b1c35805bb8c16259df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump all extensions to string. <br /></td></tr>
+<tr class="memitem:a0cb1c927ea55bd8be8a309575e81b31c" id="r_a0cb1c927ea55bd8be8a309575e81b31c"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a0cb1c927ea55bd8be8a309575e81b31c">checkForFeatureSupported</a> (FeatureType feature)=0</td></tr>
+<tr class="memdesc:a0cb1c927ea55bd8be8a309575e81b31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if feature supported by device.  <br /></td></tr>
+<tr class="memitem:a1ba1a091f42889d7a31d37b3fe1151a8" id="r_a1ba1a091f42889d7a31d37b3fe1151a8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1ba1a091f42889d7a31d37b3fe1151a8">getMaxTextureSize</a> () const</td></tr>
+<tr class="memdesc:a1ba1a091f42889d7a31d37b3fe1151a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum texture size.  <br /></td></tr>
+<tr class="memitem:a719567687ad3587c329e71dfd92a2ed8" id="r_a719567687ad3587c329e71dfd92a2ed8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a719567687ad3587c329e71dfd92a2ed8">getMaxAttributes</a> () const</td></tr>
+<tr class="memdesc:a719567687ad3587c329e71dfd92a2ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum attribute counts.  <br /></td></tr>
+<tr class="memitem:acc54a4f41db1dfe207b0dfa46e849c24" id="r_acc54a4f41db1dfe207b0dfa46e849c24"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acc54a4f41db1dfe207b0dfa46e849c24">getMaxTextureUnits</a> () const</td></tr>
+<tr class="memdesc:acc54a4f41db1dfe207b0dfa46e849c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum texture unit.  <br /></td></tr>
+<tr class="memitem:a97a275a6c353164b9f88b7f515b9c14f" id="r_a97a275a6c353164b9f88b7f515b9c14f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a97a275a6c353164b9f88b7f515b9c14f">getMaxSamplesAllowed</a> () const</td></tr>
+<tr class="memdesc:a97a275a6c353164b9f88b7f515b9c14f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum sampler count.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a517b3b0b6ef03bfe6113b3eb8776d5e8" id="r_a517b3b0b6ef03bfe6113b3eb8776d5e8"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a517b3b0b6ef03bfe6113b3eb8776d5e8">GraphicsCore</a></td></tr>
+<tr class="memdesc:a517b3b0b6ef03bfe6113b3eb8776d5e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for <code><a class="el" href="../../db/d30/classax_1_1rhi_1_1_graphics_core.html" title="Centralized manager for graphics driver lifecycle and shader environment.">ax::rhi::GraphicsCore</a></code>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>New or create resources from <a class="el" href="../../d0/dbb/classax_1_1rhi_1_1_graphics_device.html" title="New or create resources from GraphicsDevice.">GraphicsDevice</a>. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ae0e7579f0bd506448819c99e85fc0087" name="ae0e7579f0bd506448819c99e85fc0087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e7579f0bd506448819c99e85fc0087">&#9670;&#160;</a></span>createGraphicsContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d2/d27/classax_1_1rhi_1_1_graphics_context.html">GraphicsContext</a> * createGraphicsContext </td>
+          <td>(</td>
+          <td class="paramtype">SurfaceHandle</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="../../d2/d27/classax_1_1rhi_1_1_graphics_context.html" title="Store encoded commands for the GPU to execute.">GraphicsContext</a> (not auto‑released). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">surfaceHandle</td><td>Platform-specific surface:<ul>
+<li>Win32: HWND</li>
+<li>UWP: IUnknown* (SwapChainPanel)</li>
+<li>Vulkan: VkSurfaceKHR </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d27/classax_1_1rhi_1_1_graphics_context.html" title="Store encoded commands for the GPU to execute.">GraphicsContext</a> instance </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#a6f6a4d60c2e2b4277326dab1d56c5543">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#a6d895384f3d1b19faa7b45e7dc769319">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#a6d895384f3d1b19faa7b45e7dc769319">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="a816a318e0126c960c43b66c2e7d3aa55" name="a816a318e0126c960c43b66c2e7d3aa55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a816a318e0126c960c43b66c2e7d3aa55">&#9670;&#160;</a></span>createBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../da/d27/classax_1_1rhi_1_1_buffer.html">Buffer</a> * createBuffer </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BufferType</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BufferUsage</td>          <td class="paramname"><span class="paramname"><em>usage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>inital</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>New a <a class="el" href="../../da/d27/classax_1_1rhi_1_1_buffer.html" title="Used to store vertex and index data data.">Buffer</a> object, not auto released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>Specifies the size in bytes of the buffer object's new data store. </td></tr>
+    <tr><td class="paramname">type</td><td>Specifies the target buffer object. The symbolic constant must be BufferType::VERTEX or BufferType::INDEX. </td></tr>
+    <tr><td class="paramname">usage</td><td>Specifies the expected usage pattern of the data store. The symbolic constant must be BufferUsage::STATIC, BufferUsage::DYNAMIC. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../da/d27/classax_1_1rhi_1_1_buffer.html" title="Used to store vertex and index data data.">Buffer</a> object. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#afd3979ca247d8f4d25e2c552051667e4">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#afd3979ca247d8f4d25e2c552051667e4">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#afd3979ca247d8f4d25e2c552051667e4">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="a352e1dae91e6758029c95524422d5bec" name="a352e1dae91e6758029c95524422d5bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352e1dae91e6758029c95524422d5bec">&#9670;&#160;</a></span>createTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../db/dd3/classax_1_1rhi_1_1_texture.html">Texture</a> * createTexture </td>
+          <td>(</td>
+          <td class="paramtype">const TextureDesc &amp;</td>          <td class="paramname"><span class="paramname"><em>descriptor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="../../d2/da7/structax_1_1_color.html">Color</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>clearColorHint</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>New a <a class="el" href="../../db/dd3/classax_1_1rhi_1_1_texture.html" title="A base texture.">Texture</a> object with a render-target clear color hint, not auto released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptor</td><td>Specifies texture description. </td></tr>
+    <tr><td class="paramname">clearColorHint</td><td>Optional render-target clear color hint. D3D12 uses it as D3D12_CLEAR_VALUE metadata for optimized ClearRenderTargetView operations. Other backends ignore it. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../db/dd3/classax_1_1rhi_1_1_texture.html" title="A base texture.">Texture</a> object. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#a6bcd68114230fa99c13abba8e0659e4e">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#a6bcd68114230fa99c13abba8e0659e4e">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#a6bcd68114230fa99c13abba8e0659e4e">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="ad870b266ce9750de761f9afa07a7fc89" name="ad870b266ce9750de761f9afa07a7fc89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad870b266ce9750de761f9afa07a7fc89">&#9670;&#160;</a></span>createGraphicsPipeline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d4/d65/classax_1_1rhi_1_1_graphics_pipeline.html">GraphicsPipeline</a> * createGraphicsPipeline </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>New a <a class="el" href="../../d4/d65/classax_1_1rhi_1_1_graphics_pipeline.html" title="Graphics pipeline.">GraphicsPipeline</a> object, not auto released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptor</td><td>Specifies render pipeline description. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d4/d65/classax_1_1rhi_1_1_graphics_pipeline.html" title="Graphics pipeline.">GraphicsPipeline</a> object. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#a06c00f961606fe94b40493b2eb552604">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#a06c00f961606fe94b40493b2eb552604">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#a06c00f961606fe94b40493b2eb552604">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="a0152e6cb4f723d475eb30b57b3d160ef" name="a0152e6cb4f723d475eb30b57b3d160ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0152e6cb4f723d475eb30b57b3d160ef">&#9670;&#160;</a></span>createComputePipeline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d4/dfe/classax_1_1rhi_1_1_compute_pipeline.html">ComputePipeline</a> * createComputePipeline </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/dba/classax_1_1rhi_1_1_program.html">Program</a> *</td>          <td class="paramname"><span class="paramname"><em>program</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a compute pipeline from a compute program, not auto released. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td>Specifies the compute program. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../d4/dfe/classax_1_1rhi_1_1_compute_pipeline.html" title="Compute pipeline (backed by a backend compute PSO / dispatch pipeline).">ComputePipeline</a> object. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#a7af649d6b95cb5d7d2f68314fdb8f137">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#a7af649d6b95cb5d7d2f68314fdb8f137">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#a7af649d6b95cb5d7d2f68314fdb8f137">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="a46b6c1b2e77f6d9283fd5c4a5a602992" name="a46b6c1b2e77f6d9283fd5c4a5a602992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b6c1b2e77f6d9283fd5c4a5a602992">&#9670;&#160;</a></span>createProgram()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dd/dba/classax_1_1rhi_1_1_program.html">Program</a> * createProgram </td>
+          <td>(</td>
+          <td class="paramtype">Data</td>          <td class="paramname"><span class="paramname"><em>vsData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Data</td>          <td class="paramname"><span class="paramname"><em>fsData</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create an auto released <a class="el" href="../../dd/dba/classax_1_1rhi_1_1_program.html" title="A program.">Program</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vsData</td><td>Specifes this is a vertex shader data. </td></tr>
+    <tr><td class="paramname">fsData</td><td>Specifes this is a fragment shader data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../dd/dba/classax_1_1rhi_1_1_program.html" title="A program.">Program</a> instance. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#a655414a56a346db2eacfabfd0db9ef56">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#a655414a56a346db2eacfabfd0db9ef56">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#a655414a56a346db2eacfabfd0db9ef56">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="ac9ce1107d3dace47e5693f9b72e565f8" name="ac9ce1107d3dace47e5693f9b72e565f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9ce1107d3dace47e5693f9b72e565f8">&#9670;&#160;</a></span>getVendor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string getVendor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>below is driver info </p>
+<p>Get vendor device name. </p><dl class="section return"><dt>Returns</dt><dd>Vendor device name. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#a67aae1ac5191d209988eac4799203e9c">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#a67aae1ac5191d209988eac4799203e9c">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#a67aae1ac5191d209988eac4799203e9c">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="af0fde1744766247e32d022ef7fecec0b" name="af0fde1744766247e32d022ef7fecec0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0fde1744766247e32d022ef7fecec0b">&#9670;&#160;</a></span>getRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string getRenderer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the full name of the vendor device. </p>
+<dl class="section return"><dt>Returns</dt><dd>The full name of the vendor device. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#a1fe60d79b5a4dd4fbeace957685e7da3">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#a1fe60d79b5a4dd4fbeace957685e7da3">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#a1fe60d79b5a4dd4fbeace957685e7da3">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="a4c9e75c8b5a3c7a2a742a55786c2b757" name="a4c9e75c8b5a3c7a2a742a55786c2b757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9e75c8b5a3c7a2a742a55786c2b757">&#9670;&#160;</a></span>getVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string getVersion </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get version name. </p>
+<dl class="section return"><dt>Returns</dt><dd>Version name. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#a09cf45c1083c152c7121178af36c1d8f">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#a09cf45c1083c152c7121178af36c1d8f">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#a09cf45c1083c152c7121178af36c1d8f">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="a0cb1c927ea55bd8be8a309575e81b31c" name="a0cb1c927ea55bd8be8a309575e81b31c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cb1c927ea55bd8be8a309575e81b31c">&#9670;&#160;</a></span>checkForFeatureSupported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool checkForFeatureSupported </td>
+          <td>(</td>
+          <td class="paramtype">FeatureType</td>          <td class="paramname"><span class="paramname"><em>feature</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if feature supported by device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">feature</td><td>Specify feature to be query. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the feature is supported, false otherwise. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d2/df4/classax_1_1rhi_1_1d3d11_1_1_graphics_device_impl.html#a4424f6917ab5c2d379054b6a6d7e273f">GraphicsDeviceImpl</a>, <a class="el" href="../../d4/dd3/classax_1_1rhi_1_1gl_1_1_graphics_device_impl.html#a4424f6917ab5c2d379054b6a6d7e273f">GraphicsDeviceImpl</a>, and <a class="el" href="../../df/d43/classax_1_1rhi_1_1mtl_1_1_graphics_device_impl.html#a4424f6917ab5c2d379054b6a6d7e273f">GraphicsDeviceImpl</a>.</p>
+
+</div>
+</div>
+<a id="a1ba1a091f42889d7a31d37b3fe1151a8" name="a1ba1a091f42889d7a31d37b3fe1151a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba1a091f42889d7a31d37b3fe1151a8">&#9670;&#160;</a></span>getMaxTextureSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getMaxTextureSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get maximum texture size. </p>
+<dl class="section return"><dt>Returns</dt><dd>Maximum texture size. </dd></dl>
+
+</div>
+</div>
+<a id="a719567687ad3587c329e71dfd92a2ed8" name="a719567687ad3587c329e71dfd92a2ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719567687ad3587c329e71dfd92a2ed8">&#9670;&#160;</a></span>getMaxAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getMaxAttributes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get maximum attribute counts. </p>
+<dl class="section return"><dt>Returns</dt><dd>Maximum attribute counts. </dd></dl>
+
+</div>
+</div>
+<a id="acc54a4f41db1dfe207b0dfa46e849c24" name="acc54a4f41db1dfe207b0dfa46e849c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc54a4f41db1dfe207b0dfa46e849c24">&#9670;&#160;</a></span>getMaxTextureUnits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getMaxTextureUnits </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get maximum texture unit. </p>
+<dl class="section return"><dt>Returns</dt><dd>Maximum texture unit. </dd></dl>
+
+</div>
+</div>
+<a id="a97a275a6c353164b9f88b7f515b9c14f" name="a97a275a6c353164b9f88b7f515b9c14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a275a6c353164b9f88b7f515b9c14f">&#9670;&#160;</a></span>getMaxSamplesAllowed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getMaxSamplesAllowed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get maximum sampler count. </p>
+<dl class="section return"><dt>Returns</dt><dd>Maximum sampler count. </dd></dl>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a517b3b0b6ef03bfe6113b3eb8776d5e8" name="a517b3b0b6ef03bfe6113b3eb8776d5e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517b3b0b6ef03bfe6113b3eb8776d5e8">&#9670;&#160;</a></span>GraphicsCore</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class GraphicsCore</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shorthand for <code><a class="el" href="../../db/d30/classax_1_1rhi_1_1_graphics_core.html" title="Centralized manager for graphics driver lifecycle and shader environment.">ax::rhi::GraphicsCore</a></code>. </p>
+<p><a class="el" href="../../db/d30/classax_1_1rhi_1_1_graphics_core.html" title="Centralized manager for graphics driver lifecycle and shader environment.">GraphicsCore</a> manages the rendering backend selection, device lifecycle, and graphics runtime state for the engine. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>GraphicsDevice.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../dd/d88/namespaceax_1_1rhi.html">rhi</a></li><li class="navelem"><a href="../../d0/dbb/classax_1_1rhi_1_1_graphics_device.html">GraphicsDevice</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

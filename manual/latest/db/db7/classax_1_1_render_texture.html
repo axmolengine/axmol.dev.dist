@@ -1,0 +1,473 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: RenderTexture Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('db/db7/classax_1_1_render_texture.html','../../','dc/d2f/classax_1_1_render_texture-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RenderTexture Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a> is a render target resource, inheriting from <a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html" title="Texture2D class.">Texture2D</a>.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;RenderTexture.h&gt;</code></p>
+
+<p>Inherits <a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html">Texture2D</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a34c520dac9edfb3c5458c928174eddff" id="r_a34c520dac9edfb3c5458c928174eddff"><td class="memItemLeft"><a id="a34c520dac9edfb3c5458c928174eddff" name="a34c520dac9edfb3c5458c928174eddff"></a>
+using&#160;</td><td class="memItemRight"><b>SaveFileCallbackType</b> = std::function&lt;void(RenderTexture*, std::string_view)&gt;</td></tr>
+<tr class="memdesc:a34c520dac9edfb3c5458c928174eddff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback invoked after an asynchronous save-to-file request completes. <br /></td></tr>
+<tr class="inherit_header pub_types_classax_1_1_texture2_d"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classax_1_1_texture2_d')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html">Texture2D</a></td></tr>
+<tr class="memitem:a15b1dace3543012d14f85fd152a81bf5 inherit pub_types_classax_1_1_texture2_d" id="r_a15b1dace3543012d14f85fd152a81bf5"><td class="memItemLeft">
+using&#160;</td><td class="memItemRight"><b>TexParams</b> = <a class="el" href="../../de/d0b/structax_1_1rhi_1_1_sampler_desc.html">rhi::SamplerDesc</a></td></tr>
+<tr class="memdesc:a15b1dace3543012d14f85fd152a81bf5 inherit pub_types_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extension to set the Min / Mag filter. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a7b4309fe9d6402ffcfb85c30eb7d0565" id="r_a7b4309fe9d6402ffcfb85c30eb7d0565"><td class="memItemLeft"><a id="a7b4309fe9d6402ffcfb85c30eb7d0565" name="a7b4309fe9d6402ffcfb85c30eb7d0565"></a>
+<a class="el" href="../../de/d86/classax_1_1rhi_1_1_render_target.html">rhi::RenderTarget</a> *&#160;</td><td class="memItemRight"><b>getRenderTarget</b> () const</td></tr>
+<tr class="memdesc:a7b4309fe9d6402ffcfb85c30eb7d0565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying render target used for offscreen rendering. <br /></td></tr>
+<tr class="memitem:a319534fec1878ee9f32f2fef5e850b3b" id="r_a319534fec1878ee9f32f2fef5e850b3b"><td class="memItemLeft"><a id="a319534fec1878ee9f32f2fef5e850b3b" name="a319534fec1878ee9f32f2fef5e850b3b"></a>
+Texture2D *&#160;</td><td class="memItemRight"><b>getDepthStencilTexture</b> () const</td></tr>
+<tr class="memdesc:a319534fec1878ee9f32f2fef5e850b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the optional depth/stencil texture attached to this render texture. <br /></td></tr>
+<tr class="memitem:a018842f1688270b8c78da3b00c511676" id="r_a018842f1688270b8c78da3b00c511676"><td class="memItemLeft"><a id="a018842f1688270b8c78da3b00c511676" name="a018842f1688270b8c78da3b00c511676"></a>
+<a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a>&#160;</td><td class="memItemRight"><b>getDepthStencilFormat</b> () const</td></tr>
+<tr class="memdesc:a018842f1688270b8c78da3b00c511676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the depth/stencil attachment format. <br /></td></tr>
+<tr class="memitem:a44524e5a7096401c78575215c5df3d83" id="r_a44524e5a7096401c78575215c5df3d83"><td class="memItemLeft"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a44524e5a7096401c78575215c5df3d83">getRenderSize</a> () const</td></tr>
+<tr class="memdesc:a44524e5a7096401c78575215c5df3d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the render target size in pixels.  <br /></td></tr>
+<tr class="memitem:a6ae96af6abe047aa0018421d7e705396" id="r_a6ae96af6abe047aa0018421d7e705396"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6ae96af6abe047aa0018421d7e705396">newImage</a> (std::function&lt; void(RefPtr&lt; <a class="el" href="../../d3/d5c/classax_1_1_image.html">Image</a> &gt;)&gt; imageCallback)</td></tr>
+<tr class="memdesc:a6ae96af6abe047aa0018421d7e705396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the render texture pixels into an <a class="el" href="../../d3/d5c/classax_1_1_image.html" title="The Image class for loading all images supported by axmol .">Image</a> asynchronously.  <br /></td></tr>
+<tr class="memitem:a78383e2f89f75f096994e447f11c51f3" id="r_a78383e2f89f75f096994e447f11c51f3"><td class="memItemLeft"><a id="a78383e2f89f75f096994e447f11c51f3" name="a78383e2f89f75f096994e447f11c51f3"></a>
+bool&#160;</td><td class="memItemRight"><b>saveToFile</b> (std::string_view filename, bool isRGBA=true, <a class="el" href="#a34c520dac9edfb3c5458c928174eddff">SaveFileCallbackType</a> callback=nullptr)</td></tr>
+<tr class="memdesc:a78383e2f89f75f096994e447f11c51f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the render texture to a file using the filename extension to infer the format. <br /></td></tr>
+<tr class="memitem:aedd7ab29f75a149117f90dafd0711a01" id="r_aedd7ab29f75a149117f90dafd0711a01"><td class="memItemLeft"><a id="aedd7ab29f75a149117f90dafd0711a01" name="aedd7ab29f75a149117f90dafd0711a01"></a>
+bool&#160;</td><td class="memItemRight"><b>saveToFile</b> (std::string_view fileName, <a class="el" href="../../d3/d5c/classax_1_1_image.html#ab4e88c89b3b7ea1735996cc4def22d58">Image::Format</a> format, bool isRGBA=true, <a class="el" href="#a34c520dac9edfb3c5458c928174eddff">SaveFileCallbackType</a> callback=nullptr)</td></tr>
+<tr class="memdesc:aedd7ab29f75a149117f90dafd0711a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the render texture to a file using an explicit image format. <br /></td></tr>
+<tr class="memitem:a9a7f5829631d697db5b20dbf52d5fb13" id="r_a9a7f5829631d697db5b20dbf52d5fb13"><td class="memItemLeft"><a id="a9a7f5829631d697db5b20dbf52d5fb13" name="a9a7f5829631d697db5b20dbf52d5fb13"></a>
+bool&#160;</td><td class="memItemRight"><b>saveToFileAsNonPMA</b> (std::string_view filename, bool isRGBA=true, <a class="el" href="#a34c520dac9edfb3c5458c928174eddff">SaveFileCallbackType</a> callback=nullptr)</td></tr>
+<tr class="memdesc:a9a7f5829631d697db5b20dbf52d5fb13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the render texture to a file after converting pixels from premultiplied alpha. <br /></td></tr>
+<tr class="memitem:ae810ed91df88570a5247b63e1ddcc421" id="r_ae810ed91df88570a5247b63e1ddcc421"><td class="memItemLeft"><a id="ae810ed91df88570a5247b63e1ddcc421" name="ae810ed91df88570a5247b63e1ddcc421"></a>
+bool&#160;</td><td class="memItemRight"><b>saveToFileAsNonPMA</b> (std::string_view fileName, <a class="el" href="../../d3/d5c/classax_1_1_image.html#ab4e88c89b3b7ea1735996cc4def22d58">Image::Format</a> format, bool isRGBA, <a class="el" href="#a34c520dac9edfb3c5458c928174eddff">SaveFileCallbackType</a> callback)</td></tr>
+<tr class="memdesc:ae810ed91df88570a5247b63e1ddcc421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the render texture to a file using an explicit format after converting pixels from premultiplied alpha. <br /></td></tr>
+<tr class="inherit_header pub_methods_classax_1_1_texture2_d"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classax_1_1_texture2_d')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html">Texture2D</a></td></tr>
+<tr class="memitem:a6b8ced3551b2a96eecc906c34a2b5cff inherit pub_methods_classax_1_1_texture2_d" id="r_a6b8ced3551b2a96eecc906c34a2b5cff"><td class="memItemLeft">
+virtual&#160;</td><td class="memItemRight"><b>~Texture2D</b> ()</td></tr>
+<tr class="memdesc:a6b8ced3551b2a96eecc906c34a2b5cff inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">@lua NA <br /></td></tr>
+<tr class="memitem:addc9c9de204bb96fe342a1b67a470c85 inherit pub_methods_classax_1_1_texture2_d" id="r_addc9c9de204bb96fe342a1b67a470c85"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#addc9c9de204bb96fe342a1b67a470c85">initWithImage</a> (<a class="el" href="../../d3/d5c/classax_1_1_image.html">Image</a> *image, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">PixelFormat</a> renderFormat=PixelFormat::NONE, bool autoGenMipmaps=false)</td></tr>
+<tr class="memdesc:addc9c9de204bb96fe342a1b67a470c85 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a texture from a <a class="el" href="../../d3/d5c/classax_1_1_image.html" title="The Image class for loading all images supported by axmol .">Image</a> object.  <br /></td></tr>
+<tr class="memitem:a8d1642075684338e68c72543008371e8 inherit pub_methods_classax_1_1_texture2_d" id="r_a8d1642075684338e68c72543008371e8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#a8d1642075684338e68c72543008371e8">initWithString</a> (std::string_view text, std::string_view fontName, float fontSize, const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;dimensions=<a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>(0, 0), <a class="el" href="../../d3/d6b/namespaceax.html#a329d9bd927278567bf85aa36e94571bf">TextHAlignment</a> hAlignment=TextHAlignment::CENTER, <a class="el" href="../../d3/d6b/namespaceax.html#a5cbfbd781a7150c133f63a37742f1a48">TextVAlignment</a> vAlignment=TextVAlignment::TOP, bool enableWrap=true, int overflow=0)</td></tr>
+<tr class="memdesc:a8d1642075684338e68c72543008371e8 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a texture from a string with dimensions, alignment, font name and font size.  <br /></td></tr>
+<tr class="memitem:aca74a254ff4039f81944a34c86158fad inherit pub_methods_classax_1_1_texture2_d" id="r_aca74a254ff4039f81944a34c86158fad"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#aca74a254ff4039f81944a34c86158fad">initWithString</a> (std::string_view text, const <a class="el" href="../../d2/d0c/structax_1_1_font_definition.html">FontDefinition</a> &amp;textDefinition)</td></tr>
+<tr class="memdesc:aca74a254ff4039f81944a34c86158fad inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a texture from a string using a text definition.  <br /></td></tr>
+<tr class="memitem:af8664fc646b3474eaab0665390187087 inherit pub_methods_classax_1_1_texture2_d" id="r_af8664fc646b3474eaab0665390187087"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#af8664fc646b3474eaab0665390187087">initWithData</a> (const void *data, ssize_t dataSize, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> pixelFormat, int pixelsWide, int pixelsHigh, bool preMultipliedAlpha=false, bool autoGenMipmaps=false)</td></tr>
+<tr class="memdesc:af8664fc646b3474eaab0665390187087 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes with a texture2d with data.  <br /></td></tr>
+<tr class="memitem:a9c4cc15eef80f5eaf50619fd50da0b37 inherit pub_methods_classax_1_1_texture2_d" id="r_a9c4cc15eef80f5eaf50619fd50da0b37"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#a9c4cc15eef80f5eaf50619fd50da0b37">initWithData</a> (const void *data, ssize_t dataSize, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> pixelFormat, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> renderFormat, int pixelsWide, int pixelsHigh, bool preMultipliedAlpha=false, bool autoGenMipmaps=false)</td></tr>
+<tr class="memdesc:a9c4cc15eef80f5eaf50619fd50da0b37 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes with a texture2d with data.  <br /></td></tr>
+<tr class="memitem:a8dbc62d3dbee2a8afc3b28f6c89c7a2a inherit pub_methods_classax_1_1_texture2_d" id="r_a8dbc62d3dbee2a8afc3b28f6c89c7a2a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#a8dbc62d3dbee2a8afc3b28f6c89c7a2a">initWithMipmaps</a> (std::span&lt; MipmapInfo &gt; mipmaps, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> pixelFormat, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> renderFormat, int pixelsWide, int pixelsHigh, bool preMultipliedAlpha=false)</td></tr>
+<tr class="memdesc:a8dbc62d3dbee2a8afc3b28f6c89c7a2a inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes with mipmaps.  <br /></td></tr>
+<tr class="memitem:a6a8e614582689f7fad42cd65f23f0752 inherit pub_methods_classax_1_1_texture2_d" id="r_a6a8e614582689f7fad42cd65f23f0752"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#a6a8e614582689f7fad42cd65f23f0752">updateData</a> (<a class="el" href="../../d3/d5c/classax_1_1_image.html">Image</a> *image)</td></tr>
+<tr class="memdesc:a6a8e614582689f7fad42cd65f23f0752 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">update data by image  <br /></td></tr>
+<tr class="memitem:aeae383897d169bd86b03ceb20fc5b122 inherit pub_methods_classax_1_1_texture2_d" id="r_aeae383897d169bd86b03ceb20fc5b122"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#aeae383897d169bd86b03ceb20fc5b122">updateData</a> (std::span&lt; const TextureSliceData &gt; subDatas)</td></tr>
+<tr class="memdesc:aeae383897d169bd86b03ceb20fc5b122 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">update data by subDatas  <br /></td></tr>
+<tr class="memitem:aac6c758cfbd3b4a003a1966fd22cf124 inherit pub_methods_classax_1_1_texture2_d" id="r_aac6c758cfbd3b4a003a1966fd22cf124"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#aac6c758cfbd3b4a003a1966fd22cf124">updateData</a> (const void *data, int width, int height, int level=0, int layerIndex=0)</td></tr>
+<tr class="memdesc:aac6c758cfbd3b4a003a1966fd22cf124 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the texture with a new image data.  <br /></td></tr>
+<tr class="memitem:aa41765f454d52ce260087e8c53cb0068 inherit pub_methods_classax_1_1_texture2_d" id="r_aa41765f454d52ce260087e8c53cb0068"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#aa41765f454d52ce260087e8c53cb0068">updateSubData</a> (const void *data, int offsetX, int offsetY, int width, int height, int level=0, int layerIndex=0)</td></tr>
+<tr class="memdesc:aa41765f454d52ce260087e8c53cb0068 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update texture sub data.  <br /></td></tr>
+<tr class="memitem:adf4256ef8fa281d98229e52f3f07b5cb inherit pub_methods_classax_1_1_texture2_d" id="r_adf4256ef8fa281d98229e52f3f07b5cb"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#adf4256ef8fa281d98229e52f3f07b5cb">getWidth</a> () const</td></tr>
+<tr class="memdesc:adf4256ef8fa281d98229e52f3f07b5cb inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the texture width in physical pixels.  <br /></td></tr>
+<tr class="memitem:a70f8686f8a7e877db2c4e3640fbd4ace inherit pub_methods_classax_1_1_texture2_d" id="r_a70f8686f8a7e877db2c4e3640fbd4ace"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#a70f8686f8a7e877db2c4e3640fbd4ace">getHeight</a> () const</td></tr>
+<tr class="memdesc:a70f8686f8a7e877db2c4e3640fbd4ace inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the texture height in physical pixels.  <br /></td></tr>
+<tr class="memitem:aa5de9a109183b243c64b4b33d354a990 inherit pub_methods_classax_1_1_texture2_d" id="r_aa5de9a109183b243c64b4b33d354a990"><td class="memItemLeft"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#aa5de9a109183b243c64b4b33d354a990">getPixelSize</a> () const</td></tr>
+<tr class="memdesc:aa5de9a109183b243c64b4b33d354a990 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the physical pixel size of the texture as a float vector.  <br /></td></tr>
+<tr class="memitem:a9eace857e8fa431f5bf5ad786f8d1d7d inherit pub_methods_classax_1_1_texture2_d" id="r_a9eace857e8fa431f5bf5ad786f8d1d7d"><td class="memItemLeft"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#a9eace857e8fa431f5bf5ad786f8d1d7d">getContentSize</a> () const</td></tr>
+<tr class="memdesc:a9eace857e8fa431f5bf5ad786f8d1d7d inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the logical content size of the texture in points.  <br /></td></tr>
+<tr class="memitem:a87f05e63aced25d74e8a7455307191ff inherit pub_methods_classax_1_1_texture2_d" id="r_a87f05e63aced25d74e8a7455307191ff"><td class="memItemLeft">
+float&#160;</td><td class="memItemRight"><b>getMaxS</b> () const</td></tr>
+<tr class="memdesc:a87f05e63aced25d74e8a7455307191ff inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets max S. <br /></td></tr>
+<tr class="memitem:ab1ed1cffe95a7c7b6807ce3350711e89 inherit pub_methods_classax_1_1_texture2_d" id="r_ab1ed1cffe95a7c7b6807ce3350711e89"><td class="memItemLeft">
+void&#160;</td><td class="memItemRight"><b>setMaxS</b> (float maxS)</td></tr>
+<tr class="memdesc:ab1ed1cffe95a7c7b6807ce3350711e89 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets max S. <br /></td></tr>
+<tr class="memitem:abc66a0bec711b6cc62bf0102a650a88e inherit pub_methods_classax_1_1_texture2_d" id="r_abc66a0bec711b6cc62bf0102a650a88e"><td class="memItemLeft">
+float&#160;</td><td class="memItemRight"><b>getMaxT</b> () const</td></tr>
+<tr class="memdesc:abc66a0bec711b6cc62bf0102a650a88e inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets max T. <br /></td></tr>
+<tr class="memitem:a3f22620f3838d686c9048de251e2e804 inherit pub_methods_classax_1_1_texture2_d" id="r_a3f22620f3838d686c9048de251e2e804"><td class="memItemLeft">
+void&#160;</td><td class="memItemRight"><b>setMaxT</b> (float maxT)</td></tr>
+<tr class="memdesc:a3f22620f3838d686c9048de251e2e804 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets max T. <br /></td></tr>
+<tr class="memitem:aa2c9bba6d49b335816b36b60a6fcbc36 inherit pub_methods_classax_1_1_texture2_d" id="r_aa2c9bba6d49b335816b36b60a6fcbc36"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#aa2c9bba6d49b335816b36b60a6fcbc36">setAntiAliasTexParameters</a> ()</td></tr>
+<tr class="memdesc:aa2c9bba6d49b335816b36b60a6fcbc36 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets antialias texture parameters:  <br /></td></tr>
+<tr class="memitem:ada0eedff71e551f089727923a8c23513 inherit pub_methods_classax_1_1_texture2_d" id="r_ada0eedff71e551f089727923a8c23513"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#ada0eedff71e551f089727923a8c23513">setAliasTexParameters</a> ()</td></tr>
+<tr class="memdesc:ada0eedff71e551f089727923a8c23513 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets alias texture parameters:  <br /></td></tr>
+<tr class="memitem:a82bfdf26ee1f747e4a0761d87599fae2 inherit pub_methods_classax_1_1_texture2_d" id="r_a82bfdf26ee1f747e4a0761d87599fae2"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#a82bfdf26ee1f747e4a0761d87599fae2">getStringForFormat</a> () const</td></tr>
+<tr class="memdesc:a82bfdf26ee1f747e4a0761d87599fae2 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pixel format.  <br /></td></tr>
+<tr class="memitem:a8201ee0dffb5f01aae0d597ebacbef1b inherit pub_methods_classax_1_1_texture2_d" id="r_a8201ee0dffb5f01aae0d597ebacbef1b"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#a8201ee0dffb5f01aae0d597ebacbef1b">getBitsPerPixelForFormat</a> () const</td></tr>
+<tr class="memdesc:a8201ee0dffb5f01aae0d597ebacbef1b inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bits-per-pixel of the in-memory OpenGL texture.  <br /></td></tr>
+<tr class="memitem:a7bf53e52bff87cfbc5dd1c7312945b6b inherit pub_methods_classax_1_1_texture2_d" id="r_a7bf53e52bff87cfbc5dd1c7312945b6b"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#a7bf53e52bff87cfbc5dd1c7312945b6b">getBitsPerPixelForFormat</a> (<a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> format) const</td></tr>
+<tr class="memdesc:a7bf53e52bff87cfbc5dd1c7312945b6b inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper functions that returns bits per pixels for a given format.  <br /></td></tr>
+<tr class="memitem:ad7dbaaf5705729392bcef9f5078e737b inherit pub_methods_classax_1_1_texture2_d" id="r_ad7dbaaf5705729392bcef9f5078e737b"><td class="memItemLeft">
+bool&#160;</td><td class="memItemRight"><b>hasPremultipliedAlpha</b> () const</td></tr>
+<tr class="memdesc:ad7dbaaf5705729392bcef9f5078e737b inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the texture has their Alpha premultiplied. <br /></td></tr>
+<tr class="memitem:a46416c18b84a3536b983225175f154a1 inherit pub_methods_classax_1_1_texture2_d" id="r_a46416c18b84a3536b983225175f154a1"><td class="memItemLeft">
+bool&#160;</td><td class="memItemRight"><b>hasMipmaps</b> () const</td></tr>
+<tr class="memdesc:a46416c18b84a3536b983225175f154a1 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not the texture has mip maps. <br /></td></tr>
+<tr class="memitem:acbdfb16e8e0d7ec3eb3518a880ae3b08 inherit pub_methods_classax_1_1_texture2_d" id="r_acbdfb16e8e0d7ec3eb3518a880ae3b08"><td class="memItemLeft">
+<a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a>&#160;</td><td class="memItemRight"><b>getPixelFormat</b> () const</td></tr>
+<tr class="memdesc:acbdfb16e8e0d7ec3eb3518a880ae3b08 inherit pub_methods_classax_1_1_texture2_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pixel format of the texture. <br /></td></tr>
+<tr class="inherit_header pub_methods_classax_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classax_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d0/d25/classax_1_1_object.html">Object</a></td></tr>
+<tr class="memitem:a24888ae1fe9df2d329c9b485807cb62b inherit pub_methods_classax_1_1_object" id="r_a24888ae1fe9df2d329c9b485807cb62b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a24888ae1fe9df2d329c9b485807cb62b">retain</a> ()</td></tr>
+<tr class="memdesc:a24888ae1fe9df2d329c9b485807cb62b inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retains the ownership.  <br /></td></tr>
+<tr class="memitem:a23b477d0e2d399f75d585d154c346591 inherit pub_methods_classax_1_1_object" id="r_a23b477d0e2d399f75d585d154c346591"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a23b477d0e2d399f75d585d154c346591">release</a> ()</td></tr>
+<tr class="memdesc:a23b477d0e2d399f75d585d154c346591 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the ownership immediately.  <br /></td></tr>
+<tr class="memitem:a8c10c4318ad9f6d71f24f5185e4b8512 inherit pub_methods_classax_1_1_object" id="r_a8c10c4318ad9f6d71f24f5185e4b8512"><td class="memItemLeft">Object *&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a8c10c4318ad9f6d71f24f5185e4b8512">autorelease</a> ()</td></tr>
+<tr class="memdesc:a8c10c4318ad9f6d71f24f5185e4b8512 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the ownership sometime soon automatically.  <br /></td></tr>
+<tr class="memitem:a00f5c543c1504195eb40b1dcc4d1e794 inherit pub_methods_classax_1_1_object" id="r_a00f5c543c1504195eb40b1dcc4d1e794"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a00f5c543c1504195eb40b1dcc4d1e794">getReferenceCount</a> () const</td></tr>
+<tr class="memdesc:a00f5c543c1504195eb40b1dcc4d1e794 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d0/d25/classax_1_1_object.html" title="Object is used for reference count management.">Object</a>'s current reference count.  <br /></td></tr>
+<tr class="memitem:aece2eba33dcdef9be4fee125d74dda92 inherit pub_methods_classax_1_1_object" id="r_aece2eba33dcdef9be4fee125d74dda92"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#aece2eba33dcdef9be4fee125d74dda92">getObjectID</a> () const noexcept</td></tr>
+<tr class="memdesc:aece2eba33dcdef9be4fee125d74dda92 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the process-local diagnostic identifier assigned at construction.  <br /></td></tr>
+<tr class="memitem:ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5 inherit pub_methods_classax_1_1_object" id="r_ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5">~Object</a> ()</td></tr>
+<tr class="memdesc:ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aea2fabe7ec38e657215debd3031011f7" id="r_aea2fabe7ec38e657215debd3031011f7"><td class="memItemLeft">static RenderTexture *&#160;</td><td class="memItemRight"><a class="el" href="#aea2fabe7ec38e657215debd3031011f7">create</a> (int w, int h, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> format=rhi::PixelFormat::RGBA8, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> depthStencilFormat=rhi::PixelFormat::NONE)</td></tr>
+<tr class="memdesc:aea2fabe7ec38e657215debd3031011f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a render texture with an optional depth/stencil attachment.  <br /></td></tr>
+<tr class="memitem:aa6aa14b16eee04b2346da0d0b78cdac9" id="r_aa6aa14b16eee04b2346da0d0b78cdac9"><td class="memItemLeft">static RenderTexture *&#160;</td><td class="memItemRight"><a class="el" href="#aa6aa14b16eee04b2346da0d0b78cdac9">createForCanvas</a> (const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;contentSize, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> format=rhi::PixelFormat::RGBA8, <a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a> depthStencilFormat=rhi::PixelFormat::NONE)</td></tr>
+<tr class="memdesc:aa6aa14b16eee04b2346da0d0b78cdac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a render texture for content measured in canvas coordinates.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a> is a render target resource, inheriting from <a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html" title="Texture2D class.">Texture2D</a>. </p>
+<p>It holds the GPU resources (color texture, optional depth/stencil texture, render target binding) needed for offscreen rendering.</p>
+<p>To render into a <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a>, use <a class="el" href="../../d3/d2d/classax_1_1_render_texture_pass.html" title="Manages an offscreen render pass into a RenderTexture.">RenderTexturePass</a>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> rt = <a class="code hl_function" href="#aea2fabe7ec38e657215debd3031011f7">RenderTexture::create</a>(w, h);</div>
+<div class="line"><span class="keyword">auto</span> pass = RefPtr&lt;RenderTexturePass&gt;(<a class="code hl_function" href="../../d3/d2d/classax_1_1_render_texture_pass.html#a70d5fa2b17b3e2d2b7acb1cbddec904b">RenderTexturePass::obtain</a>(rt), tlx::adopt_object);</div>
+<div class="line">pass-&gt;begin();</div>
+<div class="line"><span class="comment">// ... render content ...</span></div>
+<div class="line">pass-&gt;end();</div>
+<div class="ttc" id="aclassax_1_1_render_texture_html_aea2fabe7ec38e657215debd3031011f7"><div class="ttname"><a href="#aea2fabe7ec38e657215debd3031011f7">ax::RenderTexture::create</a></div><div class="ttdeci">static RenderTexture * create(int w, int h, rhi::PixelFormat format=rhi::PixelFormat::RGBA8, rhi::PixelFormat depthStencilFormat=rhi::PixelFormat::NONE)</div><div class="ttdoc">Creates a render texture with an optional depth/stencil attachment.</div></div>
+<div class="ttc" id="aclassax_1_1_render_texture_pass_html_a70d5fa2b17b3e2d2b7acb1cbddec904b"><div class="ttname"><a href="../../d3/d2d/classax_1_1_render_texture_pass.html#a70d5fa2b17b3e2d2b7acb1cbddec904b">ax::RenderTexturePass::obtain</a></div><div class="ttdeci">static RenderTexturePass * obtain(RenderTexture *rt=nullptr)</div><div class="ttdoc">Obtain a new render texture pass instance (ref count 1, does not enter autorelease pool).</div></div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="Y-axis"></a>
+consistency across graphics backends</h1>
+<p>On OpenGL, offscreen FBO textures have a bottom-left origin, while Direct3D, Metal, and Vulkan use a top-left origin. By default (<span class="tt">_autoFlipY == true</span>), <a class="el" href="../../d3/d2d/classax_1_1_render_texture_pass.html" title="Manages an offscreen render pass into a RenderTexture.">RenderTexturePass</a> automatically flips the visiting camera's projection matrix on OpenGL so that the rendered texture has a consistent top-left origin across all platforms.</p>
+<p>If you access <span class="tt"><a class="el" href="#a7b4309fe9d6402ffcfb85c30eb7d0565" title="Returns the underlying render target used for offscreen rendering.">getRenderTarget()</a></span> directly and manage the rendering pipeline yourself (e.g., Live2D CubismRenderer), you must check <span class="tt">rhi::GraphicsCore::isOpenGL()</span> and flip the Y-axis manually.</p>
+<p>If you render through <a class="el" href="../../d3/d2d/classax_1_1_render_texture_pass.html" title="Manages an offscreen render pass into a RenderTexture.">RenderTexturePass</a>, call <span class="tt">RenderTexturePass::setAutoFlipY(false)</span> to preserve the raw backend-native orientation. This is useful when the texture will be consumed by a system that expects the native coordinate system, such as VR/OpenXR compositors. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aea2fabe7ec38e657215debd3031011f7" name="aea2fabe7ec38e657215debd3031011f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2fabe7ec38e657215debd3031011f7">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderTexture * create </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a></td>          <td class="paramname"><span class="paramname"><em>format</em></span><span class="paramdefsep"> = </span><span class="paramdefval">rhi::PixelFormat::RGBA8</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a></td>          <td class="paramname"><span class="paramname"><em>depthStencilFormat</em></span><span class="paramdefsep"> = </span><span class="paramdefval">rhi::PixelFormat::NONE</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a render texture with an optional depth/stencil attachment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>Width in pixels. </td></tr>
+    <tr><td class="paramname">h</td><td>Height in pixels. </td></tr>
+    <tr><td class="paramname">format</td><td><a class="el" href="../../d2/da7/structax_1_1_color.html" title="RGBA color composed of 4 floats.">Color</a> texture pixel format. </td></tr>
+    <tr><td class="paramname">depthStencilFormat</td><td>Depth/stencil texture format, or NONE if not needed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new autoreleased <a class="el" href="../../db/db7/classax_1_1_render_texture.html" title="RenderTexture is a render target resource, inheriting from Texture2D.">RenderTexture</a> instance, or nullptr on failure. </dd></dl>
+
+</div>
+</div>
+<a id="aa6aa14b16eee04b2346da0d0b78cdac9" name="aa6aa14b16eee04b2346da0d0b78cdac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6aa14b16eee04b2346da0d0b78cdac9">&#9670;&#160;</a></span>createForCanvas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderTexture * createForCanvas </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>contentSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a></td>          <td class="paramname"><span class="paramname"><em>format</em></span><span class="paramdefsep"> = </span><span class="paramdefval">rhi::PixelFormat::RGBA8</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d88/namespaceax_1_1rhi.html#afe919d7a7aeba256337f0fc494cf7221">rhi::PixelFormat</a></td>          <td class="paramname"><span class="paramname"><em>depthStencilFormat</em></span><span class="paramdefsep"> = </span><span class="paramdefval">rhi::PixelFormat::NONE</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a render texture for content measured in canvas coordinates. </p>
+<p>The input size is interpreted in canvas coordinates and converted to physical texture pixels using <a class="el" href="../../d4/d72/classax_1_1_director.html#a3bf87b5ffbc8165bf9c060663053fae2" title="Converts a size from canvas coordinates to canvas pixels.">Director::canvasToPixels()</a>. Use <a class="el" href="#aea2fabe7ec38e657215debd3031011f7" title="Creates a render texture with an optional depth/stencil attachment.">create()</a> when the size is already in texture pixels. </p>
+
+</div>
+</div>
+<a id="a44524e5a7096401c78575215c5df3d83" name="a44524e5a7096401c78575215c5df3d83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44524e5a7096401c78575215c5df3d83">&#9670;&#160;</a></span>getRenderSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> getRenderSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the render target size in pixels. </p>
+<p>This is a render-target semantic alias of <a class="el" href="../../d3/dd4/classax_1_1_texture2_d.html#aa5de9a109183b243c64b4b33d354a990" title="Returns the physical pixel size of the texture as a float vector.">Texture2D::getPixelSize()</a>. </p>
+
+</div>
+</div>
+<a id="a6ae96af6abe047aa0018421d7e705396" name="a6ae96af6abe047aa0018421d7e705396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae96af6abe047aa0018421d7e705396">&#9670;&#160;</a></span>newImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void newImage </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(RefPtr&lt; <a class="el" href="../../d3/d5c/classax_1_1_image.html">Image</a> &gt;)&gt;</td>          <td class="paramname"><span class="paramname"><em>imageCallback</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads the render texture pixels into an <a class="el" href="../../d3/d5c/classax_1_1_image.html" title="The Image class for loading all images supported by axmol .">Image</a> asynchronously. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageCallback</td><td>Callback receiving the captured image. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>RenderTexture.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../db/db7/classax_1_1_render_texture.html">RenderTexture</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

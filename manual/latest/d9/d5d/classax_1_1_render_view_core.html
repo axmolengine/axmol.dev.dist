@@ -1,0 +1,1374 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: RenderViewCore Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d9/d5d/classax_1_1_render_view_core.html','../../','d5/d64/classax_1_1_render_view_core-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RenderViewCore Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="../../de/d8b/group__platform.html">Platform Specific</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Core render view abstraction for window/surface state and scene presentation.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;RenderViewCore.h&gt;</code></p>
+
+<p>Inherits <a class="el" href="../../d0/d25/classax_1_1_object.html">Object</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a0c681221226f103298ec1979f300aa34" id="r_a0c681221226f103298ec1979f300aa34"><td class="memItemLeft"><a id="a0c681221226f103298ec1979f300aa34" name="a0c681221226f103298ec1979f300aa34"></a>
+virtual&#160;</td><td class="memItemRight"><b>~RenderViewCore</b> ()</td></tr>
+<tr class="memdesc:a0c681221226f103298ec1979f300aa34"><td class="mdescLeft">&#160;</td><td class="mdescRight">@lua NA <br /></td></tr>
+<tr class="memitem:aa540e86022c1f72380d1014d98f38f43" id="r_aa540e86022c1f72380d1014d98f38f43"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa540e86022c1f72380d1014d98f38f43">end</a> ()=0</td></tr>
+<tr class="memdesc:aa540e86022c1f72380d1014d98f38f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force destroying EGL view, subclass must implement this method.  <br /></td></tr>
+<tr class="memitem:a151b23a9cb50b916f71a38677fdbf526" id="r_a151b23a9cb50b916f71a38677fdbf526"><td class="memItemLeft"><a id="a151b23a9cb50b916f71a38677fdbf526" name="a151b23a9cb50b916f71a38677fdbf526"></a>
+virtual bool&#160;</td><td class="memItemRight"><b>isGfxContextReady</b> ()=0</td></tr>
+<tr class="memdesc:a151b23a9cb50b916f71a38677fdbf526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether graphics context is ready, subclass must implement this method. <br /></td></tr>
+<tr class="memitem:a960db4e1e503ea5428a1351783fffed3" id="r_a960db4e1e503ea5428a1351783fffed3"><td class="memItemLeft"><a id="a960db4e1e503ea5428a1351783fffed3" name="a960db4e1e503ea5428a1351783fffed3"></a>
+virtual void&#160;</td><td class="memItemRight"><b>swapBuffers</b> ()=0</td></tr>
+<tr class="memdesc:a960db4e1e503ea5428a1351783fffed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exchanges the front and back buffers, subclass must implement this method. <br /></td></tr>
+<tr class="memitem:a5d391c78e09288e75f8f6400e8841205" id="r_a5d391c78e09288e75f8f6400e8841205"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a5d391c78e09288e75f8f6400e8841205">setIMEKeyboardState</a> (bool open)=0</td></tr>
+<tr class="memdesc:a5d391c78e09288e75f8f6400e8841205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open or close IME keyboard , subclass must implement this method.  <br /></td></tr>
+<tr class="memitem:a93cfd538729016a9f6881e31d93ff41a" id="r_a93cfd538729016a9f6881e31d93ff41a"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a93cfd538729016a9f6881e31d93ff41a">windowShouldClose</a> ()</td></tr>
+<tr class="memdesc:a93cfd538729016a9f6881e31d93ff41a"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the window is closed, it will return false if the platforms is Ios or Android.  <br /></td></tr>
+<tr class="memitem:a73c53a1d96697e8bebe152d402decf83" id="r_a73c53a1d96697e8bebe152d402decf83"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a73c53a1d96697e8bebe152d402decf83">pollEvents</a> ()</td></tr>
+<tr class="memdesc:a73c53a1d96697e8bebe152d402decf83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polls compositor-managed events before scheduler update.  <br /></td></tr>
+<tr class="memitem:a39bcf1af2c343b1720c45b26693d8e36" id="r_a39bcf1af2c343b1720c45b26693d8e36"><td class="memItemLeft">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a39bcf1af2c343b1720c45b26693d8e36">getWindowSize</a> () const</td></tr>
+<tr class="memdesc:a39bcf1af2c343b1720c45b26693d8e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the zoomed window size In general, it returns the screen size since the view is a fullscreen view.  <br /></td></tr>
+<tr class="memitem:a821974db251dd3ca47219fb00087ad7a" id="r_a821974db251dd3ca47219fb00087ad7a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a821974db251dd3ca47219fb00087ad7a">setWindowSize</a> (float, float)</td></tr>
+<tr class="memdesc:a821974db251dd3ca47219fb00087ad7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the zoomed window size.  <br /></td></tr>
+<tr class="memitem:a28e1cb33a3a734042988b00c189df4fc" id="r_a28e1cb33a3a734042988b00c189df4fc"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a28e1cb33a3a734042988b00c189df4fc">setWindowZoomFactor</a> (float)</td></tr>
+<tr class="memdesc:a28e1cb33a3a734042988b00c189df4fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set zoom factor for frame.  <br /></td></tr>
+<tr class="memitem:aa7cd2aac6ae68e685147422b2540a042" id="r_aa7cd2aac6ae68e685147422b2540a042"><td class="memItemLeft">virtual float&#160;</td><td class="memItemRight"><a class="el" href="#aa7cd2aac6ae68e685147422b2540a042">getWindowZoomFactor</a> () const</td></tr>
+<tr class="memdesc:aa7cd2aac6ae68e685147422b2540a042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get zoom factor for frame.  <br /></td></tr>
+<tr class="memitem:af1ab13fba374ce58ad2b52dfdf579559" id="r_af1ab13fba374ce58ad2b52dfdf579559"><td class="memItemLeft"><a id="af1ab13fba374ce58ad2b52dfdf579559" name="af1ab13fba374ce58ad2b52dfdf579559"></a>
+&#160;</td><td class="memItemRight"><b>AX_DEPRECATED</b> (&quot;3.0&quot;) const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;getFrameSize() const</td></tr>
+<tr class="memdesc:af1ab13fba374ce58ad2b52dfdf579559"><td class="mdescLeft">&#160;</td><td class="mdescRight">implicit deprecated APIs, use getWindowSize instead <br /></td></tr>
+<tr class="memitem:a4a86b29ab31e5ed4b15ee6371fd89a5f" id="r_a4a86b29ab31e5ed4b15ee6371fd89a5f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4a86b29ab31e5ed4b15ee6371fd89a5f">setCursorVisible</a> (bool)</td></tr>
+<tr class="memdesc:a4a86b29ab31e5ed4b15ee6371fd89a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/d19/classax_1_1_hide.html" title="Hide the node.">Hide</a> or <a class="el" href="../../d0/d97/classax_1_1_show.html" title="Show the node.">Show</a> the mouse cursor if there is one.  <br /></td></tr>
+<tr class="memitem:a8a5e9651a7d257439ec7778210351061" id="r_a8a5e9651a7d257439ec7778210351061"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a8a5e9651a7d257439ec7778210351061">getRenderScale</a> () const</td></tr>
+<tr class="memdesc:a8a5e9651a7d257439ec7778210351061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get axmol render scale.  <br /></td></tr>
+<tr class="memitem:a5ff6fb8bef3e6ab0c36036e03ffeb70a" id="r_a5ff6fb8bef3e6ab0c36036e03ffeb70a"><td class="memItemLeft">virtual <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5ff6fb8bef3e6ab0c36036e03ffeb70a">getVisibleSize</a> () const</td></tr>
+<tr class="memdesc:a5ff6fb8bef3e6ab0c36036e03ffeb70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the visible area size of render viewport.  <br /></td></tr>
+<tr class="memitem:a6862c67dad7a38a83e96a2e903cd17d4" id="r_a6862c67dad7a38a83e96a2e903cd17d4"><td class="memItemLeft">virtual <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6862c67dad7a38a83e96a2e903cd17d4">getVisibleOrigin</a> () const</td></tr>
+<tr class="memdesc:a6862c67dad7a38a83e96a2e903cd17d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the visible origin point of render viewport.  <br /></td></tr>
+<tr class="memitem:a1fe70d6f75b43f8293baf778eb048d0a" id="r_a1fe70d6f75b43f8293baf778eb048d0a"><td class="memItemLeft">virtual <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1fe70d6f75b43f8293baf778eb048d0a">getVisibleRect</a> () const</td></tr>
+<tr class="memdesc:a1fe70d6f75b43f8293baf778eb048d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the visible rectangle of render viewport.  <br /></td></tr>
+<tr class="memitem:aab6afd0d9fefcecd17b3f6c99cc7c547" id="r_aab6afd0d9fefcecd17b3f6c99cc7c547"><td class="memItemLeft"><a id="aab6afd0d9fefcecd17b3f6c99cc7c547" name="aab6afd0d9fefcecd17b3f6c99cc7c547"></a>
+virtual <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a>&#160;</td><td class="memItemRight"><b>getSafeAreaRect</b> () const</td></tr>
+<tr class="memdesc:aab6afd0d9fefcecd17b3f6c99cc7c547"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets safe area rectangle. <br /></td></tr>
+<tr class="memitem:a6d43ec6b343473157849cf62f18b3825" id="r_a6d43ec6b343473157849cf62f18b3825"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6d43ec6b343473157849cf62f18b3825">setDesignResolutionSize</a> (float width, float height, <a class="el" href="../../d3/d6b/namespaceax.html#a1cffba1e93904c18739b3a67171e7894">ResolutionPolicy</a> resolutionPolicy)</td></tr>
+<tr class="memdesc:a6d43ec6b343473157849cf62f18b3825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the design resolution size.  <br /></td></tr>
+<tr class="memitem:a31b20bbea0266fac91d3b39820906d20" id="r_a31b20bbea0266fac91d3b39820906d20"><td class="memItemLeft">virtual const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a31b20bbea0266fac91d3b39820906d20">getDesignResolutionSize</a> () const</td></tr>
+<tr class="memdesc:a31b20bbea0266fac91d3b39820906d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get design resolution size.  <br /></td></tr>
+<tr class="memitem:a687e7c49b356bb561e236078d2a46d1f" id="r_a687e7c49b356bb561e236078d2a46d1f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a687e7c49b356bb561e236078d2a46d1f">setViewportInPoints</a> (float x, float y, float w, float h)</td></tr>
+<tr class="memdesc:a687e7c49b356bb561e236078d2a46d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set render view port rectangle with points.  <br /></td></tr>
+<tr class="memitem:a3b9fa231a5cc24d3b3783ddb0d9211da" id="r_a3b9fa231a5cc24d3b3783ddb0d9211da"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a3b9fa231a5cc24d3b3783ddb0d9211da">setScissorInPoints</a> (float x, float y, float w, float h)</td></tr>
+<tr class="memdesc:a3b9fa231a5cc24d3b3783ddb0d9211da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Scissor rectangle with points.  <br /></td></tr>
+<tr class="memitem:a6e0c13ef929ead38a5a7e13d0d83e3c8" id="r_a6e0c13ef929ead38a5a7e13d0d83e3c8"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a6e0c13ef929ead38a5a7e13d0d83e3c8">isScissorEnabled</a> ()</td></tr>
+<tr class="memdesc:a6e0c13ef929ead38a5a7e13d0d83e3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether GL_SCISSOR_TEST is enable.  <br /></td></tr>
+<tr class="memitem:a0bc5c8a9ae0da6a745433c3ced43f914" id="r_a0bc5c8a9ae0da6a745433c3ced43f914"><td class="memItemLeft">virtual <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0bc5c8a9ae0da6a745433c3ced43f914">getScissorInPoints</a> () const</td></tr>
+<tr class="memdesc:a0bc5c8a9ae0da6a745433c3ced43f914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current scissor rectangle.  <br /></td></tr>
+<tr class="memitem:a4830bd9f3706dfecb0b81f3ca1dcedde" id="r_a4830bd9f3706dfecb0b81f3ca1dcedde"><td class="memItemLeft">std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a4830bd9f3706dfecb0b81f3ca1dcedde">getViewName</a> () const</td></tr>
+<tr class="memdesc:a4830bd9f3706dfecb0b81f3ca1dcedde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the view name.  <br /></td></tr>
+<tr class="memitem:aa4915151ce738ef18e2b6dc445c693df" id="r_aa4915151ce738ef18e2b6dc445c693df"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa4915151ce738ef18e2b6dc445c693df">setIcon</a> (std::string_view) const</td></tr>
+<tr class="memdesc:aa4915151ce738ef18e2b6dc445c693df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window icon (implemented for windows and linux).  <br /></td></tr>
+<tr class="memitem:afbd738b3115a55721ed69c2be3911e70" id="r_afbd738b3115a55721ed69c2be3911e70"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afbd738b3115a55721ed69c2be3911e70">setIcon</a> (std::span&lt; const std::string_view &gt;) const</td></tr>
+<tr class="memdesc:afbd738b3115a55721ed69c2be3911e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window icon (implemented for windows and linux).  <br /></td></tr>
+<tr class="memitem:a03dc15d1ba6435e3b20302b846d9008e" id="r_a03dc15d1ba6435e3b20302b846d9008e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a03dc15d1ba6435e3b20302b846d9008e">setDefaultIcon</a> () const</td></tr>
+<tr class="memdesc:a03dc15d1ba6435e3b20302b846d9008e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default window icon (implemented for windows and linux).  <br /></td></tr>
+<tr class="memitem:ab00f0c6df3e70e4ba6c27c57f30348ea" id="r_ab00f0c6df3e70e4ba6c27c57f30348ea"><td class="memItemLeft">const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab00f0c6df3e70e4ba6c27c57f30348ea">getViewportRect</a> () const</td></tr>
+<tr class="memdesc:ab00f0c6df3e70e4ba6c27c57f30348ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the render view port rectangle.  <br /></td></tr>
+<tr class="memitem:a06537446920f8e81bd35743ec0aea8a4" id="r_a06537446920f8e81bd35743ec0aea8a4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a06537446920f8e81bd35743ec0aea8a4">getScaleX</a> () const</td></tr>
+<tr class="memdesc:a06537446920f8e81bd35743ec0aea8a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scale factor of the horizontal direction.  <br /></td></tr>
+<tr class="memitem:ac43ec99e5f31968b5298371246357da0" id="r_ac43ec99e5f31968b5298371246357da0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ac43ec99e5f31968b5298371246357da0">getScaleY</a> () const</td></tr>
+<tr class="memdesc:ac43ec99e5f31968b5298371246357da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scale factor of the vertical direction.  <br /></td></tr>
+<tr class="memitem:a45e3efa599efcde488c6a52c166d3131" id="r_a45e3efa599efcde488c6a52c166d3131"><td class="memItemLeft"><a class="el" href="../../d3/d6b/namespaceax.html#a1cffba1e93904c18739b3a67171e7894">ResolutionPolicy</a>&#160;</td><td class="memItemRight"><a class="el" href="#a45e3efa599efcde488c6a52c166d3131">getResolutionPolicy</a> () const</td></tr>
+<tr class="memdesc:a45e3efa599efcde488c6a52c166d3131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current Resolution policy.  <br /></td></tr>
+<tr class="memitem:a14b71d1230d798312e67ed4385b3b9e0" id="r_a14b71d1230d798312e67ed4385b3b9e0"><td class="memItemLeft">virtual void *&#160;</td><td class="memItemRight"><a class="el" href="#a14b71d1230d798312e67ed4385b3b9e0">getNativeWindow</a> () const</td></tr>
+<tr class="memdesc:a14b71d1230d798312e67ed4385b3b9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Native Window object.  <br /></td></tr>
+<tr class="memitem:a11e2d1784ab782c1c56d5b41f13047db" id="r_a11e2d1784ab782c1c56d5b41f13047db"><td class="memItemLeft">virtual SurfaceHandle&#160;</td><td class="memItemRight"><a class="el" href="#a11e2d1784ab782c1c56d5b41f13047db">getNativeDisplay</a> () const</td></tr>
+<tr class="memdesc:a11e2d1784ab782c1c56d5b41f13047db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Native Display object.  <br /></td></tr>
+<tr class="memitem:a0ae6ba4c55c01523860d3573cac914f7" id="r_a0ae6ba4c55c01523860d3573cac914f7"><td class="memItemLeft">virtual WindowPlatform&#160;</td><td class="memItemRight"><a class="el" href="#a0ae6ba4c55c01523860d3573cac914f7">getWindowPlatform</a> () const</td></tr>
+<tr class="memdesc:a0ae6ba4c55c01523860d3573cac914f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Window Platform object.  <br /></td></tr>
+<tr class="memitem:a3563a12affc76451051f25a6b5a72310" id="r_a3563a12affc76451051f25a6b5a72310"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a3563a12affc76451051f25a6b5a72310">showContextMenu</a> (const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;, bool hasText, bool hasSelection, bool readOnly)</td></tr>
+<tr class="memdesc:a3563a12affc76451051f25a6b5a72310"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/d97/classax_1_1_show.html" title="Show the node.">Show</a> the system edit menu (Copy/Cut/Paste) at the given point.  <br /></td></tr>
+<tr class="memitem:adae205f1232ba02cf11262d39c83c7b3" id="r_adae205f1232ba02cf11262d39c83c7b3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#adae205f1232ba02cf11262d39c83c7b3">hideContextMenu</a> ()</td></tr>
+<tr class="memdesc:adae205f1232ba02cf11262d39c83c7b3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/d19/classax_1_1_hide.html" title="Hide the node.">Hide</a> the system edit menu if visible.  <br /></td></tr>
+<tr class="memitem:adb4d6c026c2865b5ba92dbcb485885d1" id="r_adb4d6c026c2865b5ba92dbcb485885d1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adb4d6c026c2865b5ba92dbcb485885d1">updateRenderSurface</a> (float width, float height, uint8_t updateFlag)</td></tr>
+<tr class="memdesc:adb4d6c026c2865b5ba92dbcb485885d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the render surface size (framebuffer/render target) and synchronizes related view parameters.  <br /></td></tr>
+<tr class="memitem:af345bd4cf6500afde828f827b2bb3dc9" id="r_af345bd4cf6500afde828f827b2bb3dc9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af345bd4cf6500afde828f827b2bb3dc9">setSceneCompositor</a> (std::unique_ptr&lt; SceneCompositor &gt; &amp;&amp;compositor)</td></tr>
+<tr class="memdesc:af345bd4cf6500afde828f827b2bb3dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the active scene compositor.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classax_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classax_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d0/d25/classax_1_1_object.html">Object</a></td></tr>
+<tr class="memitem:a24888ae1fe9df2d329c9b485807cb62b inherit pub_methods_classax_1_1_object" id="r_a24888ae1fe9df2d329c9b485807cb62b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a24888ae1fe9df2d329c9b485807cb62b">retain</a> ()</td></tr>
+<tr class="memdesc:a24888ae1fe9df2d329c9b485807cb62b inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retains the ownership.  <br /></td></tr>
+<tr class="memitem:a23b477d0e2d399f75d585d154c346591 inherit pub_methods_classax_1_1_object" id="r_a23b477d0e2d399f75d585d154c346591"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a23b477d0e2d399f75d585d154c346591">release</a> ()</td></tr>
+<tr class="memdesc:a23b477d0e2d399f75d585d154c346591 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the ownership immediately.  <br /></td></tr>
+<tr class="memitem:a8c10c4318ad9f6d71f24f5185e4b8512 inherit pub_methods_classax_1_1_object" id="r_a8c10c4318ad9f6d71f24f5185e4b8512"><td class="memItemLeft">Object *&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a8c10c4318ad9f6d71f24f5185e4b8512">autorelease</a> ()</td></tr>
+<tr class="memdesc:a8c10c4318ad9f6d71f24f5185e4b8512 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the ownership sometime soon automatically.  <br /></td></tr>
+<tr class="memitem:a00f5c543c1504195eb40b1dcc4d1e794 inherit pub_methods_classax_1_1_object" id="r_a00f5c543c1504195eb40b1dcc4d1e794"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a00f5c543c1504195eb40b1dcc4d1e794">getReferenceCount</a> () const</td></tr>
+<tr class="memdesc:a00f5c543c1504195eb40b1dcc4d1e794 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d0/d25/classax_1_1_object.html" title="Object is used for reference count management.">Object</a>'s current reference count.  <br /></td></tr>
+<tr class="memitem:aece2eba33dcdef9be4fee125d74dda92 inherit pub_methods_classax_1_1_object" id="r_aece2eba33dcdef9be4fee125d74dda92"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#aece2eba33dcdef9be4fee125d74dda92">getObjectID</a> () const noexcept</td></tr>
+<tr class="memdesc:aece2eba33dcdef9be4fee125d74dda92 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the process-local diagnostic identifier assigned at construction.  <br /></td></tr>
+<tr class="memitem:ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5 inherit pub_methods_classax_1_1_object" id="r_ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5">~Object</a> ()</td></tr>
+<tr class="memdesc:ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Core render view abstraction for window/surface state and scene presentation. </p>
+<p><a class="el" href="../../d9/d5d/classax_1_1_render_view_core.html" title="Core render view abstraction for window/surface state and scene presentation.">RenderViewCore</a> owns the active <a class="el" href="../../d8/de6/classax_1_1_scene_compositor.html" title="RenderView-owned scene composition policy.">SceneCompositor</a>, tracks window and render surface sizes, maintains design-resolution viewport mapping, and forwards scene rendering, scissor operations, and per-frame event polling to the active compositor.</p>
+<p>Platform subclasses provide native window/event/swapchain behavior. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aa540e86022c1f72380d1014d98f38f43" name="aa540e86022c1f72380d1014d98f38f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa540e86022c1f72380d1014d98f38f43">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Force destroying EGL view, subclass must implement this method. </p>
+<p>@lua endToLua </p>
+
+</div>
+</div>
+<a id="a5d391c78e09288e75f8f6400e8841205" name="a5d391c78e09288e75f8f6400e8841205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d391c78e09288e75f8f6400e8841205">&#9670;&#160;</a></span>setIMEKeyboardState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setIMEKeyboardState </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>open</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open or close IME keyboard , subclass must implement this method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">open</td><td>Open or close IME keyboard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93cfd538729016a9f6881e31d93ff41a" name="a93cfd538729016a9f6881e31d93ff41a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93cfd538729016a9f6881e31d93ff41a">&#9670;&#160;</a></span>windowShouldClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool windowShouldClose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When the window is closed, it will return false if the platforms is Ios or Android. </p>
+<p>If the platforms is windows or Mac,it will return true.</p>
+<dl class="section return"><dt>Returns</dt><dd>In ios and android it will return false,if in windows or Mac it will return true. </dd></dl>
+
+</div>
+</div>
+<a id="a73c53a1d96697e8bebe152d402decf83" name="a73c53a1d96697e8bebe152d402decf83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c53a1d96697e8bebe152d402decf83">&#9670;&#160;</a></span>pollEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pollEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Polls compositor-managed events before scheduler update. </p>
+<p>The active <a class="el" href="../../d8/de6/classax_1_1_scene_compositor.html" title="RenderView-owned scene composition policy.">SceneCompositor</a> decides how native platform events and optional runtime events are polled. The default compositor forwards to pollNativeEvents(). </p>
+
+</div>
+</div>
+<a id="a39bcf1af2c343b1720c45b26693d8e36" name="a39bcf1af2c343b1720c45b26693d8e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39bcf1af2c343b1720c45b26693d8e36">&#9670;&#160;</a></span>getWindowSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp; getWindowSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the zoomed window size In general, it returns the screen size since the view is a fullscreen view. </p>
+<dl class="section return"><dt>Returns</dt><dd>The window size (aka logic size) </dd></dl>
+
+</div>
+</div>
+<a id="a821974db251dd3ca47219fb00087ad7a" name="a821974db251dd3ca47219fb00087ad7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821974db251dd3ca47219fb00087ad7a">&#9670;&#160;</a></span>setWindowSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setWindowSize </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the zoomed window size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The width of the fram size. </td></tr>
+    <tr><td class="paramname">height</td><td>The height of the fram size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28e1cb33a3a734042988b00c189df4fc" name="a28e1cb33a3a734042988b00c189df4fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e1cb33a3a734042988b00c189df4fc">&#9670;&#160;</a></span>setWindowZoomFactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setWindowZoomFactor </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set zoom factor for frame. </p>
+<p>This methods are for debugging big resolution (e.g.new ipad) app on desktop.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zoomFactor</td><td>The zoom factor for frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa7cd2aac6ae68e685147422b2540a042" name="aa7cd2aac6ae68e685147422b2540a042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7cd2aac6ae68e685147422b2540a042">&#9670;&#160;</a></span>getWindowZoomFactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float getWindowZoomFactor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get zoom factor for frame. </p>
+<p>This methods are for debugging big resolution (e.g.new ipad) app on desktop.</p>
+<dl class="section return"><dt>Returns</dt><dd>The zoom factor for frame. </dd></dl>
+
+</div>
+</div>
+<a id="a4a86b29ab31e5ed4b15ee6371fd89a5f" name="a4a86b29ab31e5ed4b15ee6371fd89a5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a86b29ab31e5ed4b15ee6371fd89a5f">&#9670;&#160;</a></span>setCursorVisible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setCursorVisible </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d6/d19/classax_1_1_hide.html" title="Hide the node.">Hide</a> or <a class="el" href="../../d0/d97/classax_1_1_show.html" title="Show the node.">Show</a> the mouse cursor if there is one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isVisible</td><td><a class="el" href="../../d6/d19/classax_1_1_hide.html" title="Hide the node.">Hide</a> or <a class="el" href="../../d0/d97/classax_1_1_show.html" title="Show the node.">Show</a> the mouse cursor if there is one. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a5e9651a7d257439ec7778210351061" name="a8a5e9651a7d257439ec7778210351061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a5e9651a7d257439ec7778210351061">&#9670;&#160;</a></span>getRenderScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getRenderScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get axmol render scale. </p>
+<dl class="section return"><dt>Returns</dt><dd>The render scale fbSize/windowSize aka backing scale factor</dd></dl>
+<p>Notes:</p><ul>
+<li>On mobile platforms, this value is always 1.0f (no DPI scaling).</li>
+<li>On PC platforms, when renderScaleMode == Physical, this value usually reflects the monitor's DPI scaling factor (e.g. Windows HiDPI). </li>
+</ul>
+
+</div>
+</div>
+<a id="a5ff6fb8bef3e6ab0c36036e03ffeb70a" name="a5ff6fb8bef3e6ab0c36036e03ffeb70a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff6fb8bef3e6ab0c36036e03ffeb70a">&#9670;&#160;</a></span>getVisibleSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> getVisibleSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the visible area size of render viewport. </p>
+<dl class="section return"><dt>Returns</dt><dd>The visible area size of render viewport. </dd></dl>
+
+</div>
+</div>
+<a id="a6862c67dad7a38a83e96a2e903cd17d4" name="a6862c67dad7a38a83e96a2e903cd17d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6862c67dad7a38a83e96a2e903cd17d4">&#9670;&#160;</a></span>getVisibleOrigin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> getVisibleOrigin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the visible origin point of render viewport. </p>
+<dl class="section return"><dt>Returns</dt><dd>The visible origin point of render viewport. </dd></dl>
+
+</div>
+</div>
+<a id="a1fe70d6f75b43f8293baf778eb048d0a" name="a1fe70d6f75b43f8293baf778eb048d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe70d6f75b43f8293baf778eb048d0a">&#9670;&#160;</a></span>getVisibleRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> getVisibleRect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the visible rectangle of render viewport. </p>
+<dl class="section return"><dt>Returns</dt><dd>The visible rectangle of render viewport. </dd></dl>
+
+</div>
+</div>
+<a id="a6d43ec6b343473157849cf62f18b3825" name="a6d43ec6b343473157849cf62f18b3825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d43ec6b343473157849cf62f18b3825">&#9670;&#160;</a></span>setDesignResolutionSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setDesignResolutionSize </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d6b/namespaceax.html#a1cffba1e93904c18739b3a67171e7894">ResolutionPolicy</a></td>          <td class="paramname"><span class="paramname"><em>resolutionPolicy</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the design resolution size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Design resolution width. </td></tr>
+    <tr><td class="paramname">height</td><td>Design resolution height. </td></tr>
+    <tr><td class="paramname">resolutionPolicy</td><td>The resolution policy desired, you may choose: [1] EXACT_FIT Fill screen by stretch-to-fit: if the design resolution ratio of width to height is different from the screen resolution ratio, your game view will be stretched. [2] NO_BORDER Full screen without black border: if the design resolution ratio of width to height is different from the screen resolution ratio, two areas of your game view will be cut. [3] SHOW_ALL Full screen with black border: if the design resolution ratio of width to height is different from the screen resolution ratio, two black borders will be shown. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>For applications with a static design resolution, this method should typically be called only once during initialization. </dd></dl>
+
+</div>
+</div>
+<a id="a31b20bbea0266fac91d3b39820906d20" name="a31b20bbea0266fac91d3b39820906d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b20bbea0266fac91d3b39820906d20">&#9670;&#160;</a></span>getDesignResolutionSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp; getDesignResolutionSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get design resolution size. </p>
+<p>Default resolution size is the same as 'getWindowSize'.</p>
+<dl class="section return"><dt>Returns</dt><dd>The design resolution size. </dd></dl>
+
+</div>
+</div>
+<a id="a687e7c49b356bb561e236078d2a46d1f" name="a687e7c49b356bb561e236078d2a46d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687e7c49b356bb561e236078d2a46d1f">&#9670;&#160;</a></span>setViewportInPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setViewportInPoints </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set render view port rectangle with points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Set the points of x. </td></tr>
+    <tr><td class="paramname">y</td><td>Set the points of y. </td></tr>
+    <tr><td class="paramname">w</td><td>Set the width of the view port </td></tr>
+    <tr><td class="paramname">h</td><td>Set the Height of the view port. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3b9fa231a5cc24d3b3783ddb0d9211da" name="a3b9fa231a5cc24d3b3783ddb0d9211da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b9fa231a5cc24d3b3783ddb0d9211da">&#9670;&#160;</a></span>setScissorInPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setScissorInPoints </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set Scissor rectangle with points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Set the points of x. </td></tr>
+    <tr><td class="paramname">y</td><td>Set the points of y. </td></tr>
+    <tr><td class="paramname">w</td><td>Set the width of the view port </td></tr>
+    <tr><td class="paramname">h</td><td>Set the Height of the view port. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6e0c13ef929ead38a5a7e13d0d83e3c8" name="a6e0c13ef929ead38a5a7e13d0d83e3c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e0c13ef929ead38a5a7e13d0d83e3c8">&#9670;&#160;</a></span>isScissorEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool isScissorEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get whether GL_SCISSOR_TEST is enable. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether GL_SCISSOR_TEST is enable. </dd></dl>
+
+</div>
+</div>
+<a id="a0bc5c8a9ae0da6a745433c3ced43f914" name="a0bc5c8a9ae0da6a745433c3ced43f914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc5c8a9ae0da6a745433c3ced43f914">&#9670;&#160;</a></span>getScissorInPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> getScissorInPoints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current scissor rectangle. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current scissor rectangle. </dd></dl>
+
+</div>
+</div>
+<a id="a4830bd9f3706dfecb0b81f3ca1dcedde" name="a4830bd9f3706dfecb0b81f3ca1dcedde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4830bd9f3706dfecb0b81f3ca1dcedde">&#9670;&#160;</a></span>getViewName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view getViewName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the view name. </p>
+<dl class="section return"><dt>Returns</dt><dd>The view name. </dd></dl>
+
+</div>
+</div>
+<a id="aa4915151ce738ef18e2b6dc445c693df" name="aa4915151ce738ef18e2b6dc445c693df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4915151ce738ef18e2b6dc445c693df">&#9670;&#160;</a></span>setIcon() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setIcon </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window icon (implemented for windows and linux). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>A path to image file, e.g., "icons/cusom.png". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afbd738b3115a55721ed69c2be3911e70" name="afbd738b3115a55721ed69c2be3911e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbd738b3115a55721ed69c2be3911e70">&#9670;&#160;</a></span>setIcon() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setIcon </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; const std::string_view &gt;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window icon (implemented for windows and linux). </p>
+<p>Best icon (based on size) will be auto selected.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filelist</td><td>The array contains icons. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a03dc15d1ba6435e3b20302b846d9008e" name="a03dc15d1ba6435e3b20302b846d9008e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03dc15d1ba6435e3b20302b846d9008e">&#9670;&#160;</a></span>setDefaultIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setDefaultIcon </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set default window icon (implemented for windows and linux). </p>
+<p>On windows it will use icon from .exe file (if included). On linux it will use default window icon. </p>
+
+</div>
+</div>
+<a id="ab00f0c6df3e70e4ba6c27c57f30348ea" name="ab00f0c6df3e70e4ba6c27c57f30348ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00f0c6df3e70e4ba6c27c57f30348ea">&#9670;&#160;</a></span>getViewportRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../df/dc5/classax_1_1_rect.html">Rect</a> &amp; getViewportRect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the render view port rectangle. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return the render view port rectangle. </dd></dl>
+
+</div>
+</div>
+<a id="a06537446920f8e81bd35743ec0aea8a4" name="a06537446920f8e81bd35743ec0aea8a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06537446920f8e81bd35743ec0aea8a4">&#9670;&#160;</a></span>getScaleX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getScaleX </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get scale factor of the horizontal direction. </p>
+<dl class="section return"><dt>Returns</dt><dd>Scale factor of the horizontal direction. </dd></dl>
+
+</div>
+</div>
+<a id="ac43ec99e5f31968b5298371246357da0" name="ac43ec99e5f31968b5298371246357da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac43ec99e5f31968b5298371246357da0">&#9670;&#160;</a></span>getScaleY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getScaleY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get scale factor of the vertical direction. </p>
+<dl class="section return"><dt>Returns</dt><dd>Scale factor of the vertical direction. </dd></dl>
+
+</div>
+</div>
+<a id="a45e3efa599efcde488c6a52c166d3131" name="a45e3efa599efcde488c6a52c166d3131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e3efa599efcde488c6a52c166d3131">&#9670;&#160;</a></span>getResolutionPolicy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d6b/namespaceax.html#a1cffba1e93904c18739b3a67171e7894">ResolutionPolicy</a> getResolutionPolicy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current Resolution policy. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current Resolution policy. </dd></dl>
+
+</div>
+</div>
+<a id="a14b71d1230d798312e67ed4385b3b9e0" name="a14b71d1230d798312e67ed4385b3b9e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b71d1230d798312e67ed4385b3b9e0">&#9670;&#160;</a></span>getNativeWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void * getNativeWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Native Window object. </p>
+<dl class="section return"><dt>Returns</dt><dd>void* win32: HWND winrt: PresentTarget* linux: x11 or wayland window macOS: NSWindow* iOS: UIWindow* </dd></dl>
+
+</div>
+</div>
+<a id="a11e2d1784ab782c1c56d5b41f13047db" name="a11e2d1784ab782c1c56d5b41f13047db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11e2d1784ab782c1c56d5b41f13047db">&#9670;&#160;</a></span>getNativeDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SurfaceHandle getNativeDisplay </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Native Display object. </p>
+<dl class="section return"><dt>Returns</dt><dd>void* linux: x11 or wayland display macOS: NSGLContext* iOS/tvOS: EARenderViewBase* </dd></dl>
+
+</div>
+</div>
+<a id="a0ae6ba4c55c01523860d3573cac914f7" name="a0ae6ba4c55c01523860d3573cac914f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae6ba4c55c01523860d3573cac914f7">&#9670;&#160;</a></span>getWindowPlatform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual WindowPlatform getWindowPlatform </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Window Platform object. </p>
+<dl class="section return"><dt>Returns</dt><dd>WindowPlatform </dd></dl>
+
+</div>
+</div>
+<a id="a3563a12affc76451051f25a6b5a72310" name="a3563a12affc76451051f25a6b5a72310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3563a12affc76451051f25a6b5a72310">&#9670;&#160;</a></span>showContextMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void showContextMenu </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>hasText</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>hasSelection</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>readOnly</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d0/d97/classax_1_1_show.html" title="Show the node.">Show</a> the system edit menu (Copy/Cut/Paste) at the given point. </p>
+<p>The point is specified in <b>screen coordinates</b> (engine pixels), not platform view points. Callers that have platform view coordinates must convert by dividing by the view's content scale factor before calling.</p>
+<p>This method must be called on the main/UI thread. Implementations should present the platform's standard edit menu at the requested location and route menu actions back to the engine (e.g. via <a class="el" href="../../d6/d0f/classax_1_1_input_system.html" title="Input Method Edit Message Dispatcher.">InputSystem</a>).</p>
+<dl class="section note"><dt>Note</dt><dd>Currently implemented only on iOS. On other platforms this method may be a no-op until a platform-specific implementation is provided.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPoint</td><td>Target location in screen coordinates. </td></tr>
+    <tr><td class="paramname">hasSelection</td><td>Whether there is a text selection. </td></tr>
+    <tr><td class="paramname">hasText</td><td>Whether the input field has text. </td></tr>
+    <tr><td class="paramname">readOnly</td><td>Whether the current input field is read-only </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adae205f1232ba02cf11262d39c83c7b3" name="adae205f1232ba02cf11262d39c83c7b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae205f1232ba02cf11262d39c83c7b3">&#9670;&#160;</a></span>hideContextMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void hideContextMenu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d6/d19/classax_1_1_hide.html" title="Hide the node.">Hide</a> the system edit menu if visible. </p>
+<p>Must be safe to call on the main/UI thread. Implementations should dismiss any visible system edit menu.</p>
+<dl class="section note"><dt>Note</dt><dd>Currently implemented only on iOS. On other platforms this method may be a no-op until a platform-specific implementation is provided. </dd></dl>
+
+</div>
+</div>
+<a id="adb4d6c026c2865b5ba92dbcb485885d1" name="adb4d6c026c2865b5ba92dbcb485885d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4d6c026c2865b5ba92dbcb485885d1">&#9670;&#160;</a></span>updateRenderSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateRenderSurface </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>updateFlag</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the render surface size (framebuffer/render target) and synchronizes related view parameters. </p>
+<p>This method performs the following actions:</p><ul>
+<li>Sets <span class="tt">_renderSize</span> to the specified dimensions;</li>
+<li>On mobile platforms (Android/iOS), <span class="tt">_windowSize</span> is synchronized to match <span class="tt">_renderSize</span>;</li>
+<li>On desktop platforms, <span class="tt">_windowSize</span> is only initialized to <span class="tt">_renderSize</span> if it hasn't been set yet;</li>
+<li>If <span class="tt">_designResolutionSize</span> is unset (<span class="tt"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html#a605104050bcc3dc4d899b5b36646c05e" title="equals to Vec2(0,0)">Vec2::zero</a></span>), it is initialized to <span class="tt">_renderSize</span>;</li>
+<li>Calls <span class="tt">updateDesignResolution()</span> to recalculate <span class="tt">_viewScale</span> and <span class="tt">_viewportRect</span> based on the current <span class="tt"><a class="el" href="../../d3/d6b/namespaceax.html#a1cffba1e93904c18739b3a67171e7894" title="There are some Resolution Policy for Adapt to the screen.">ResolutionPolicy</a></span>, and updates the <a class="el" href="../../d4/d72/classax_1_1_director.html" title="Class that creates and handles the main Window and manages how and when to execute the Scenes.">Director</a>'s canvas size and projection matrix accordingly.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The target width of the render surface. Its meaning depends on <span class="tt">updateFlag</span>: it may represent the framebuffer width, logical window width, or design resolution width. </td></tr>
+    <tr><td class="paramname">height</td><td>The target height of the render surface. Its meaning depends on <span class="tt">updateFlag</span>: it may represent the framebuffer height, logical window height, or design resolution height. </td></tr>
+    <tr><td class="paramname">updateFlag</td><td>Optional flags to control which parts of the view should be updated. Defaults to <span class="tt">SurfaceUpdateFlag::AllUpdates</span>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method may initialize <span class="tt">_windowSize</span> and <span class="tt">_designResolutionSize</span> on first invocation. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>No update will occur if the given size is (0, 0). </dd></dl>
+
+</div>
+</div>
+<a id="af345bd4cf6500afde828f827b2bb3dc9" name="af345bd4cf6500afde828f827b2bb3dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af345bd4cf6500afde828f827b2bb3dc9">&#9670;&#160;</a></span>setSceneCompositor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSceneCompositor </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; SceneCompositor &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>compositor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replaces the active scene compositor. </p>
+<p>Pass nullptr to restore the default <a class="el" href="../../d8/de6/classax_1_1_scene_compositor.html" title="RenderView-owned scene composition policy.">SceneCompositor</a>. The new compositor is immediately bound to this <a class="el" href="../../d9/d5d/classax_1_1_render_view_core.html" title="Core render view abstraction for window/surface state and scene presentation.">RenderViewCore</a> via <a class="el" href="../../d8/de6/classax_1_1_scene_compositor.html#a27ee82f56716921dfae1ceb0ecb5073c" title="Called when this compositor is bound to a RenderViewCore or when the render surface changes.">SceneCompositor::onRenderViewChanged()</a>. The previous compositor is destroyed synchronously.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">compositor</td><td>New compositor, or nullptr for the default compositor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The default compositor renders all visible cameras in the scene. <a class="el" href="../../dc/d55/classax_1_1experimental_1_1_v_r_scene_compositor.html" title="Product VR scene compositor backed by OpenXR.">VRSceneCompositor</a> provides the product OpenXR path, while preview compositors may provide non-runtime stereo rendering. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>RenderViewCore.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../d9/d5d/classax_1_1_render_view_core.html">RenderViewCore</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

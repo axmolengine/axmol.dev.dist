@@ -1,0 +1,708 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: PointerEvent Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d9/dc8/classax_1_1_pointer_event.html','../../','d1/d17/classax_1_1_pointer_event-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PointerEvent Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Pointer event.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;PointerEvent.h&gt;</code></p>
+
+<p>Inherits <a class="el" href="../../d5/db6/classax_1_1_event.html">Event</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a47c44df5a068a71959ff09048700fa30" id="r_a47c44df5a068a71959ff09048700fa30"><td class="memItemLeft"><a id="a47c44df5a068a71959ff09048700fa30" name="a47c44df5a068a71959ff09048700fa30"></a>
+&#160;</td><td class="memItemRight"><b>PointerEvent</b> ()</td></tr>
+<tr class="memdesc:a47c44df5a068a71959ff09048700fa30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="memitem:a4a92c1b105bfbb2044250bf6dc0a1738" id="r_a4a92c1b105bfbb2044250bf6dc0a1738"><td class="memItemLeft"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4a92c1b105bfbb2044250bf6dc0a1738">getPoint</a> () const</td></tr>
+<tr class="memdesc:a4a92c1b105bfbb2044250bf6dc0a1738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current touch location in screen coordinates.  <br /></td></tr>
+<tr class="memitem:a89c46cd846ca00d0c6315c2c04a6ed6e" id="r_a89c46cd846ca00d0c6315c2c04a6ed6e"><td class="memItemLeft"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a89c46cd846ca00d0c6315c2c04a6ed6e">getPrevPoint</a> () const</td></tr>
+<tr class="memdesc:a89c46cd846ca00d0c6315c2c04a6ed6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the previous touch location in screen coordinates.  <br /></td></tr>
+<tr class="memitem:af554bbe4d2c485a0f72f052917162cd3" id="r_af554bbe4d2c485a0f72f052917162cd3"><td class="memItemLeft"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#af554bbe4d2c485a0f72f052917162cd3">getStartPoint</a> () const</td></tr>
+<tr class="memdesc:af554bbe4d2c485a0f72f052917162cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the start touch location in screen coordinates.  <br /></td></tr>
+<tr class="memitem:a01fbaaf6f44fc5d18aded0acd0391b23" id="r_a01fbaaf6f44fc5d18aded0acd0391b23"><td class="memItemLeft"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a01fbaaf6f44fc5d18aded0acd0391b23">getWorldPoint</a> () const</td></tr>
+<tr class="memdesc:a01fbaaf6f44fc5d18aded0acd0391b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current pointer position in world space.  <br /></td></tr>
+<tr class="memitem:a5bf81959eead6c3789951781c43dbc9e" id="r_a5bf81959eead6c3789951781c43dbc9e"><td class="memItemLeft"><a id="a5bf81959eead6c3789951781c43dbc9e" name="a5bf81959eead6c3789951781c43dbc9e"></a>
+<a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><b>getPrevWorldPoint</b> () const</td></tr>
+<tr class="memdesc:a5bf81959eead6c3789951781c43dbc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the previous pointer position in world space. <br /></td></tr>
+<tr class="memitem:a090ead4ed2efae5046304d6310758dc7" id="r_a090ead4ed2efae5046304d6310758dc7"><td class="memItemLeft"><a id="a090ead4ed2efae5046304d6310758dc7" name="a090ead4ed2efae5046304d6310758dc7"></a>
+<a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a>&#160;</td><td class="memItemRight"><b>getStartWorldPoint</b> () const</td></tr>
+<tr class="memdesc:a090ead4ed2efae5046304d6310758dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the start pointer position in world space. <br /></td></tr>
+<tr class="memitem:a95279ca55949800709db844fa1100e2e" id="r_a95279ca55949800709db844fa1100e2e"><td class="memItemLeft">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a95279ca55949800709db844fa1100e2e">getScrollDelta</a> () const</td></tr>
+<tr class="memdesc:a95279ca55949800709db844fa1100e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mouse scroll data of axis.  <br /></td></tr>
+<tr class="memitem:adb3fa0a7c2bb8b2068fc18c179fb5e37" id="r_adb3fa0a7c2bb8b2068fc18c179fb5e37"><td class="memItemLeft">intptr_t&#160;</td><td class="memItemRight"><a class="el" href="#adb3fa0a7c2bb8b2068fc18c179fb5e37">getPointerId</a> () const</td></tr>
+<tr class="memdesc:adb3fa0a7c2bb8b2068fc18c179fb5e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer id.  <br /></td></tr>
+<tr class="memitem:ae15a7dd811563735e30cd311a4ca0179" id="r_ae15a7dd811563735e30cd311a4ca0179"><td class="memItemLeft">PointerType&#160;</td><td class="memItemRight"><a class="el" href="#ae15a7dd811563735e30cd311a4ca0179">getPointerType</a> () const</td></tr>
+<tr class="memdesc:ae15a7dd811563735e30cd311a4ca0179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer device type for this event.  <br /></td></tr>
+<tr class="memitem:a206a3a5ac61ccb2de0208401739c5425" id="r_a206a3a5ac61ccb2de0208401739c5425"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a206a3a5ac61ccb2de0208401739c5425">getButton</a> () const</td></tr>
+<tr class="memdesc:a206a3a5ac61ccb2de0208401739c5425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of the button that triggered this event.  <br /></td></tr>
+<tr class="memitem:ac319b056f81d3d9014ba3183f6e799b4" id="r_ac319b056f81d3d9014ba3183f6e799b4"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ac319b056f81d3d9014ba3183f6e799b4">getPressedButtons</a> () const</td></tr>
+<tr class="memdesc:ac319b056f81d3d9014ba3183f6e799b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bitmask of currently pressed buttons.  <br /></td></tr>
+<tr class="memitem:a54897cc2c15347bbf4c4cc12da36ca59" id="r_a54897cc2c15347bbf4c4cc12da36ca59"><td class="memItemLeft"><a id="a54897cc2c15347bbf4c4cc12da36ca59" name="a54897cc2c15347bbf4c4cc12da36ca59"></a>
+bool&#160;</td><td class="memItemRight"><b>isButtonPressed</b> (int buttonIndex) const</td></tr>
+<tr class="memdesc:a54897cc2c15347bbf4c4cc12da36ca59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether specified button index pressed. <br /></td></tr>
+<tr class="memitem:acdf5c139412d333a887de18fae1db465" id="r_acdf5c139412d333a887de18fae1db465"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acdf5c139412d333a887de18fae1db465">isPrimaryPressed</a> () const</td></tr>
+<tr class="memdesc:acdf5c139412d333a887de18fae1db465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the primary input is currently pressed.  <br /></td></tr>
+<tr class="memitem:a348b738642a4acf251eb3a96e691b605" id="r_a348b738642a4acf251eb3a96e691b605"><td class="memItemLeft"><a id="a348b738642a4acf251eb3a96e691b605" name="a348b738642a4acf251eb3a96e691b605"></a>
+bool&#160;</td><td class="memItemRight"><b>isCaptured</b> () const</td></tr>
+<tr class="memdesc:a348b738642a4acf251eb3a96e691b605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether this event was routed through pointer capture. <br /></td></tr>
+<tr class="memitem:a4e3cdbf378261a4ebdd359b009bd4f20" id="r_a4e3cdbf378261a4ebdd359b009bd4f20"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a4e3cdbf378261a4ebdd359b009bd4f20">getPressure</a> () const</td></tr>
+<tr class="memdesc:a4e3cdbf378261a4ebdd359b009bd4f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the normalized pressure applied to the touch surface.  <br /></td></tr>
+<tr class="memitem:af765bcbf40e06d923b3d5c49f70ab4b7" id="r_af765bcbf40e06d923b3d5c49f70ab4b7"><td class="memItemLeft">InputPhase&#160;</td><td class="memItemRight"><a class="el" href="#af765bcbf40e06d923b3d5c49f70ab4b7">getPhase</a> () const</td></tr>
+<tr class="memdesc:af765bcbf40e06d923b3d5c49f70ab4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the phase of this pointer event.  <br /></td></tr>
+<tr class="memitem:a4a3cd192d12a7cefba816d04b6d5879e" id="r_a4a3cd192d12a7cefba816d04b6d5879e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4a3cd192d12a7cefba816d04b6d5879e">isPrimary</a> () const</td></tr>
+<tr class="memdesc:a4a3cd192d12a7cefba816d04b6d5879e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether this pointer is the primary pointer.  <br /></td></tr>
+<tr class="memitem:a7268bdb227fed0311631b00d32a5a543" id="r_a7268bdb227fed0311631b00d32a5a543"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7268bdb227fed0311631b00d32a5a543">setPointerInfo</a> (InputPhase phase, <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> point, const <a class="el" href="../../d6/de7/structax_1_1_pointer_input_state.html">PointerInputState</a> &amp;inputState)</td></tr>
+<tr class="memdesc:a7268bdb227fed0311631b00d32a5a543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the touch information.  <br /></td></tr>
+<tr class="memitem:a9fa819a9d347de6a3c37d197ffec5aca" id="r_a9fa819a9d347de6a3c37d197ffec5aca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9fa819a9d347de6a3c37d197ffec5aca">setScrollData</a> (<a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> delta)</td></tr>
+<tr class="memdesc:a9fa819a9d347de6a3c37d197ffec5aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mouse scroll data.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classax_1_1_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classax_1_1_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d5/db6/classax_1_1_event.html">Event</a></td></tr>
+<tr class="memitem:a615396a45531c047219d4b99c214a0ed inherit pub_methods_classax_1_1_event" id="r_a615396a45531c047219d4b99c214a0ed"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>Event</b> (<a class="el" href="../../d5/db6/classax_1_1_event.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type)</td></tr>
+<tr class="memdesc:a615396a45531c047219d4b99c214a0ed inherit pub_methods_classax_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="memitem:aa28124883bfb17601f85db7e635094b1 inherit pub_methods_classax_1_1_event" id="r_aa28124883bfb17601f85db7e635094b1"><td class="memItemLeft">
+virtual&#160;</td><td class="memItemRight"><b>~Event</b> ()</td></tr>
+<tr class="memdesc:aa28124883bfb17601f85db7e635094b1 inherit pub_methods_classax_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memitem:a97c56d51eec84be3e856eb0ca6ebd3d4 inherit pub_methods_classax_1_1_event" id="r_a97c56d51eec84be3e856eb0ca6ebd3d4"><td class="memItemLeft"><a class="el" href="../../d5/db6/classax_1_1_event.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d5/db6/classax_1_1_event.html#a97c56d51eec84be3e856eb0ca6ebd3d4">getType</a> () const</td></tr>
+<tr class="memdesc:a97c56d51eec84be3e856eb0ca6ebd3d4 inherit pub_methods_classax_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the event type.  <br /></td></tr>
+<tr class="memitem:a5591305c3b987788eb8ac753710df4b4 inherit pub_methods_classax_1_1_event" id="r_a5591305c3b987788eb8ac753710df4b4"><td class="memItemLeft">
+void&#160;</td><td class="memItemRight"><b>stopPropagation</b> ()</td></tr>
+<tr class="memdesc:a5591305c3b987788eb8ac753710df4b4 inherit pub_methods_classax_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops propagation for current event. <br /></td></tr>
+<tr class="memitem:af0d5d118f2f1e173295b317748a033ef inherit pub_methods_classax_1_1_event" id="r_af0d5d118f2f1e173295b317748a033ef"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d5/db6/classax_1_1_event.html#af0d5d118f2f1e173295b317748a033ef">isStopped</a> () const</td></tr>
+<tr class="memdesc:af0d5d118f2f1e173295b317748a033ef inherit pub_methods_classax_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the event has been stopped.  <br /></td></tr>
+<tr class="memitem:ac2783abf4a7bc071168f81077b59b1aa inherit pub_methods_classax_1_1_event" id="r_ac2783abf4a7bc071168f81077b59b1aa"><td class="memItemLeft"><a class="el" href="../../df/da2/classax_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight"><a class="el" href="../../d5/db6/classax_1_1_event.html#ac2783abf4a7bc071168f81077b59b1aa">getCurrentTarget</a> ()</td></tr>
+<tr class="memdesc:ac2783abf4a7bc071168f81077b59b1aa inherit pub_methods_classax_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets current target of the event.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classax_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classax_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d0/d25/classax_1_1_object.html">Object</a></td></tr>
+<tr class="memitem:a24888ae1fe9df2d329c9b485807cb62b inherit pub_methods_classax_1_1_object" id="r_a24888ae1fe9df2d329c9b485807cb62b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a24888ae1fe9df2d329c9b485807cb62b">retain</a> ()</td></tr>
+<tr class="memdesc:a24888ae1fe9df2d329c9b485807cb62b inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retains the ownership.  <br /></td></tr>
+<tr class="memitem:a23b477d0e2d399f75d585d154c346591 inherit pub_methods_classax_1_1_object" id="r_a23b477d0e2d399f75d585d154c346591"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a23b477d0e2d399f75d585d154c346591">release</a> ()</td></tr>
+<tr class="memdesc:a23b477d0e2d399f75d585d154c346591 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the ownership immediately.  <br /></td></tr>
+<tr class="memitem:a8c10c4318ad9f6d71f24f5185e4b8512 inherit pub_methods_classax_1_1_object" id="r_a8c10c4318ad9f6d71f24f5185e4b8512"><td class="memItemLeft">Object *&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a8c10c4318ad9f6d71f24f5185e4b8512">autorelease</a> ()</td></tr>
+<tr class="memdesc:a8c10c4318ad9f6d71f24f5185e4b8512 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the ownership sometime soon automatically.  <br /></td></tr>
+<tr class="memitem:a00f5c543c1504195eb40b1dcc4d1e794 inherit pub_methods_classax_1_1_object" id="r_a00f5c543c1504195eb40b1dcc4d1e794"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#a00f5c543c1504195eb40b1dcc4d1e794">getReferenceCount</a> () const</td></tr>
+<tr class="memdesc:a00f5c543c1504195eb40b1dcc4d1e794 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d0/d25/classax_1_1_object.html" title="Object is used for reference count management.">Object</a>'s current reference count.  <br /></td></tr>
+<tr class="memitem:aece2eba33dcdef9be4fee125d74dda92 inherit pub_methods_classax_1_1_object" id="r_aece2eba33dcdef9be4fee125d74dda92"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#aece2eba33dcdef9be4fee125d74dda92">getObjectID</a> () const noexcept</td></tr>
+<tr class="memdesc:aece2eba33dcdef9be4fee125d74dda92 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the process-local diagnostic identifier assigned at construction.  <br /></td></tr>
+<tr class="memitem:ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5 inherit pub_methods_classax_1_1_object" id="r_ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d25/classax_1_1_object.html#ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5">~Object</a> ()</td></tr>
+<tr class="memdesc:ab5cc4f9ba1ea5c2f25bc4b1f0dac5dc5 inherit pub_methods_classax_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classax_1_1_event"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classax_1_1_event')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="../../d5/db6/classax_1_1_event.html">Event</a></td></tr>
+<tr class="memitem:a1d1cfd8ffb84e947f82999c682b666a7 inherit pub_types_classax_1_1_event" id="r_a1d1cfd8ffb84e947f82999c682b666a7"><td class="memItemLeft"><a id="a1d1cfd8ffb84e947f82999c682b666a7" name="a1d1cfd8ffb84e947f82999c682b666a7"></a>enum class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/db6/classax_1_1_event.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> </td></tr>
+<tr class="memdesc:a1d1cfd8ffb84e947f82999c682b666a7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/db6/classax_1_1_event.html#a1d1cfd8ffb84e947f82999c682b666a7" title="Type Event type.">Type</a> <a class="el" href="../../d5/db6/classax_1_1_event.html" title="Base class of all kinds of events.">Event</a> type. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Pointer event. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a4a92c1b105bfbb2044250bf6dc0a1738" name="a4a92c1b105bfbb2044250bf6dc0a1738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a92c1b105bfbb2044250bf6dc0a1738">&#9670;&#160;</a></span>getPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> getPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current touch location in screen coordinates. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current touch location in screen coordinates. </dd></dl>
+
+</div>
+</div>
+<a id="a89c46cd846ca00d0c6315c2c04a6ed6e" name="a89c46cd846ca00d0c6315c2c04a6ed6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c46cd846ca00d0c6315c2c04a6ed6e">&#9670;&#160;</a></span>getPrevPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> getPrevPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the previous touch location in screen coordinates. </p>
+<dl class="section return"><dt>Returns</dt><dd>The previous touch location in screen coordinates. </dd></dl>
+
+</div>
+</div>
+<a id="af554bbe4d2c485a0f72f052917162cd3" name="af554bbe4d2c485a0f72f052917162cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af554bbe4d2c485a0f72f052917162cd3">&#9670;&#160;</a></span>getStartPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> getStartPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the start touch location in screen coordinates. </p>
+<dl class="section return"><dt>Returns</dt><dd>The start touch location in screen coordinates. </dd></dl>
+
+</div>
+</div>
+<a id="a01fbaaf6f44fc5d18aded0acd0391b23" name="a01fbaaf6f44fc5d18aded0acd0391b23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01fbaaf6f44fc5d18aded0acd0391b23">&#9670;&#160;</a></span>getWorldPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> getWorldPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current pointer position in world space. </p>
+<p>Uses the per-camera ray (set by <a class="el" href="../../de/d23/classax_1_1_event_dispatcher.html" title="This class manages event listener subscriptions and event dispatching.">EventDispatcher</a>) to compute the correct world point for the camera that performed the hit-test. </p>
+
+</div>
+</div>
+<a id="a95279ca55949800709db844fa1100e2e" name="a95279ca55949800709db844fa1100e2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95279ca55949800709db844fa1100e2e">&#9670;&#160;</a></span>getScrollDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a> &amp; getScrollDelta </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get mouse scroll data of axis. </p>
+<dl class="section return"><dt>Returns</dt><dd>The scroll data of axis. </dd></dl>
+
+</div>
+</div>
+<a id="adb3fa0a7c2bb8b2068fc18c179fb5e37" name="adb3fa0a7c2bb8b2068fc18c179fb5e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb3fa0a7c2bb8b2068fc18c179fb5e37">&#9670;&#160;</a></span>getPointerId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">intptr_t getPointerId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get pointer id. </p>
+<p>@lua getId</p>
+<dl class="section return"><dt>Returns</dt><dd>The id of pointer. </dd></dl>
+
+</div>
+</div>
+<a id="ae15a7dd811563735e30cd311a4ca0179" name="ae15a7dd811563735e30cd311a4ca0179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae15a7dd811563735e30cd311a4ca0179">&#9670;&#160;</a></span>getPointerType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PointerType getPointerType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the pointer device type for this event. </p>
+<p>Returns the type of pointer that produced the event (for example, Mouse, Touch, or Pen).</p>
+<dl class="section return"><dt>Returns</dt><dd>PointerType The pointer device type. </dd></dl>
+
+</div>
+</div>
+<a id="a206a3a5ac61ccb2de0208401739c5425" name="a206a3a5ac61ccb2de0208401739c5425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206a3a5ac61ccb2de0208401739c5425">&#9670;&#160;</a></span>getButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getButton </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the index of the button that triggered this event. </p>
+<p>The value is a button index (0..n-1) when a physical button triggered the event. Use -1 to indicate "no button" (for example, touch events or pure move events).</p>
+<dl class="section return"><dt>Returns</dt><dd>int The triggering button index, or -1 if none.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This field represents the single button that caused this event. To inspect the current set of pressed buttons, use <a class="el" href="#ac319b056f81d3d9014ba3183f6e799b4" title="Get the bitmask of currently pressed buttons.">getPressedButtons()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ac319b056f81d3d9014ba3183f6e799b4" name="ac319b056f81d3d9014ba3183f6e799b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac319b056f81d3d9014ba3183f6e799b4">&#9670;&#160;</a></span>getPressedButtons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t getPressedButtons </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the bitmask of currently pressed buttons. </p>
+<p>Each bit corresponds to a button index: bit i represents whether button index i is currently pressed (1 = pressed, 0 = released). For example, bit 0 = left button, bit 1 = right button, bit 2 = middle button.</p>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t Bitmask of pressed buttons; 0 means no buttons pressed.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The mapping between button indices and bits is: bit i &lt;-&gt; button index i. For touch events, this value is typically 0. </dd></dl>
+
+</div>
+</div>
+<a id="acdf5c139412d333a887de18fae1db465" name="acdf5c139412d333a887de18fae1db465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdf5c139412d333a887de18fae1db465">&#9670;&#160;</a></span>isPrimaryPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPrimaryPressed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the primary input is currently pressed. </p>
+<p>This method returns true when the primary input source is actively pressed and not in the PointerUp phase.</p>
+<ul>
+<li><b>Mouse</b>: True if the primary button (typically the left button) is pressed.</li>
+<li><b>Touch</b>: True if the first touch point is active (touch down).</li>
+<li><b>Pen</b>: True if the pen tip (primary button) is pressed.</li>
+</ul>
+<p>Use this method to detect the main interaction across devices (mouse left drag, first finger touch drag, or pen tip press).</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the primary input is pressed, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a4e3cdbf378261a4ebdd359b009bd4f20" name="a4e3cdbf378261a4ebdd359b009bd4f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e3cdbf378261a4ebdd359b009bd4f20">&#9670;&#160;</a></span>getPressure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getPressure </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the normalized pressure applied to the touch surface. </p>
+<p>This value represents the force intensity of the touch, universally supported across multi-touch screens, digital styluses (e.g., Apple Pencil), and pressure-sensitive devices.</p>
+<dl class="section return"><dt>Returns</dt><dd>A normalized float value typically ranging from 0.0f to 1.0f:<ul>
+<li><b>0.0f</b>: No pressure applied or hovering.</li>
+<li><b>1.0f</b>: Standard full press intensity.</li>
+<li>Values <b>&gt; 1.0f</b> may be returned on platforms supporting deep press (e.g., iOS 3D Touch).</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>For legacy devices or platforms lacking pressure-sensing hardware, this safely falls back to a constant <b>1.0f</b> to guarantee standard touch interactions. </dd></dl>
+
+</div>
+</div>
+<a id="af765bcbf40e06d923b3d5c49f70ab4b7" name="af765bcbf40e06d923b3d5c49f70ab4b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af765bcbf40e06d923b3d5c49f70ab4b7">&#9670;&#160;</a></span>getPhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InputPhase getPhase </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the phase of this pointer event. </p>
+<p>Returns the input phase that describes the current state of the pointer interaction, such as when a mouse button, touch, or pen contact is pressed, released, moved, or canceled.</p>
+<dl class="section return"><dt>Returns</dt><dd>InputPhase enumeration value indicating the event phase:<ul>
+<li>InputPhase::PointerDown when the pointer makes contact</li>
+<li>InputPhase::PointerUp when the pointer contact ends</li>
+<li>InputPhase::PointerMove when the pointer moves</li>
+<li>InputPhase::PointerCancel when the pointer interaction is canceled</li>
+<li>InputPhase::PointerScroll when the pointer performs a scroll</li>
+<li>InputPhase::PointerEnter when the pointer enters a region</li>
+<li>InputPhase::PointerLeave when the pointer leaves a region</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This reflects only the state of this <a class="el" href="../../d9/dc8/classax_1_1_pointer_event.html" title="Pointer event.">PointerEvent</a> instance and does not query the global pointer state. </dd></dl>
+
+</div>
+</div>
+<a id="a4a3cd192d12a7cefba816d04b6d5879e" name="a4a3cd192d12a7cefba816d04b6d5879e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a3cd192d12a7cefba816d04b6d5879e">&#9670;&#160;</a></span>isPrimary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPrimary </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether this pointer is the primary pointer. </p>
+<p>Returns true if the pointer is considered primary. The primary pointer is the one that controls the mouse cursor. For touch input, the first finger that touches the screen is marked as primary. For mouse input, the pointer is always primary.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if this is the primary pointer, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a7268bdb227fed0311631b00d32a5a543" name="a7268bdb227fed0311631b00d32a5a543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7268bdb227fed0311631b00d32a5a543">&#9670;&#160;</a></span>setPointerInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPointerInfo </td>
+          <td>(</td>
+          <td class="paramtype">InputPhase</td>          <td class="paramname"><span class="paramname"><em>phase</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a></td>          <td class="paramname"><span class="paramname"><em>point</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d6/de7/structax_1_1_pointer_input_state.html">PointerInputState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>inputState</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the touch information. </p>
+<p>It always used to monitor touch event.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>A given id </td></tr>
+    <tr><td class="paramname">point</td><td>A given point in screen coordinate. </td></tr>
+    <tr><td class="paramname">pressure</td><td>maximum possible force for 3d touch. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9fa819a9d347de6a3c37d197ffec5aca" name="a9fa819a9d347de6a3c37d197ffec5aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa819a9d347de6a3c37d197ffec5aca">&#9670;&#160;</a></span>setScrollData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setScrollData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d6f/classax_1_1_vec2.html">Vec2</a></td>          <td class="paramname"><span class="paramname"><em>delta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set mouse scroll data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scrollX</td><td>The scroll data of x axis. </td></tr>
+    <tr><td class="paramname">scrollY</td><td>The scroll data of y axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>PointerEvent.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../d9/dc8/classax_1_1_pointer_event.html">PointerEvent</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

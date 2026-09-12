@@ -1,0 +1,645 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: Joint3D Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('df/d28/classax_1_1_joint3_d.html','../../','d9/d4e/classax_1_1_joint3_d-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Joint3D Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Base class for 3D joints.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;Joint3D.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae95f7267fdd91cc9291ae46acc3fb87a" id="r_ae95f7267fdd91cc9291ae46acc3fb87a"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ae95f7267fdd91cc9291ae46acc3fb87a">CoordinateSpace</a> { <a class="el" href="#ae95f7267fdd91cc9291ae46acc3fb87aa509820290d57f333403f490dde7316f4">Local</a>
+, <a class="el" href="#ae95f7267fdd91cc9291ae46acc3fb87aaf5a7924e621e84c9280a9a27e1bcb7f6">World</a>
+ }</td></tr>
+<tr class="memdesc:ae95f7267fdd91cc9291ae46acc3fb87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anchor coordinate space understood by <a class="el" href="../../df/d28/classax_1_1_joint3_d.html" title="Base class for 3D joints.">Joint3D</a>.  <a href="#ae95f7267fdd91cc9291ae46acc3fb87a">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a23f639e4e335ba3ceecbd8249af38125" id="r_a23f639e4e335ba3ceecbd8249af38125"><td class="memItemLeft"><a id="a23f639e4e335ba3ceecbd8249af38125" name="a23f639e4e335ba3ceecbd8249af38125"></a>
+&#160;</td><td class="memItemRight"><b>~Joint3D</b> () override</td></tr>
+<tr class="memdesc:a23f639e4e335ba3ceecbd8249af38125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memitem:a7d49ce0b97da59c8470b2e731365064d" id="r_a7d49ce0b97da59c8470b2e731365064d"><td class="memItemLeft"><a id="a7d49ce0b97da59c8470b2e731365064d" name="a7d49ce0b97da59c8470b2e731365064d"></a>
+void&#160;</td><td class="memItemRight"><b>onEnter</b> () override</td></tr>
+<tr class="memdesc:a7d49ce0b97da59c8470b2e731365064d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the component enters the active scene graph. <br /></td></tr>
+<tr class="memitem:aa8479fb5be2ae5398ebaf3ff15401dc3" id="r_aa8479fb5be2ae5398ebaf3ff15401dc3"><td class="memItemLeft"><a id="aa8479fb5be2ae5398ebaf3ff15401dc3" name="aa8479fb5be2ae5398ebaf3ff15401dc3"></a>
+void&#160;</td><td class="memItemRight"><b>onExit</b> () override</td></tr>
+<tr class="memdesc:aa8479fb5be2ae5398ebaf3ff15401dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the component exits the active scene graph. <br /></td></tr>
+<tr class="memitem:a49af19f53757889da92c059758b9bc6f" id="r_a49af19f53757889da92c059758b9bc6f"><td class="memItemLeft"><a id="a49af19f53757889da92c059758b9bc6f" name="a49af19f53757889da92c059758b9bc6f"></a>
+bool&#160;</td><td class="memItemRight"><b>isAttached</b> () const</td></tr>
+<tr class="memdesc:a49af19f53757889da92c059758b9bc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the native physics constraint has been created and attached. <br /></td></tr>
+<tr class="memitem:a154ec210ca7c5f01c6a55da0a9c4de8c" id="r_a154ec210ca7c5f01c6a55da0a9c4de8c"><td class="memItemLeft"><a id="a154ec210ca7c5f01c6a55da0a9c4de8c" name="a154ec210ca7c5f01c6a55da0a9c4de8c"></a>
+PhysicsWorld3D *&#160;</td><td class="memItemRight"><b>getWorld</b> () const</td></tr>
+<tr class="memdesc:a154ec210ca7c5f01c6a55da0a9c4de8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the physics world that currently owns the joint, or <span class="tt">nullptr</span> when detached. <br /></td></tr>
+<tr class="memitem:a9ed90eef74cf3f33367e3ed2982da215" id="r_a9ed90eef74cf3f33367e3ed2982da215"><td class="memItemLeft"><a id="a9ed90eef74cf3f33367e3ed2982da215" name="a9ed90eef74cf3f33367e3ed2982da215"></a>
+Rigidbody3D *&#160;</td><td class="memItemRight"><b>getAttachedBody</b> () const</td></tr>
+<tr class="memdesc:a9ed90eef74cf3f33367e3ed2982da215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rigid body on the same node as this component. <br /></td></tr>
+<tr class="memitem:a0d8facb5d0b5a3e636353bd5b657eb08" id="r_a0d8facb5d0b5a3e636353bd5b657eb08"><td class="memItemLeft"><a id="a0d8facb5d0b5a3e636353bd5b657eb08" name="a0d8facb5d0b5a3e636353bd5b657eb08"></a>
+Rigidbody3D *&#160;</td><td class="memItemRight"><b>getConnectedBody</b> () const</td></tr>
+<tr class="memdesc:a0d8facb5d0b5a3e636353bd5b657eb08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the other rigid body connected by this joint. <br /></td></tr>
+<tr class="memitem:acec2c4bb71891b27443401d0043caf18" id="r_acec2c4bb71891b27443401d0043caf18"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acec2c4bb71891b27443401d0043caf18">setConnectedBody</a> (Rigidbody3D *body)</td></tr>
+<tr class="memdesc:acec2c4bb71891b27443401d0043caf18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the rigid body connected on the far side of the joint.  <br /></td></tr>
+<tr class="memitem:a386a9fef678b1ec4706c5fbf2cbea344" id="r_a386a9fef678b1ec4706c5fbf2cbea344"><td class="memItemLeft"><a id="a386a9fef678b1ec4706c5fbf2cbea344" name="a386a9fef678b1ec4706c5fbf2cbea344"></a>
+<a class="el" href="#ae95f7267fdd91cc9291ae46acc3fb87a">CoordinateSpace</a>&#160;</td><td class="memItemRight"><b>getCoordinateSpace</b> () const</td></tr>
+<tr class="memdesc:a386a9fef678b1ec4706c5fbf2cbea344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the coordinate space used by anchor and axis values. <br /></td></tr>
+<tr class="memitem:abf7971cefd6032fedadf1fd9edd674f1" id="r_abf7971cefd6032fedadf1fd9edd674f1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abf7971cefd6032fedadf1fd9edd674f1">setCoordinateSpace</a> (<a class="el" href="#ae95f7267fdd91cc9291ae46acc3fb87a">CoordinateSpace</a> space)</td></tr>
+<tr class="memdesc:abf7971cefd6032fedadf1fd9edd674f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the coordinate space used by anchors and axes.  <br /></td></tr>
+<tr class="memitem:a8ab30c96bfbf30c1dc23410a71ba5263" id="r_a8ab30c96bfbf30c1dc23410a71ba5263"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8ab30c96bfbf30c1dc23410a71ba5263">setAnchorsInWorldSpace</a> (const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;anchor)</td></tr>
+<tr class="memdesc:a8ab30c96bfbf30c1dc23410a71ba5263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets both anchors to the same world-space position.  <br /></td></tr>
+<tr class="memitem:a05783b15fa3874ab5af963daa17238fe" id="r_a05783b15fa3874ab5af963daa17238fe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a05783b15fa3874ab5af963daa17238fe">setAnchors</a> (const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;anchor, const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;connectedAnchor)</td></tr>
+<tr class="memdesc:a05783b15fa3874ab5af963daa17238fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint anchors for both rigid bodies.  <br /></td></tr>
+<tr class="memitem:a9ab2786c70f4d9dbacde756b728d8bc4" id="r_a9ab2786c70f4d9dbacde756b728d8bc4"><td class="memItemLeft"><a id="a9ab2786c70f4d9dbacde756b728d8bc4" name="a9ab2786c70f4d9dbacde756b728d8bc4"></a>
+const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;&#160;</td><td class="memItemRight"><b>getAnchor</b> () const</td></tr>
+<tr class="memdesc:a9ab2786c70f4d9dbacde756b728d8bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the anchor on the attached body. <br /></td></tr>
+<tr class="memitem:acfdc6ce56fa0b713cb22aca1291b6886" id="r_acfdc6ce56fa0b713cb22aca1291b6886"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acfdc6ce56fa0b713cb22aca1291b6886">setAnchor</a> (const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;anchor)</td></tr>
+<tr class="memdesc:acfdc6ce56fa0b713cb22aca1291b6886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the anchor on the attached body.  <br /></td></tr>
+<tr class="memitem:a09947fcf2199ee9e71cc7eca4ad6a72f" id="r_a09947fcf2199ee9e71cc7eca4ad6a72f"><td class="memItemLeft"><a id="a09947fcf2199ee9e71cc7eca4ad6a72f" name="a09947fcf2199ee9e71cc7eca4ad6a72f"></a>
+const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;&#160;</td><td class="memItemRight"><b>getConnectedAnchor</b> () const</td></tr>
+<tr class="memdesc:a09947fcf2199ee9e71cc7eca4ad6a72f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the anchor on the connected body. <br /></td></tr>
+<tr class="memitem:a14161bbee271b7b8d3d40de528443a72" id="r_a14161bbee271b7b8d3d40de528443a72"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a14161bbee271b7b8d3d40de528443a72">setConnectedAnchor</a> (const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;anchor)</td></tr>
+<tr class="memdesc:a14161bbee271b7b8d3d40de528443a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the anchor on the connected body.  <br /></td></tr>
+<tr class="memitem:a7a755c13cd7bba4152a2586f7ccf2708" id="r_a7a755c13cd7bba4152a2586f7ccf2708"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7a755c13cd7bba4152a2586f7ccf2708">setAxesInWorldSpace</a> (const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;axis)</td></tr>
+<tr class="memdesc:a7a755c13cd7bba4152a2586f7ccf2708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets both axes to the same world-space position.  <br /></td></tr>
+<tr class="memitem:a11717098f375506f931c174431e4f5c3" id="r_a11717098f375506f931c174431e4f5c3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a11717098f375506f931c174431e4f5c3">setAxes</a> (const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;axis, const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;connectedAxis)</td></tr>
+<tr class="memdesc:a11717098f375506f931c174431e4f5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint axes for both rigid bodies.  <br /></td></tr>
+<tr class="memitem:af643228b81ca256aa2324c2130610a12" id="r_af643228b81ca256aa2324c2130610a12"><td class="memItemLeft"><a id="af643228b81ca256aa2324c2130610a12" name="af643228b81ca256aa2324c2130610a12"></a>
+const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;&#160;</td><td class="memItemRight"><b>getAxis</b> () const</td></tr>
+<tr class="memdesc:af643228b81ca256aa2324c2130610a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the attached body's joint axis. <br /></td></tr>
+<tr class="memitem:a40a49abd39ec1483b8fc5d255e259e51" id="r_a40a49abd39ec1483b8fc5d255e259e51"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a40a49abd39ec1483b8fc5d255e259e51">setAxis</a> (const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;axis)</td></tr>
+<tr class="memdesc:a40a49abd39ec1483b8fc5d255e259e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the attached body's joint axis.  <br /></td></tr>
+<tr class="memitem:a93ccba231910f5cac1212160af4944c2" id="r_a93ccba231910f5cac1212160af4944c2"><td class="memItemLeft"><a id="a93ccba231910f5cac1212160af4944c2" name="a93ccba231910f5cac1212160af4944c2"></a>
+const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;&#160;</td><td class="memItemRight"><b>getConnectedAxis</b> () const</td></tr>
+<tr class="memdesc:a93ccba231910f5cac1212160af4944c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the secondary body's joint axis. <br /></td></tr>
+<tr class="memitem:acce5f70c7be49cb2565759fb8c8d7763" id="r_acce5f70c7be49cb2565759fb8c8d7763"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#acce5f70c7be49cb2565759fb8c8d7763">setConnectedAxis</a> (const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;axis)</td></tr>
+<tr class="memdesc:acce5f70c7be49cb2565759fb8c8d7763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the connected body's joint axis.  <br /></td></tr>
+<tr class="memitem:af2805bb985a7153f2de59a5e265e8237" id="r_af2805bb985a7153f2de59a5e265e8237"><td class="memItemLeft"><a id="af2805bb985a7153f2de59a5e265e8237" name="af2805bb985a7153f2de59a5e265e8237"></a>
+JPH::Constraint *&#160;</td><td class="memItemRight"><b>internalHandle</b> () const</td></tr>
+<tr class="memdesc:af2805bb985a7153f2de59a5e265e8237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying native constraint pointer. <br /></td></tr>
+<tr class="memitem:ae2269ef3278df218e241b80409cd7c96" id="r_ae2269ef3278df218e241b80409cd7c96"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae2269ef3278df218e241b80409cd7c96">setUserData</a> (void *userData)</td></tr>
+<tr class="memdesc:ae2269ef3278df218e241b80409cd7c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores opaque user data on the joint component.  <br /></td></tr>
+<tr class="memitem:a3e3aa64d72ec3b4d94e64b96362c475a" id="r_a3e3aa64d72ec3b4d94e64b96362c475a"><td class="memItemLeft"><a id="a3e3aa64d72ec3b4d94e64b96362c475a" name="a3e3aa64d72ec3b4d94e64b96362c475a"></a>
+void *&#160;</td><td class="memItemRight"><b>getUserData</b> () const</td></tr>
+<tr class="memdesc:a3e3aa64d72ec3b4d94e64b96362c475a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the opaque user data pointer assigned to this joint. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for 3D joints. </p>
+<p>Joint connects the Rigidbody3D on the same node (bodyA) to another Rigidbody3D (bodyB). </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
+<a id="ae95f7267fdd91cc9291ae46acc3fb87a" name="ae95f7267fdd91cc9291ae46acc3fb87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95f7267fdd91cc9291ae46acc3fb87a">&#9670;&#160;</a></span>CoordinateSpace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ae95f7267fdd91cc9291ae46acc3fb87a">CoordinateSpace</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Anchor coordinate space understood by <a class="el" href="../../df/d28/classax_1_1_joint3_d.html" title="Base class for 3D joints.">Joint3D</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae95f7267fdd91cc9291ae46acc3fb87aa509820290d57f333403f490dde7316f4" name="ae95f7267fdd91cc9291ae46acc3fb87aa509820290d57f333403f490dde7316f4"></a>Local&#160;</td><td class="fielddoc"><p>Anchor and axis values are relative to each rigid body's center of mass. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae95f7267fdd91cc9291ae46acc3fb87aaf5a7924e621e84c9280a9a27e1bcb7f6" name="ae95f7267fdd91cc9291ae46acc3fb87aaf5a7924e621e84c9280a9a27e1bcb7f6"></a>World&#160;</td><td class="fielddoc"><p>Anchor and axis values are expressed in world space. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="acec2c4bb71891b27443401d0043caf18" name="acec2c4bb71891b27443401d0043caf18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec2c4bb71891b27443401d0043caf18">&#9670;&#160;</a></span>setConnectedBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setConnectedBody </td>
+          <td>(</td>
+          <td class="paramtype">Rigidbody3D *</td>          <td class="paramname"><span class="paramname"><em>body</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assigns the rigid body connected on the far side of the joint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body</td><td>The connected rigid body. This can only be set once. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abf7971cefd6032fedadf1fd9edd674f1" name="abf7971cefd6032fedadf1fd9edd674f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7971cefd6032fedadf1fd9edd674f1">&#9670;&#160;</a></span>setCoordinateSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCoordinateSpace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae95f7267fdd91cc9291ae46acc3fb87a">CoordinateSpace</a></td>          <td class="paramname"><span class="paramname"><em>space</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the coordinate space used by anchors and axes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">space</td><td>The new anchor space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8ab30c96bfbf30c1dc23410a71ba5263" name="a8ab30c96bfbf30c1dc23410a71ba5263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab30c96bfbf30c1dc23410a71ba5263">&#9670;&#160;</a></span>setAnchorsInWorldSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAnchorsInWorldSpace </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>anchor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets both anchors to the same world-space position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">anchor</td><td>The shared world-space anchor point. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a05783b15fa3874ab5af963daa17238fe" name="a05783b15fa3874ab5af963daa17238fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05783b15fa3874ab5af963daa17238fe">&#9670;&#160;</a></span>setAnchors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAnchors </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>anchor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>connectedAnchor</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the joint anchors for both rigid bodies. </p>
+<p>The values are interpreted in the current coordinate space.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">anchor</td><td>Anchor on the attached rigid body. </td></tr>
+    <tr><td class="paramname">connectedAnchor</td><td>Anchor on the connected rigid body. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acfdc6ce56fa0b713cb22aca1291b6886" name="acfdc6ce56fa0b713cb22aca1291b6886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfdc6ce56fa0b713cb22aca1291b6886">&#9670;&#160;</a></span>setAnchor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setAnchor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>anchor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the anchor on the attached body. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">anchor</td><td>The anchor value in the current anchor space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a14161bbee271b7b8d3d40de528443a72" name="a14161bbee271b7b8d3d40de528443a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14161bbee271b7b8d3d40de528443a72">&#9670;&#160;</a></span>setConnectedAnchor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setConnectedAnchor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>anchor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the anchor on the connected body. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">anchor</td><td>The anchor value in the current anchor space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7a755c13cd7bba4152a2586f7ccf2708" name="a7a755c13cd7bba4152a2586f7ccf2708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a755c13cd7bba4152a2586f7ccf2708">&#9670;&#160;</a></span>setAxesInWorldSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAxesInWorldSpace </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets both axes to the same world-space position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>The shared world-space axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11717098f375506f931c174431e4f5c3" name="a11717098f375506f931c174431e4f5c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11717098f375506f931c174431e4f5c3">&#9670;&#160;</a></span>setAxes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAxes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>connectedAxis</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the joint axes for both rigid bodies. </p>
+<p>The values are interpreted in the current coordinate space.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>Axis on the attached rigid body. </td></tr>
+    <tr><td class="paramname">connectedAxis</td><td>Axis on the connected rigid body. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40a49abd39ec1483b8fc5d255e259e51" name="a40a49abd39ec1483b8fc5d255e259e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a49abd39ec1483b8fc5d255e259e51">&#9670;&#160;</a></span>setAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAxis </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the attached body's joint axis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>The axis expressed in the current anchor space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acce5f70c7be49cb2565759fb8c8d7763" name="acce5f70c7be49cb2565759fb8c8d7763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce5f70c7be49cb2565759fb8c8d7763">&#9670;&#160;</a></span>setConnectedAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setConnectedAxis </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de0/classax_1_1_vec3.html">Vec3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the connected body's joint axis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>The axis expressed in the current anchor space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae2269ef3278df218e241b80409cd7c96" name="ae2269ef3278df218e241b80409cd7c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2269ef3278df218e241b80409cd7c96">&#9670;&#160;</a></span>setUserData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUserData </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>userData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stores opaque user data on the joint component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userData</td><td>Caller-owned user pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>Joint3D.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../df/d28/classax_1_1_joint3_d.html">Joint3D</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

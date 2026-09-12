@@ -1,0 +1,546 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: GraphicsCore Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('db/d30/classax_1_1rhi_1_1_graphics_core.html','../../','d0/db6/classax_1_1rhi_1_1_graphics_core-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GraphicsCore Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Centralized manager for graphics driver lifecycle and shader environment.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;GraphicsCore.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae43b944cce006aef525a0499ab98f02a" id="r_ae43b944cce006aef525a0499ab98f02a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae43b944cce006aef525a0499ab98f02a">setPreferredBackend</a> (GraphicsBackend <a class="el" href="#a25f16b7410c82f7c90f34dab9e0556a7">backend</a>)</td></tr>
+<tr class="memdesc:ae43b944cce006aef525a0499ab98f02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the preferred rendering backend (RHI).  <br /></td></tr>
+<tr class="memitem:a82cdc2b0c3155d67e17b19364e9b2ce2" id="r_a82cdc2b0c3155d67e17b19364e9b2ce2"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a82cdc2b0c3155d67e17b19364e9b2ce2">setVulkanMinAndroidApiLevel</a> (int apiLevel)</td></tr>
+<tr class="memdesc:a82cdc2b0c3155d67e17b19364e9b2ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the minimum Android API level required to enable Vulkan.  <br /></td></tr>
+<tr class="memitem:a9ca6969bef7e0ebee88b866e9f10698a" id="r_a9ca6969bef7e0ebee88b866e9f10698a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a9ca6969bef7e0ebee88b866e9f10698a">setVulkanInterop</a> (<a class="el" href="../../d8/d6a/classax_1_1rhi_1_1_vulkan_interop.html">VulkanInterop</a> *interop)</td></tr>
+<tr class="memdesc:a9ca6969bef7e0ebee88b866e9f10698a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Vulkan interoperability interface for external API integration.  <br /></td></tr>
+<tr class="memitem:a63b4c97d0e77b7e50e6a793d01f1c12d" id="r_a63b4c97d0e77b7e50e6a793d01f1c12d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a63b4c97d0e77b7e50e6a793d01f1c12d">setBackendPriority</a> (GraphicsBackend <a class="el" href="#a25f16b7410c82f7c90f34dab9e0556a7">backend</a>, int prio)</td></tr>
+<tr class="memdesc:a63b4c97d0e77b7e50e6a793d01f1c12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority value for a specific rendering backend.  <br /></td></tr>
+<tr class="memitem:aef12a616912427dd0d3f07b58c7852ec" id="r_aef12a616912427dd0d3f07b58c7852ec"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#aef12a616912427dd0d3f07b58c7852ec">getBackendPriority</a> (GraphicsBackend <a class="el" href="#a25f16b7410c82f7c90f34dab9e0556a7">backend</a>)</td></tr>
+<tr class="memdesc:aef12a616912427dd0d3f07b58c7852ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current priority value for a specific rendering backend.  <br /></td></tr>
+<tr class="memitem:aafb7e488abf18afaab6e3017d6f9e861" id="r_aafb7e488abf18afaab6e3017d6f9e861"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aafb7e488abf18afaab6e3017d6f9e861">initialize</a> ()</td></tr>
+<tr class="memdesc:aafb7e488abf18afaab6e3017d6f9e861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects and prepares the active graphics device.  <br /></td></tr>
+<tr class="memitem:a5ae3f45c1d242251964807b2e4d682ae" id="r_a5ae3f45c1d242251964807b2e4d682ae"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5ae3f45c1d242251964807b2e4d682ae">activate</a> ()</td></tr>
+<tr class="memdesc:a5ae3f45c1d242251964807b2e4d682ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates the active graphics device (OpenGL only).  <br /></td></tr>
+<tr class="memitem:a62d41be4b41bfdb31fb9d8b017c5363a" id="r_a62d41be4b41bfdb31fb9d8b017c5363a"><td class="memItemLeft"><a id="a62d41be4b41bfdb31fb9d8b017c5363a" name="a62d41be4b41bfdb31fb9d8b017c5363a"></a>
+static void&#160;</td><td class="memItemRight"><b>shutdown</b> ()</td></tr>
+<tr class="memdesc:a62d41be4b41bfdb31fb9d8b017c5363a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases and destroys the active graphics device, freeing all associated resources. <br /></td></tr>
+<tr class="memitem:a68fbd95320e675be32672a28495a8d72" id="r_a68fbd95320e675be32672a28495a8d72"><td class="memItemLeft"><a id="a68fbd95320e675be32672a28495a8d72" name="a68fbd95320e675be32672a28495a8d72"></a>
+static <a class="el" href="../../d0/dbb/classax_1_1rhi_1_1_graphics_device.html">GraphicsDevice</a> *&#160;</td><td class="memItemRight"><b>device</b> ()</td></tr>
+<tr class="memdesc:a68fbd95320e675be32672a28495a8d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the active graphics device instance, or nullptr if not initialized. <br /></td></tr>
+<tr class="memitem:a25f16b7410c82f7c90f34dab9e0556a7" id="r_a25f16b7410c82f7c90f34dab9e0556a7"><td class="memItemLeft"><a id="a25f16b7410c82f7c90f34dab9e0556a7" name="a25f16b7410c82f7c90f34dab9e0556a7"></a>
+static GraphicsBackend&#160;</td><td class="memItemRight"><b>backend</b> ()</td></tr>
+<tr class="memdesc:a25f16b7410c82f7c90f34dab9e0556a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the active (actually initialized) graphics backend. <br /></td></tr>
+<tr class="memitem:a7f2359d66ad08be5545d89bff49d861b" id="r_a7f2359d66ad08be5545d89bff49d861b"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a7f2359d66ad08be5545d89bff49d861b">shaderLanguage</a> ()</td></tr>
+<tr class="memdesc:a7f2359d66ad08be5545d89bff49d861b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shader language (e.g.  <br /></td></tr>
+<tr class="memitem:a5cf3d420a31fa7a2ca5e521457d22b0c" id="r_a5cf3d420a31fa7a2ca5e521457d22b0c"><td class="memItemLeft"><a id="a5cf3d420a31fa7a2ca5e521457d22b0c" name="a5cf3d420a31fa7a2ca5e521457d22b0c"></a>
+static int&#160;</td><td class="memItemRight"><b>shaderProfile</b> ()</td></tr>
+<tr class="memdesc:a5cf3d420a31fa7a2ca5e521457d22b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shader profile version used by the active backend. <br /></td></tr>
+<tr class="memitem:a252fb773fea7253e5de6b9e2b5d97999" id="r_a252fb773fea7253e5de6b9e2b5d97999"><td class="memItemLeft"><a id="a252fb773fea7253e5de6b9e2b5d97999" name="a252fb773fea7253e5de6b9e2b5d97999"></a>
+static int&#160;</td><td class="memItemRight"><b>shaderILProfile</b> ()</td></tr>
+<tr class="memdesc:a252fb773fea7253e5de6b9e2b5d97999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shader intermediate-language profile used by the active backend. <br /></td></tr>
+<tr class="memitem:a1a9a8759f9b61bba3d2251e51ea5bddc" id="r_a1a9a8759f9b61bba3d2251e51ea5bddc"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a1a9a8759f9b61bba3d2251e51ea5bddc">setShaderILProfile</a> (int profile)</td></tr>
+<tr class="memdesc:a1a9a8759f9b61bba3d2251e51ea5bddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the shader intermediate-language profile for the active backend.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Centralized manager for graphics driver lifecycle and shader environment. </p>
+<p><a class="el" href="../../db/d30/classax_1_1rhi_1_1_graphics_core.html" title="Centralized manager for graphics driver lifecycle and shader environment.">GraphicsCore</a> provides a unified interface to create, activate, and destroy rendering drivers across multiple backends (D3D, Vulkan, Metal, OpenGL). It abstracts backend differences and ensures consistent shader language/profile setup for the current driver.</p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="../../db/d30/classax_1_1rhi_1_1_graphics_core.html" title="Centralized manager for graphics driver lifecycle and shader environment.">GraphicsCore</a> is the system-level entry point for all rendering operations. For actual GPU resource creation (e.g., textures, buffers, pipelines), use <a class="el" href="#a68fbd95320e675be32672a28495a8d72" title="Returns the active graphics device instance, or nullptr if not initialized.">GraphicsCore::device()</a> to obtain the active driver instance. </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ae43b944cce006aef525a0499ab98f02a" name="ae43b944cce006aef525a0499ab98f02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae43b944cce006aef525a0499ab98f02a">&#9670;&#160;</a></span>setPreferredBackend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPreferredBackend </td>
+          <td>(</td>
+          <td class="paramtype">GraphicsBackend</td>          <td class="paramname"><span class="paramname"><em>backend</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the preferred rendering backend (RHI). </p>
+<p>This static method allows selecting a specific rendering backend for the engine, such as OpenGL, D3D11, D3D12, Vulkan, or Metal. If no preference is explicitly set, the default value is GraphicsBackend::Auto.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a25f16b7410c82f7c90f34dab9e0556a7" title="Returns the active (actually initialized) graphics backend.">backend</a></td><td>The desired rendering backend. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a82cdc2b0c3155d67e17b19364e9b2ce2" name="a82cdc2b0c3155d67e17b19364e9b2ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82cdc2b0c3155d67e17b19364e9b2ce2">&#9670;&#160;</a></span>setVulkanMinAndroidApiLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setVulkanMinAndroidApiLevel </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>apiLevel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the minimum Android API level required to enable Vulkan. </p>
+<p>This function allows applications to restrict Vulkan usage based on the device's Android OS version. If the current device reports Vulkan support but its API level is lower than the configured minimum, Vulkan will be skipped during driver selection and the engine will fall back to the next available backend (e.g. OpenGL ES).</p>
+<dl class="section note"><dt>Note</dt><dd>This call is optional. If not invoked, Vulkan will be considered only on devices running Android 12 (API level 31) or higher, which is the default minimum requirement.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>To ensure the restriction takes effect, this function should be invoked as early as possible (e.g. in the application delegate's constructor/applicationWillLaunch), before any rendering context or driver initialization occurs.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">apiLevel</td><td>The minimum Android API level required to allow Vulkan usage. Default is 31 (Android 12). References:<ul>
+<li><a href="https://apilevels.com/">https://apilevels.com/</a></li>
+<li><a href="https://developer.android.com/tools/releases/platforms">https://developer.android.com/tools/releases/platforms</a> </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9ca6969bef7e0ebee88b866e9f10698a" name="a9ca6969bef7e0ebee88b866e9f10698a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ca6969bef7e0ebee88b866e9f10698a">&#9670;&#160;</a></span>setVulkanInterop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setVulkanInterop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/d6a/classax_1_1rhi_1_1_vulkan_interop.html">VulkanInterop</a> *</td>          <td class="paramname"><span class="paramname"><em>interop</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the Vulkan interoperability interface for external API integration. </p>
+<p>This function allows external rendering frameworks (such as OpenXR for VR/AR) to share Vulkan resources with the engine's internal Vulkan driver. The provided <a class="el" href="../../d8/d6a/classax_1_1rhi_1_1_vulkan_interop.html" title="Optional Vulkan initialization hook for external graphics interop.">VulkanInterop</a> instance serves as a bridge between the engine and the external API, enabling coordinated Vulkan instance and device management.</p>
+<p>The typical use case is when the engine is used within an OpenXR application:</p><ul>
+<li>OpenXR runtime creates and manages the Vulkan instance and physical device</li>
+<li>The engine needs to use the same Vulkan instance/device for rendering</li>
+<li><a class="el" href="../../d8/d6a/classax_1_1rhi_1_1_vulkan_interop.html" title="Optional Vulkan initialization hook for external graphics interop.">VulkanInterop</a> provides the necessary handles and synchronization primitives</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>This function must be called <b>before</b> <a class="el" href="#aafb7e488abf18afaab6e3017d6f9e861" title="Selects and prepares the active graphics device.">GraphicsCore::initialize()</a> to take effect. Once the driver is initialized, changing the interop object has no effect.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The caller is responsible for ensuring the <a class="el" href="../../d8/d6a/classax_1_1rhi_1_1_vulkan_interop.html" title="Optional Vulkan initialization hook for external graphics interop.">VulkanInterop</a> object remains valid for the entire lifetime of the Vulkan driver. The engine does not take ownership of the pointer.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interop</td><td>Pointer to a <a class="el" href="../../d8/d6a/classax_1_1rhi_1_1_vulkan_interop.html" title="Optional Vulkan initialization hook for external graphics interop.">VulkanInterop</a> implementation that provides the external Vulkan handles. Pass nullptr to clear the interop interface and revert to engine-managed Vulkan instance creation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d8/d6a/classax_1_1rhi_1_1_vulkan_interop.html" title="Optional Vulkan initialization hook for external graphics interop.">VulkanInterop</a> </dd>
+<dd>
+<a class="el" href="#aafb7e488abf18afaab6e3017d6f9e861" title="Selects and prepares the active graphics device.">initialize()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a63b4c97d0e77b7e50e6a793d01f1c12d" name="a63b4c97d0e77b7e50e6a793d01f1c12d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b4c97d0e77b7e50e6a793d01f1c12d">&#9670;&#160;</a></span>setBackendPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBackendPriority </td>
+          <td>(</td>
+          <td class="paramtype">GraphicsBackend</td>          <td class="paramname"><span class="paramname"><em>backend</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prio</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the priority value for a specific rendering backend. </p>
+<p>This function allows advanced users to override the default backend selection order by assigning a custom priority to a given backend. Higher values indicate higher preference when selecting the active backend.</p>
+<dl class="section note"><dt>Note</dt><dd>This call is <b>optional</b>. If not invoked, the engine will use built-in default priorities to select the backend. It is primarily intended for advanced users who need fine-grained control over backend selection.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>To ensure the priority takes effect, this function should be invoked as early as possible, typically in the application delegate's constructor/applicationWillLaunch, before any rendering context or window is created. Late changes may not apply if the backend has already been initialized. <b>This API does not affect the fallback OpenGL backend.</b></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a25f16b7410c82f7c90f34dab9e0556a7" title="Returns the active (actually initialized) graphics backend.">backend</a></td><td>The backend to assign a priority to. </td></tr>
+    <tr><td class="paramname">prio</td><td>The priority value (higher means more preferred). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef12a616912427dd0d3f07b58c7852ec" name="aef12a616912427dd0d3f07b58c7852ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef12a616912427dd0d3f07b58c7852ec">&#9670;&#160;</a></span>getBackendPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getBackendPriority </td>
+          <td>(</td>
+          <td class="paramtype">GraphicsBackend</td>          <td class="paramname"><span class="paramname"><em>backend</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the current priority value for a specific rendering backend. </p>
+<p>This function returns the priority value previously assigned to the given backend, either by default or via <a class="el" href="#a63b4c97d0e77b7e50e6a793d01f1c12d" title="Sets the priority value for a specific rendering backend.">setBackendPriority()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a25f16b7410c82f7c90f34dab9e0556a7" title="Returns the active (actually initialized) graphics backend.">backend</a></td><td>The backend to query. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The priority value associated with the backend. </dd></dl>
+
+</div>
+</div>
+<a id="aafb7e488abf18afaab6e3017d6f9e861" name="aafb7e488abf18afaab6e3017d6f9e861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb7e488abf18afaab6e3017d6f9e861">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Selects and prepares the active graphics device. </p>
+<p>This function chooses the most suitable device implementation based on the configured priorities and available backends. For non-OpenGL backends, the device is created and automatically initialized. For OpenGL, only the device object is constructed here; initialization must be deferred until a valid window/context is available. </p>
+
+</div>
+</div>
+<a id="a5ae3f45c1d242251964807b2e4d682ae" name="a5ae3f45c1d242251964807b2e4d682ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae3f45c1d242251964807b2e4d682ae">&#9670;&#160;</a></span>activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void activate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Activates the active graphics device (OpenGL only). </p>
+<p>This function is only required when using OpenGL, since its initialization cannot be performed at construction time. It should be called after the window and GL context have been created, to complete the device setup.</p>
+<p>For non-OpenGL backends, initialization is already performed during <a class="el" href="#aafb7e488abf18afaab6e3017d6f9e861" title="Selects and prepares the active graphics device.">initialize()</a>, so this function is not needed and will typically be a no-op. </p>
+
+</div>
+</div>
+<a id="a7f2359d66ad08be5545d89bff49d861b" name="a7f2359d66ad08be5545d89bff49d861b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2359d66ad08be5545d89bff49d861b">&#9670;&#160;</a></span>shaderLanguage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shaderLanguage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the shader language (e.g. </p>
+<p>GLSL, ESSL, HLSL, SPIRV, MSL) used by the active backend. </p>
+
+</div>
+</div>
+<a id="a1a9a8759f9b61bba3d2251e51ea5bddc" name="a1a9a8759f9b61bba3d2251e51ea5bddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9a8759f9b61bba3d2251e51ea5bddc">&#9670;&#160;</a></span>setShaderILProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setShaderILProfile </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>profile</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the shader intermediate-language profile for the active backend. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">profile</td><td>The shader IL profile value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>GraphicsCore.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../dd/d88/namespaceax_1_1rhi.html">rhi</a></li><li class="navelem"><a href="../../db/d30/classax_1_1rhi_1_1_graphics_core.html">GraphicsCore</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

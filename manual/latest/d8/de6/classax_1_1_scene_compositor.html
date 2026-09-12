@@ -1,0 +1,409 @@
+<!-- HTML header for doxygen 1.9.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Axmol Engine: SceneCompositor Class Reference</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript">
+    window.__relpath = "../../";
+</script>
+<script src="../../hacks.js" type="text/javascript"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+          Ac: [ "{\\cal A}", 0],
+          Sc: [ "{\\cal S}", 0],
+      },
+      equationNumbers: { autoNumber: "AMS" }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/javascript" src="../../darkmode_toggle.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://github.com/axmolengine/axmol">GitHub</a></li>
+    <li><a href="../../index.html">Top</a></li>
+  </ul>
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Axmol Engine<span id="projectnumber">&#160;3.0.0-dd9160f</span>
+   </div>
+  </td>
+    <!--<td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>-->
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d8/de6/classax_1_1_scene_compositor.html','../../','d7/d0b/classax_1_1_scene_compositor-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SceneCompositor Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>RenderView-owned scene composition policy.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;SceneCompositor.h&gt;</code></p>
+
+<p>Inherited by <a class="el" href="../../d9/db3/classax_1_1experimental_1_1_v_r_preview_scene_compositor.html">VRPreviewSceneCompositor</a>, and <a class="el" href="../../dc/d55/classax_1_1experimental_1_1_v_r_scene_compositor.html">VRSceneCompositor</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a834d2acff706cf68185bef78a30cf546" id="r_a834d2acff706cf68185bef78a30cf546"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a834d2acff706cf68185bef78a30cf546">isVRActive</a> () const</td></tr>
+<tr class="memdesc:a834d2acff706cf68185bef78a30cf546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether this compositor is currently presenting a VR scene.  <br /></td></tr>
+<tr class="memitem:a5b6e1cc014251f8977a270a7982795e2" id="r_a5b6e1cc014251f8977a270a7982795e2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a5b6e1cc014251f8977a270a7982795e2">pollEvents</a> ()</td></tr>
+<tr class="memdesc:a5b6e1cc014251f8977a270a7982795e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called each frame before scheduler update to poll compositor-owned events.  <br /></td></tr>
+<tr class="memitem:a412c30b3f18c2735ea08e7f945814c3f" id="r_a412c30b3f18c2735ea08e7f945814c3f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a412c30b3f18c2735ea08e7f945814c3f">renderScene</a> (Renderer *renderer, Scene *scene)</td></tr>
+<tr class="memdesc:a412c30b3f18c2735ea08e7f945814c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Composes the scene for the current frame.  <br /></td></tr>
+<tr class="memitem:a27ee82f56716921dfae1ceb0ecb5073c" id="r_a27ee82f56716921dfae1ceb0ecb5073c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a27ee82f56716921dfae1ceb0ecb5073c">onRenderViewChanged</a> (<a class="el" href="../../d9/d5d/classax_1_1_render_view_core.html">RenderViewCore</a> *rv)</td></tr>
+<tr class="memdesc:a27ee82f56716921dfae1ceb0ecb5073c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when this compositor is bound to a <a class="el" href="../../d9/d5d/classax_1_1_render_view_core.html" title="Core render view abstraction for window/surface state and scene presentation.">RenderViewCore</a> or when the render surface changes.  <br /></td></tr>
+<tr class="memitem:aa188d5b4ae3be1a974c94fee34b2b424" id="r_aa188d5b4ae3be1a974c94fee34b2b424"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa188d5b4ae3be1a974c94fee34b2b424">setScissorRect</a> (float x, float y, float w, float h)</td></tr>
+<tr class="memdesc:aa188d5b4ae3be1a974c94fee34b2b424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a scissor rect, optionally transformed by the active raster transform.  <br /></td></tr>
+<tr class="memitem:a7f6f5afa40f7f7dda6caab03447989f2" id="r_a7f6f5afa40f7f7dda6caab03447989f2"><td class="memItemLeft">virtual const ScissorRect &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7f6f5afa40f7f7dda6caab03447989f2">getScissorRect</a> () const</td></tr>
+<tr class="memdesc:a7f6f5afa40f7f7dda6caab03447989f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last scissor rect set through this compositor.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>RenderView-owned scene composition policy. </p>
+<p><a class="el" href="../../d8/de6/classax_1_1_scene_compositor.html" title="RenderView-owned scene composition policy.">SceneCompositor</a> is the RenderViewCore-owned strategy that defines how the current scene is composed into the active render surface.</p>
+<p>The base implementation iterates all visible cameras, applies their transforms, and submits draw commands to the Renderer. Specialized compositors, such as <a class="el" href="../../dc/d55/classax_1_1experimental_1_1_v_r_scene_compositor.html" title="Product VR scene compositor backed by OpenXR.">VRSceneCompositor</a>, may render the scene into custom per-view or per-eye render targets before presenting it. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a834d2acff706cf68185bef78a30cf546" name="a834d2acff706cf68185bef78a30cf546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834d2acff706cf68185bef78a30cf546">&#9670;&#160;</a></span>isVRActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool isVRActive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether this compositor is currently presenting a VR scene. </p>
+<p>Base returns false </p>
+
+</div>
+</div>
+<a id="a5b6e1cc014251f8977a270a7982795e2" name="a5b6e1cc014251f8977a270a7982795e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b6e1cc014251f8977a270a7982795e2">&#9670;&#160;</a></span>pollEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void pollEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called each frame before scheduler update to poll compositor-owned events. </p>
+<p>The base implementation polls native window/platform events by forwarding to RenderViewCore::pollNativeEvents(). Specialized compositors may extend this to poll runtime-specific events, such as OpenXR frame events. </p>
+
+<p>Reimplemented in <a class="el" href="../../dc/d55/classax_1_1experimental_1_1_v_r_scene_compositor.html#a816a284bcc9b556951096599bbe9273d">VRSceneCompositor</a>.</p>
+
+</div>
+</div>
+<a id="a412c30b3f18c2735ea08e7f945814c3f" name="a412c30b3f18c2735ea08e7f945814c3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a412c30b3f18c2735ea08e7f945814c3f">&#9670;&#160;</a></span>renderScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void renderScene </td>
+          <td>(</td>
+          <td class="paramtype">Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Scene *</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Composes the scene for the current frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="../../dd/d00/group__renderer.html">Renderer</a></td><td>The Renderer to submit draw commands into. </td></tr>
+    <tr><td class="paramname">scene</td><td>The scene graph to traverse and compose. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27ee82f56716921dfae1ceb0ecb5073c" name="a27ee82f56716921dfae1ceb0ecb5073c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ee82f56716921dfae1ceb0ecb5073c">&#9670;&#160;</a></span>onRenderViewChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onRenderViewChanged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d5d/classax_1_1_render_view_core.html">RenderViewCore</a> *</td>          <td class="paramname"><span class="paramname"><em>rv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when this compositor is bound to a <a class="el" href="../../d9/d5d/classax_1_1_render_view_core.html" title="Core render view abstraction for window/surface state and scene presentation.">RenderViewCore</a> or when the render surface changes. </p>
+<p>The base implementation stores the <a class="el" href="../../d9/d5d/classax_1_1_render_view_core.html" title="Core render view abstraction for window/surface state and scene presentation.">RenderViewCore</a> weak reference. Subclasses may override to recreate framebuffer-sized or runtime resources. </p>
+
+</div>
+</div>
+<a id="aa188d5b4ae3be1a974c94fee34b2b424" name="aa188d5b4ae3be1a974c94fee34b2b424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa188d5b4ae3be1a974c94fee34b2b424">&#9670;&#160;</a></span>setScissorRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setScissorRect </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies a scissor rect, optionally transformed by the active raster transform. </p>
+<p>Base implementation delegates to Renderer::setScissorRect. </p>
+
+</div>
+</div>
+<a id="a7f6f5afa40f7f7dda6caab03447989f2" name="a7f6f5afa40f7f7dda6caab03447989f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6f5afa40f7f7dda6caab03447989f2">&#9670;&#160;</a></span>getScissorRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const ScissorRect &amp; getScissorRect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the last scissor rect set through this compositor. </p>
+<p>Base implementation delegates to Renderer::getScissorRect. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><b>SceneCompositor.h</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../d3/d6b/namespaceax.html">ax</a></li><li class="navelem"><a href="../../d8/de6/classax_1_1_scene_compositor.html">SceneCompositor</a></li>
+    <li class="footer">Generated on <span class="timestamp"></span> for Axmol Engine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
