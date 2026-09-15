@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Axmol | A Multi-platform Engine for Mobile, Desktop, WebAssembly and Xbox.</title>
+    <meta name="description"
+      content="Axmol Engine (Axmol) — open-source C++ multi-platform game engine with modern rendering, rich tooling, and an active community.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://axmol.dev/sponsor/">
+    <link rel="preconnect" href="https://img.shields.io" crossorigin>
+    <link rel="preconnect" href="https://github.com" crossorigin>
+    <script>
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem("axmol-theme"); } catch (e) {}
+        var sys = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute(
+          "data-bs-theme",
+          (saved === "light" || saved === "dark") ? saved : sys
+        );
+      })();
+    </script>
+    <link href="/assets/css/bootstrap.min.css?v=5.3.8" rel="stylesheet">
+    <link href="/assets/css/styles.css?v=2.1.3" rel="stylesheet">
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top glass-nav">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="/" aria-label="Axmol home">
+          <img src="/assets/img/logo.png" alt="Axmol" height="28">
+        </a>
+
+        <!-- Collapse button for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                href="https://axmol.dev/manual" target="_blank">API
+                Documentation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                href="https://github.com/axmolengine/axmol/wiki"
+                target="_blank">Wiki</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-donate" href="/sponsor/">Sponsor Axmol
+                ❤️</a>
+            </li>
+          </ul>
+
+          <!-- Right side: GitHub + Theme dropdown -->
+          <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <!-- GitHub icon -->
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center justify-content-center"
+                href="https://github.com/axmolengine/axmol"
+                target="_blank" rel="noopener" aria-label="GitHub repository">
+                <svg class="github-icon" width="24" height="24"
+                  aria-hidden="true">
+                  <use href="/assets/icons.svg#github-icon"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div
+                class="vr d-none d-lg-flex h-100 mx-lg-2 text-white">
+              </div>
+              <hr
+                class="d-lg-none my-2 text-white-50">
+            </li>
+
+            <!-- Theme dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center justify-content-left"
+                href="#" id="themeDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Theme">
+                <svg class="theme-icon" width="24" height="24"
+                  fill="currentColor">
+                  <use href="/assets/icons.svg#circle-half"></use>
+                </svg>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="themeDropdown">
+                <li>
+                  <button class="dropdown-item d-flex align-items-center"
+                    data-theme-option="light"
+                    onclick="AxmolTheme.saveTheme('light')">
+                    <svg width="16" height="16" fill="currentColor">
+                      <use href="/assets/icons.svg#sun-fill"></use>
+                    </svg> &nbsp;Light
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item d-flex align-items-center"
+                    data-theme-option="dark"
+                    onclick="AxmolTheme.saveTheme('dark')">
+                    <svg width="16" height="16" fill="currentColor">
+                      <use href="/assets/icons.svg#moon-stars-fill"></use>
+                    </svg> &nbsp;Dark
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item d-flex align-items-center"
+                    data-theme-option="auto"
+                    onclick="AxmolTheme.saveTheme('auto')">
+                    <svg width="16" height="16" fill="currentColor">
+                      <use href="/assets/icons.svg#circle-half"></use>
+                    </svg> &nbsp;Auto
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero hero-gradient position-relative overflow-hidden">
+      <!-- Decorative energy rings -->
+      <div class="energy energy-a"></div>
+      <div class="energy energy-b"></div>
+
+      <div class="container py-5 py-lg-6 position-relative">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-12 text-center">
+            <h1 class="fw-bold">Sponsor Axmol</h1>
+            <p class="lead mt-3">
+              We are a global community of Axmol fans and developers,
+              building and maintaining it with passion.
+            </p>
+            <p class="mt-3">
+              Axmol is free and open-source, maintained by its core developers and community contributors.
+              Every bug fix, improvement, and new feature takes time and effort.
+            </p>
+            <p class="mt-3">
+              Your support helps us accelerate development, prioritize important features,
+              and keep Axmol thriving for everyone.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container py-5">
+      <form class="container" id="unipayment" action method="POST"
+        target="_blank">
+        <input style="display:none" readonly="readonly" name="WIDout_trade_no"
+          id="WIDout_trade_no" type="text" value size="50" />
+        <input style="display:none" readonly="readonly" name="WIDprod"
+          id="WIDprod" type="text" value size="50" />
+        <input style="display:none" readonly="readonly" name="WIDamount"
+          id="WIDamount" type="text" value="1" size="50" />
+        <input style="display:none" readonly="readonly" name="WIDdonate"
+          id="WIDdonate" type="text" value="Axmol" size="50" />
+        <input style="display:none" readonly="readonly" name="WIDchannel"
+          id="WIDchannel" type="text" value="3" size="50" />
+        <input style="display:none" readonly="readonly" name="WIDmonthly"
+          id="WIDmonthly" type="text" value="0" size="50" />
+      </form>
+
+      <h4 class="mb-3">Become a Sponsor</h4>
+
+      <!-- Sponsor Type Tabs -->
+      <div class="d-flex gap-2 mb-3">
+        <button id="btn-individual-tiers" type="button"
+          class="btn btn-outline-primary active">
+          Individual Tiers
+        </button>
+        <button id="btn-corporate-tiers" type="button"
+          class="btn btn-outline-primary">
+          Corporate Sponsorship
+        </button>
+      </div>
+
+      <div id="individual-sponsor-section">
+        <!-- Sponsor Channel Dropdown -->
+        <div class="d-flex align-items-center gap-1 mb-3">
+          <label for="channel-options" class="form-label mb-0">Sponsor
+            Channel:</label>
+          <select id="channel-options"
+            class="form-select form-select-sm w-auto">
+            <option value="github">GitHub Sponsors</option>
+            <option value="osc">Open Source Collective</option>
+          </select>
+        </div>
+
+      <div class="sponsor-cards">
+        <!-- Sponsors tiers -->
+        <label>
+          <input id="t01" class="sponsor-radio" type="radio" name="sponsor"
+            value="5">
+          <div class="sponsor-card">
+            <h3 class="tier-title">Backer</h3>
+            <div class="price">USD$5/month</div>
+          </div>
+        </label>
+
+        <label>
+          <input id="t02" class="sponsor-radio" type="radio" name="sponsor"
+            value="25">
+          <div class="sponsor-card">
+            <h3 class="tier-title">Bronze</h3>
+            <div class="price">USD$25/month</div>
+          </div>
+        </label>
+
+        <label>
+          <input id="t03" class="sponsor-radio" type="radio" name="sponsor"
+            value="50">
+          <div class="sponsor-card">
+            <h3 class="tier-title">Silver</h3>
+            <div class="price">USD$50/month</div>
+          </div>
+        </label>
+
+        <label>
+          <input id="t04" class="sponsor-radio" type="radio" name="sponsor"
+            value="100">
+          <div class="sponsor-card">
+            <h3 class="tier-title">Gold</h3>
+            <div class="price">USD$100/month</div>
+          </div>
+        </label>
+
+        <label>
+          <input id="t05" class="sponsor-radio" type="radio" name="sponsor"
+            value="250">
+          <div class="sponsor-card">
+            <h3 class="tier-title">Platinum</h3>
+            <div class="price">USD$250/month</div>
+          </div>
+        </label>
+
+        <!-- Custom Teir -->
+        <label>
+          <input id="custom" class="sponsor-radio" type="radio" name="sponsor">
+          <div class="sponsor-card">
+            <h3>Custom</h3>
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="amount-wrapper">
+                <input id="amount-input" class="amount-input"
+                  inputmode="decimal"
+                  placeholder="Enter amount (USD)" min="1"
+                  step="1" required>
+                <div id="amount-prefix" class="currency-symbol">$</div>
+                <div id="amount-suffix" class="currency-symbol">USD</div>
+              </div>
+              <!-- Monthly checkbox -->
+              <label class="checkbox-label mb-0">
+                <input type="checkbox" id="custom-montly" checked>
+                <span class="checkbox"></span>Monthly
+              </label>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-left gap-4 mt-4">
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-lg" id="confirm-btn">
+          💖 Confirm Sponsorship
+        </button>
+      </div>
+      </div>
+
+      <div id="corporate-sponsor-section" class="card shadow-sm d-none">
+        <div class="card-body">
+          <h5 class="card-title">Corporate Sponsorship</h5>
+          <p class="mb-2">
+            Corporate sponsorships and commercial support are handled directly by
+            <a href="https://simdsoft.com/?lang=en" target="_blank"
+              rel="noopener">Simdsoft</a>, the primary development and
+            operational entity behind Axmol.
+          </p>
+          <p class="mb-2">
+            For corporate sponsorships or development partnerships, please
+            contact us at
+            <a href="mailto:info@simdsoft.com">info@simdsoft.com</a>.
+          </p>
+          <p class="mb-0">
+            Corporate support does not grant ownership or control over the Axmol
+            project or its technical direction.
+          </p>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Scan WeChat/Alipay QR codes or visit the Axmol Open Collective page. -->
+      <div class="container my-4">
+        <h4 class="mb-3">Support from China</h4>
+        <p class="text-muted">WeChat Pay and Alipay are available through Simdsoft corporate accounts and help support Axmol development.</p>
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <!-- QR card for WeChat Pay -->
+            <div
+              class="qr-card d-flex flex-column align-items-center justify-content-center">
+              <img src="/assets/img/wxpay.jpg?v=3.0" alt="WeChat Pay QR">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <!-- QR card for Alipay -->
+            <div
+              class="qr-card d-flex flex-column align-items-center justify-content-center">
+              <img src="/assets/img/alipay.jpg?v=3.0" alt="Alipay QR">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+    </section>
+
+    <section class="container py-5">
+      <h2>Axmol Supporters</h2>
+      <h4 id="platinum">Corporate Diamond</h4>
+      <p align="left">
+        <a href="https://scorewarrior.com/?utm_source=axmol.dev" target=_blank>
+          <img
+            src="https://cdn.prod.website-files.com/633da33305ac754156026dd8/63566f1edf5f0712f94f7f1b_sw-triangle-821890.svg"
+            height="200" />
+        </a>
+      </p>
+      <h4>Platinum</h4>
+      <p>
+        peterkharitonov, Alain-Serge Nagni
+      </p>
+
+      <h4>Backers</h4>
+      <p>
+        DUONG, thienphuoc, paulocoutinhox, clvs7-gh
+      </p>
+
+      <h4>Contributors</h4>
+      <p>
+        Explorer, 蚊子别跑, 午餐界, 椰子, 零, Turky Mohammed,
+        Paul Gardiner, Julien, Javier Barros, Paulo Coutinho,
+        deal11, bingsoo
+      </p>
+
+      <div id="stats-area" class="my-4">
+        <div class="d-inline-flex align-items-center gap-1">
+          <h4 class="mb-0">Budget</h4><span
+            role="button"
+            tabindex="1"
+            data-bs-toggle="tooltip"
+            data-bs-html="true"
+            data-bs-placement="right"
+            title="GitHub Sponsors transfers funds monthly to recipients. As a result, reported totals may appear ahead of actual available balance. Total fees consist of both transaction fees and fiscal host fees. GitHub estimates sponsorship transactions using an approximate 5% Stripe fee, so reported totals may differ slightly from OSC’s records.">
+            <svg class="bi"
+              fill="currentColor"><use
+                href="/assets/icons.svg#info-circle"></use></svg>
+          </span>
+        </div>
+        <div id="wallet-list" class="row g-3">
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="faq">
+      <div class="container">
+        <h2 class="mb-4">FAQ</h2>
+        <div class="accordion" id="faqAccordion">
+
+          <!-- Q1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading1">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse1"
+                aria-expanded="false" aria-controls="faqCollapse1">
+                How can I cancel my recurring sponsorship?
+              </button>
+            </h2>
+            <div id="faqCollapse1" class="accordion-collapse collapse"
+              aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Axmol supports recurring community sponsorships through GitHub
+                Sponsors and Open Collective.<br><br>
+                To cancel a GitHub sponsorship, visit
+                <a href="https://github.com/sponsors" target="_blank"
+                  rel="noopener">github.com/sponsors</a>, open <strong>Your
+                  Sponsorships</strong>, find Axmol, and choose
+                <strong>Cancel Sponsorship</strong>.<br><br>
+                To cancel an Open Collective sponsorship, log in to your Open
+                Collective account, go to <strong>Profile &gt;
+                  Subscriptions</strong>, find your Axmol sponsorship, and
+                cancel it there.<br><br>
+                If you encounter any issues, feel free to contact us at
+                <a href="mailto:oss@simdsoft.com">oss@simdsoft.com</a>
+                with your GitHub or Open Collective account email and your
+                current sponsorship level.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading2">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse2"
+                aria-expanded="false" aria-controls="faqCollapse2">
+                What is Open Collective?
+              </button>
+            </h2>
+            <div id="faqCollapse2" class="accordion-collapse collapse"
+              aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Open Collective is one of the community sponsorship channels
+                available for Axmol, alongside GitHub Sponsors.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse3"
+                aria-expanded="false" aria-controls="faqCollapse3">
+                How can companies support Axmol?
+              </button>
+            </h2>
+            <div id="faqCollapse3" class="accordion-collapse collapse"
+              aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Corporate sponsorships and commercial support are handled
+                directly by
+                <a href="https://simdsoft.com/?lang=en" target="_blank"
+                  rel="noopener">Simdsoft</a>, the primary development and
+                operational entity behind Axmol.<br><br>
+                For corporate sponsorships or development partnerships, please
+                contact us at
+                <a href="mailto:info@simdsoft.com">info@simdsoft.com</a>.
+                <br><br>
+                Corporate support does not grant ownership or control over the
+                Axmol project or its technical direction.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading4">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faqCollapse4"
+                aria-expanded="false" aria-controls="faqCollapse4">
+                Can I choose whether my name appears in the sponsor list?
+              </button>
+            </h2>
+            <div id="faqCollapse4" class="accordion-collapse collapse"
+              aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. All sponsor names are added manually. If you prefer to
+                remain anonymous, please email us at
+                <a href="mailto:oss@simdsoft.com">oss@simdsoft.com</a>
+                and we’ll update your listing accordingly.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-top mt-5">
+      <div class="container py-4">
+        <div class="row gy-3 align-items-center">
+          <!-- Left: Copyright -->
+          <div class="col-md text-center text-md-start">
+            <div class="text-body-secondary">
+              © 2019–present <a
+                href="https://github.com/axmolengine/axmol/blob/dev/AUTHORS.md"
+                target="_blank" rel="noopener">Simdsoft Limited and other Axmol contributors</a>. <br />
+              Led and maintained by <a
+                href="https://simdsoft.com/?lang=en" target="_blank"
+                rel="noopener">Simdsoft Limited</a> (深圳司脉科技有限公司), with contributions from the community. <br />
+              Hosted on <a href="https://www.netlify.com/">Netlify</a> · Source
+              code available on <a
+                href="https://github.com/axmolengine/axmol.dev" target="_blank"
+                rel="noopener">GitHub</a>.
+            </div>
+          </div>
+
+          <!-- Right: Related Links -->
+          <div class="col-md">
+            <div class="text-center text-md-end">
+              <h6 class="text-body-secondary mb-2">Related Links</h6>
+              <div
+                class="d-flex flex-wrap justify-content-center justify-content-md-end gap-3">
+                <a class="text-body-secondary"
+                  href="https://github.com/axmolengine/axmol/discussions"
+                  target="_blank" rel="noopener">GitHub Discussions</a>
+                <a class="text-body-secondary"
+                  href="https://discord.gg/TvY2nwPbQR" target="_blank"
+                  rel="noopener">Discord</a>
+                <a class="text-body-secondary"
+                  href="https://www.reddit.com/r/axmol/" target="_blank"
+                  rel="noopener">Reddit</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Common modal -->
+    <div class="modal fade" id="commonModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="commonModalTitle" class="modal-title">Title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div id="commonModalBody" class="modal-body">
+            Message goes here.
+          </div>
+          <div id="commonModalFooter" class="modal-footer">
+            <!-- Buttons will be injected dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Common toast container -->
+    <div
+      class="toast-container position-fixed top-0 start-50 translate-middle-x p-3"></div>
+
+    <script src="/assets/js/jquery.min.js?v=3.7.1"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js?v=5.3.8"></script>
+    <script src="/assets/js/md5.js?v=2.2"></script>
+    <script src="/assets/js/utils.js?v=2.1.0"></script>
+    <script src="/assets/js/sponsor.js?v=3.1.8"></script>
+    <script src="/assets/js/theme.js?v=2.1.0"></script>
+  </body>
+
+</html>
