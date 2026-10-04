@@ -1,0 +1,27 @@
+var classax_1_1_quat =
+[
+    [ "Quat", "d1/d63/classax_1_1_quat.html#a5755302695595c7fa17386cbe3add6a8", null ],
+    [ "Quat", "d1/d63/classax_1_1_quat.html#a3c78133b8a84d3f658a2e59cc28564ad", null ],
+    [ "Quat", "d1/d63/classax_1_1_quat.html#ab6e483003f3c135d5ccaf2e7314b6d6e", null ],
+    [ "Quat", "d1/d63/classax_1_1_quat.html#a385ccc965a98b0048bd50aaf28bf8d19", null ],
+    [ "Quat", "d1/d63/classax_1_1_quat.html#ae389976f4651ac0f9915bf835a4ef378", null ],
+    [ "isIdentity", "d1/d63/classax_1_1_quat.html#ac7d05bd7bb4e214a6253fb3df2ebfb91", null ],
+    [ "isZero", "d1/d63/classax_1_1_quat.html#a1d50f30c2273c1645f1514b32d39077f", null ],
+    [ "conjugate", "d1/d63/classax_1_1_quat.html#a7f4b4aeff6b75fc08d8a49907333b20f", null ],
+    [ "getConjugated", "d1/d63/classax_1_1_quat.html#a5deb1e33de9e66764d24eb52f6e2af0d", null ],
+    [ "inverse", "d1/d63/classax_1_1_quat.html#a7b1e6d75eaa20d56c9af44c67dccedd3", null ],
+    [ "getInversed", "d1/d63/classax_1_1_quat.html#acb5d97656a58c4d992cb5923ed1e569f", null ],
+    [ "multiply", "d1/d63/classax_1_1_quat.html#acc1403c200b531fe73cb651107d0867b", null ],
+    [ "normalize", "d1/d63/classax_1_1_quat.html#acd0de676568888d848beb97dcc53ae47", null ],
+    [ "getNormalized", "d1/d63/classax_1_1_quat.html#a2e79bd4d48fd2e387192e4e177d24138", null ],
+    [ "set", "d1/d63/classax_1_1_quat.html#af632f94d77c509e5222b94b7a471cde1", null ],
+    [ "set", "d1/d63/classax_1_1_quat.html#ace46cc45311098674ac7cc05b6403d2d", null ],
+    [ "set", "d1/d63/classax_1_1_quat.html#a580d88a849ca633e196465ec4dd3afae", null ],
+    [ "set", "d1/d63/classax_1_1_quat.html#ae21505112e840021f6c91841b2eadc5e", null ],
+    [ "set", "d1/d63/classax_1_1_quat.html#a69fb8dc441f9efb75a10f9505bed40b4", null ],
+    [ "setIdentity", "d1/d63/classax_1_1_quat.html#a382e6ad7e6721b121e510959e1011be3", null ],
+    [ "toAxisAngle", "d1/d63/classax_1_1_quat.html#a64611b143992db71bf27846dc7adda0b", null ],
+    [ "operator*", "d1/d63/classax_1_1_quat.html#a38d7235b8ea39575e94ee93584090af5", null ],
+    [ "operator*", "d1/d63/classax_1_1_quat.html#a34bb22e87dcb8c05bada8243cee928b0", null ],
+    [ "operator*=", "d1/d63/classax_1_1_quat.html#ab5fa44884ad8c74d3a7584058efb8a8e", null ]
+];

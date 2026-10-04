@@ -1,0 +1,158 @@
+{
+  "$schema": "https://axmol.dev/versions/schema/v1.json",
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-04T03:57:22Z",
+  "project": "axmol",
+  "source": {
+    "repository": "https://github.com/axmolengine/axmol",
+    "releasesApi": "https://api.github.com/repos/axmolengine/axmol/releases",
+    "attribution": "Release metadata generated from the GitHub Releases API for axmolengine/axmol."
+  },
+  "channels": {
+    "lts": {
+      "label": "LTS",
+      "line": "2.11",
+      "latest": "2.11.5"
+    }
+  },
+  "versions": [
+    {
+      "version": "2.11.5",
+      "tag": "v2.11.5",
+      "channel": "lts",
+      "line": "2.11",
+      "prerelease": false,
+      "releaseDate": "2026-09-25T14:27:20Z",
+      "releaseUrl": "https://github.com/axmolengine/axmol/releases/tag/v2.11.5",
+      "archives": {
+        "zip": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.5.zip",
+        "tarball": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.5.tar.gz"
+      },
+      "artifacts": [
+        {
+          "platform": "source",
+          "arch": "any",
+          "kind": "zip",
+          "url": "https://github.com/axmolengine/axmol/releases/download/v2.11.5/axmol-2.11.5.zip",
+          "size": 244248389,
+          "sha256": "425bf1b2661b4488f1d62f24d2e7b8f0f5ce2154891820ce84c05219a5c0c0ee"
+        }
+      ]
+    },
+    {
+      "version": "2.11.4",
+      "tag": "v2.11.4",
+      "channel": "lts",
+      "line": "2.11",
+      "prerelease": false,
+      "releaseDate": "2026-07-06T03:13:33Z",
+      "releaseUrl": "https://github.com/axmolengine/axmol/releases/tag/v2.11.4",
+      "archives": {
+        "zip": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.4.zip",
+        "tarball": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.4.tar.gz"
+      },
+      "artifacts": [
+        {
+          "platform": "source",
+          "arch": "any",
+          "kind": "zip",
+          "url": "https://github.com/axmolengine/axmol/releases/download/v2.11.4/axmol-2.11.4.zip",
+          "size": 243581478,
+          "sha256": "eaab7130f6e48a72bec14dda6a34622784ee3545e8cad96d71bebd4d6fc9a03f"
+        }
+      ]
+    },
+    {
+      "version": "2.11.3",
+      "tag": "v2.11.3",
+      "channel": "lts",
+      "line": "2.11",
+      "prerelease": false,
+      "releaseDate": "2026-02-23T13:04:20Z",
+      "releaseUrl": "https://github.com/axmolengine/axmol/releases/tag/v2.11.3",
+      "archives": {
+        "zip": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.3.zip",
+        "tarball": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.3.tar.gz"
+      },
+      "artifacts": [
+        {
+          "platform": "source",
+          "arch": "any",
+          "kind": "zip",
+          "url": "https://github.com/axmolengine/axmol/releases/download/v2.11.3/axmol-2.11.3.zip",
+          "size": 237092381,
+          "sha256": "56f5e2764c1ddd9bdfd60ddf128624bff2805d2050d6d2549841ddc024e51ffa"
+        }
+      ]
+    },
+    {
+      "version": "2.11.2",
+      "tag": "v2.11.2",
+      "channel": "lts",
+      "line": "2.11",
+      "prerelease": false,
+      "releaseDate": "2026-01-15T03:24:22Z",
+      "releaseUrl": "https://github.com/axmolengine/axmol/releases/tag/v2.11.2",
+      "archives": {
+        "zip": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.2.zip",
+        "tarball": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.2.tar.gz"
+      },
+      "artifacts": [
+        {
+          "platform": "source",
+          "arch": "any",
+          "kind": "zip",
+          "url": "https://github.com/axmolengine/axmol/releases/download/v2.11.2/axmol-2.11.2.zip",
+          "size": 237092289,
+          "sha256": "503533c79cfc653ddc81a520c3b7bb1fd197c51a1cb7d82fdb7d8d8f8e54b020"
+        }
+      ]
+    },
+    {
+      "version": "2.11.1",
+      "tag": "v2.11.1",
+      "channel": "lts",
+      "line": "2.11",
+      "prerelease": false,
+      "releaseDate": "2025-12-31T05:38:57Z",
+      "releaseUrl": "https://github.com/axmolengine/axmol/releases/tag/v2.11.1",
+      "archives": {
+        "zip": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.1.zip",
+        "tarball": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.1.tar.gz"
+      },
+      "artifacts": [
+        {
+          "platform": "source",
+          "arch": "any",
+          "kind": "zip",
+          "url": "https://github.com/axmolengine/axmol/releases/download/v2.11.1/axmol-2.11.1.zip",
+          "size": 237092396,
+          "sha256": "c23b839d1bfd555b6ad4ecd2d5f2ac88d2a2b7f3b9e7fad88bd81df917eaeb3f"
+        }
+      ]
+    },
+    {
+      "version": "2.11.0",
+      "tag": "v2.11.0",
+      "channel": "lts",
+      "line": "2.11",
+      "prerelease": false,
+      "releaseDate": "2025-12-19T04:24:25Z",
+      "releaseUrl": "https://github.com/axmolengine/axmol/releases/tag/v2.11.0",
+      "archives": {
+        "zip": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.0.zip",
+        "tarball": "https://github.com/axmolengine/axmol/archive/refs/tags/v2.11.0.tar.gz"
+      },
+      "artifacts": [
+        {
+          "platform": "source",
+          "arch": "any",
+          "kind": "zip",
+          "url": "https://github.com/axmolengine/axmol/releases/download/v2.11.0/axmol-2.11.0.zip",
+          "size": 284241683,
+          "sha256": "729098dba206b5292374f80ea6bbb98107c3b9b0cb12c89520ce66eb4b632cba"
+        }
+      ]
+    }
+  ]
+}
