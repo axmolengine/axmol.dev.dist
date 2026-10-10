@@ -1,0 +1,35 @@
+var classax_1_1_collider3_d =
+[
+    [ "TriggerCallback", "dd/dcb/classax_1_1_collider3_d.html#a384fd8268854f3d98bbf46c81992226d", null ],
+    [ "Type", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7", [
+      [ "UNKNOWN", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7a696b031073e74bf2cb98e5ef201d4aa3", null ],
+      [ "BOX", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7ae657cce1913c857166b0475f18668ef5", null ],
+      [ "SPHERE", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7a6f7cea7381e843e2ee0338b4a92b0d43", null ],
+      [ "CYLINDER", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7addec32fe897072b48368b1abe03de2aa", null ],
+      [ "CAPSULE", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7a67586f12c9792da11a4bdf60360d40e9", null ],
+      [ "CONVEX", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7a87f945db7c7f9bb3f6b4931ae074a2ca", null ],
+      [ "MESH", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7a5b65fe46c5dd90ebcec69c472c3be1d9", null ],
+      [ "HEIGHT_FIELD", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7a84afc981113d71fcc063c72048cea38f", null ],
+      [ "COMPOUND", "dd/dcb/classax_1_1_collider3_d.html#a1d1cfd8ffb84e947f82999c682b666a7a756a113833040dfb33e27830fba5e901", null ]
+    ] ],
+    [ "~Collider3D", "dd/dcb/classax_1_1_collider3_d.html#a4eee14ee997c46296d9d1e149ec1f0bc", null ],
+    [ "setEnabled", "dd/dcb/classax_1_1_collider3_d.html#ac35a1fd87abdbfbd7c5bdb001e246d70", null ],
+    [ "isValid", "dd/dcb/classax_1_1_collider3_d.html#a5bc2a781be2586924afce4e4a4ea6697", null ],
+    [ "hasOwnBody", "dd/dcb/classax_1_1_collider3_d.html#a341653e575b71b80724367862c7ed3f4", null ],
+    [ "isAttached", "dd/dcb/classax_1_1_collider3_d.html#a49af19f53757889da92c059758b9bc6f", null ],
+    [ "isAttachedToWorld", "dd/dcb/classax_1_1_collider3_d.html#a1be05f47c2ef0b5f59d879f71f2a215a", null ],
+    [ "getWorld", "dd/dcb/classax_1_1_collider3_d.html#a154ec210ca7c5f01c6a55da0a9c4de8c", null ],
+    [ "getType", "dd/dcb/classax_1_1_collider3_d.html#a97c56d51eec84be3e856eb0ca6ebd3d4", null ],
+    [ "internalBody", "dd/dcb/classax_1_1_collider3_d.html#a8bffc08a2d972efaf298708a2e09b136", null ],
+    [ "internalShape", "dd/dcb/classax_1_1_collider3_d.html#a9b6545e563e1af8e721e120216395778", null ],
+    [ "setTransformInPhysics", "dd/dcb/classax_1_1_collider3_d.html#a04ec42a13f68954d9a9c8fc83e6e2dfd", null ],
+    [ "syncNodeToPhysics", "dd/dcb/classax_1_1_collider3_d.html#a83258dd023ece35d6e55fdd9dea0e014", null ],
+    [ "syncPhysicsToNode", "dd/dcb/classax_1_1_collider3_d.html#acedf34bab06307f8c7fcfef918620421", null ],
+    [ "getWorldTransform", "dd/dcb/classax_1_1_collider3_d.html#ac47a445eb374abbab8e401b948914686", null ],
+    [ "setSensor", "dd/dcb/classax_1_1_collider3_d.html#a2f5a75af04ae6b82b6657b56991e9624", null ],
+    [ "isSensor", "dd/dcb/classax_1_1_collider3_d.html#af77b82fe0298ea52c3dccbf9032b7edf", null ],
+    [ "getMaterial", "dd/dcb/classax_1_1_collider3_d.html#a1c8de27d365301e7517b4cf98c495448", null ],
+    [ "setMaterial", "dd/dcb/classax_1_1_collider3_d.html#ab58b720c31e615d45012ee067c2e4de5", null ],
+    [ "setUserData", "dd/dcb/classax_1_1_collider3_d.html#ae2269ef3278df218e241b80409cd7c96", null ],
+    [ "getUserData", "dd/dcb/classax_1_1_collider3_d.html#a3e3aa64d72ec3b4d94e64b96362c475a", null ]
+];
